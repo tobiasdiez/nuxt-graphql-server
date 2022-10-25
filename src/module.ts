@@ -9,16 +9,16 @@ export interface ModuleOptions {
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'my-module',
-    configKey: 'myModule'
+    configKey: 'myModule',
   },
   defaults: {
-    addPlugin: true
+    addPlugin: true,
   },
-  setup (options, nuxt) {
+  setup(options, nuxt) {
     if (options.addPlugin) {
       const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
       nuxt.options.build.transpile.push(runtimeDir)
       addPlugin(resolve(runtimeDir, 'plugin'))
     }
-  }
+  },
 })
