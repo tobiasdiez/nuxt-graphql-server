@@ -1,6 +1,8 @@
 {
-  "name": "my-module",
+  "name": "nuxt-graphql-server",
   "version": "1.0.0",
+  "description": "Easy GraphQL server implementation with Nuxt",
+  "repository": "https://github.com/tobiasdiez/nuxt-graphql-server",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -15,10 +17,14 @@
     "dist"
   ],
   "scripts": {
-    "prepack": "nuxt-module-build",
+    "build": "nuxt-module-build",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground"
+    "prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "lint": "pnpm lint:eslint && pnpm lint:prettier",
+    "lint:eslint": "eslint --ext .ts,.js,.vue,.graphql --ignore-path .gitignore --report-unused-disable-directives .",
+    "lint:prettier": "prettier --check --ignore-path .gitignore . '!pnpm-lock.yaml'",
+    "release": "standard-version && git push --follow-tags && pnpm publish"
   },
   "dependencies": {
     "@nuxt/kit": "^3.0.0-rc.12"
@@ -27,7 +33,15 @@
     "@nuxt/module-builder": "^0.2.0",
     "@nuxt/schema": "^3.0.0-rc.12",
     "@nuxtjs/eslint-config-typescript": "^11.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
     "eslint": "^8.26.0",
-    "nuxt": "^3.0.0-rc.12"
-  }
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "nuxt": "^3.0.0-rc.12",
+    "prettier": "^2.7.1",
+    "standard-version": "^9.5.0",
+    "typescript": "^4.8.4"
+  },
+  "packageManager": "pnpm@7.14.0"
 }

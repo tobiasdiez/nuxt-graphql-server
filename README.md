@@ -1,6 +1,46 @@
-# Nuxt Module
+# GraphQL Server Toolkit for Nuxt
 
-## Development
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![Github Actions][github-actions-src]][github-actions-href]
+[![Codecov][codecov-src]][codecov-href]
 
-- Run `npm run dev:prepare` to generate type stubs.
-- Use `npm run dev` to start [playground](./playground) in development mode.
+This package allows you to easily develop a GraphQL server in your [nuxt](v3.nuxtjs.org) application.
+
+## Installation
+
+```sh
+# npm
+npm install @apollo/server graphql @as-integrations/h3 @tobiasdiez/nuxt-graphql-server
+
+# yarn
+yarn add @apollo/server graphql @as-integrations/h3 @tobiasdiez/nuxt-graphql-server
+
+# pnpm
+pnpm add @apollo/server graphql @as-integrations/h3 @tobiasdiez/nuxt-graphql-server
+```
+
+## 💻 Development
+
+- Clone this repository
+- Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable` (use `npm i -g corepack` for Node.js < 16.10).
+- Install dependencies using `pnpm install --shamefully-hoist`.
+- - Run `pnpm run prepare` to generate type stubs.
+- Use `pnpm run dev` to start [playground](./playground) in development mode.
+
+## License
+
+Made with 💛
+
+Published under [MIT License](./LICENSE).
+
+<!-- Badges -->
+
+[npm-version-src]: https://img.shields.io/npm/v/@as-integrations/h3?style=flat-square
+[npm-version-href]: https://npmjs.com/package/@as-integrations/h3
+[npm-downloads-src]: https://img.shields.io/npm/dm/@as-integrations/h3?style=flat-square
+[npm-downloads-href]: https://npmjs.com/package/@as-integrations/h3
+[github-actions-src]: https://img.shields.io/github/workflow/status/apollo-server-integrations/apollo-server-integration-h3/ci/main?style=flat-square
+[github-actions-href]: https://github.com/apollo-server-integrations/apollo-server-integration-h3/actions?query=workflow%3Aci
+[codecov-src]: https://img.shields.io/codecov/c/gh/apollo-server-integrations/apollo-server-integration-h3/main?style=flat-square
+[codecov-href]: https://codecov.io/gh/apollo-server-integrations/apollo-server-integration-h3
