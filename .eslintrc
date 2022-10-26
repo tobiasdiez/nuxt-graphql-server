@@ -1,6 +1,7 @@
 {
   "extends": [
-    "@nuxtjs/eslint-config-typescript",
+    // TODO: Enable once its working... currently it just hangs
+    //"@nuxtjs/eslint-config-typescript",
     // Enable typescript-specific recommended rules
     "plugin:@typescript-eslint/recommended",
     // Turns off all rules that are unnecessary or might conflict with Prettier (needs to be last)
@@ -26,7 +27,7 @@
     // Ensure void operator is not used, except for variable assignment or function return (might be handy for promises)
     "no-void": ["error", { "allowAsStatement": true }],
     // Demote this to warning as long as we are still using cjs modules
-    "import/named": "warn",
+    // "import/named": "warn",
     // Import order is handled by prettier (which is incompatible with this rule: https://github.com/simonhaenisch/prettier-plugin-organize-imports/issues/65)
     "import/order": "off"
   },
