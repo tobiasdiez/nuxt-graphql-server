@@ -49,5 +49,10 @@
     "standard-version": "^9.5.0",
     "typescript": "^4.8.4"
   },
-  "packageManager": "pnpm@7.14.0"
+  "packageManager": "pnpm@7.14.0",
+  "pnpm": {
+    "patchedDependencies": {
+      "tslib@2.4.0": "patches/tslib@2.4.0.patch"
+    }
+  }
 }

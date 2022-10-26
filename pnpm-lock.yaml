@@ -1,5 +1,10 @@
 lockfileVersion: 5.4
 
+patchedDependencies:
+  tslib@2.4.0:
+    hash: oetzxpynihovdjgwjg52es3bju
+    path: patches/tslib@2.4.0.patch
+
 specifiers:
   '@graphql-tools/graphql-file-loader': ^7.5.5
   '@graphql-tools/load': ^7.8.0
@@ -382,7 +387,7 @@ packages:
       '@graphql-tools/utils': 8.12.0_graphql@16.6.0
       globby: 11.1.0
       graphql: 16.6.0
-      tslib: 2.4.0
+      tslib: 2.4.0_oetzxpynihovdjgwjg52es3bju
       unixify: 1.0.0
     dev: false
 
@@ -394,7 +399,7 @@ packages:
       '@graphql-tools/utils': 8.12.0_graphql@16.6.0
       graphql: 16.6.0
       resolve-from: 5.0.0
-      tslib: 2.4.0
+      tslib: 2.4.0_oetzxpynihovdjgwjg52es3bju
     dev: false
 
   /@graphql-tools/load/7.8.0_graphql@16.6.0:
@@ -406,7 +411,7 @@ packages:
       '@graphql-tools/utils': 8.12.0_graphql@16.6.0
       graphql: 16.6.0
       p-limit: 3.1.0
-      tslib: 2.4.0
+      tslib: 2.4.0_oetzxpynihovdjgwjg52es3bju
     dev: false
 
   /@graphql-tools/merge/8.3.6_graphql@16.6.0:
@@ -416,7 +421,7 @@ packages:
     dependencies:
       '@graphql-tools/utils': 8.12.0_graphql@16.6.0
       graphql: 16.6.0
-      tslib: 2.4.0
+      tslib: 2.4.0_oetzxpynihovdjgwjg52es3bju
     dev: false
 
   /@graphql-tools/schema/9.0.4_graphql@16.6.0:
@@ -427,7 +432,7 @@ packages:
       '@graphql-tools/merge': 8.3.6_graphql@16.6.0
       '@graphql-tools/utils': 8.12.0_graphql@16.6.0
       graphql: 16.6.0
-      tslib: 2.4.0
+      tslib: 2.4.0_oetzxpynihovdjgwjg52es3bju
       value-or-promise: 1.0.11
     dev: false
 
@@ -437,7 +442,7 @@ packages:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
     dependencies:
       graphql: 16.6.0
-      tslib: 2.4.0
+      tslib: 2.4.0_oetzxpynihovdjgwjg52es3bju
     dev: false
 
   /@humanwhocodes/config-array/0.11.6:
@@ -742,7 +747,7 @@ packages:
       open: 8.4.0
       picocolors: 1.0.0
       tiny-glob: 0.2.9
-      tslib: 2.4.0
+      tslib: 2.4.0_oetzxpynihovdjgwjg52es3bju
     dev: true
 
   /@rollup/plugin-alias/4.0.0_rollup@2.79.1:
@@ -5915,7 +5920,7 @@ packages:
   /rxjs/7.5.7:
     resolution: {integrity: sha512-z9MzKh/UcOqB3i20H6rtrlaE/CgjLOvheWK/9ILrbhROGTweAi1BaFsTT9FbwZi5Trr1qNRs+MXkhmR06awzQA==}
     dependencies:
-      tslib: 2.4.0
+      tslib: 2.4.0_oetzxpynihovdjgwjg52es3bju
     dev: true
 
   /safe-buffer/5.1.2:
@@ -6290,7 +6295,7 @@ packages:
     engines: {node: ^14.18.0 || >=16.0.0}
     dependencies:
       '@pkgr/utils': 2.3.1
-      tslib: 2.4.0
+      tslib: 2.4.0_oetzxpynihovdjgwjg52es3bju
     dev: true
 
   /tapable/1.1.3:
@@ -6429,8 +6434,9 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
-  /tslib/2.4.0:
+  /tslib/2.4.0_oetzxpynihovdjgwjg52es3bju:
     resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
+    patched: true
 
   /tsutils/3.21.0_typescript@4.8.4:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
