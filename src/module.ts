@@ -1,9 +1,8 @@
-import { resolve } from 'path'
-import { fileURLToPath } from 'url'
-import { defineNuxtModule, addPlugin } from '@nuxt/kit'
+import { defineNuxtModule } from '@nuxt/kit'
+import { createSchemaImport } from './schema-loader'
 
 export interface ModuleOptions {
-  addPlugin: boolean
+  schema: string | string[]
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -12,13 +11,16 @@ export default defineNuxtModule<ModuleOptions>({
     configKey: 'myModule',
   },
   defaults: {
-    addPlugin: true,
+    schema: './server/**/*.graphql',
   },
   setup(options, nuxt) {
-    if (options.addPlugin) {
-      const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
-      nuxt.options.build.transpile.push(runtimeDir)
-      addPlugin(resolve(runtimeDir, 'plugin'))
-    }
+    nuxt.hook('nitro:config', async (nitroConfig) => {
+      // Register #graphql/schema virtual module
+      nitroConfig.virtual = nitroConfig.virtual || {}
+      nitroConfig.virtual['#graphql/schema'] = await createSchemaImport(
+        options.schema,
+        nitroConfig.rootDir
+      )
+    })
   },
 })
