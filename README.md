@@ -7,6 +7,10 @@
 
 This package allows you to easily develop a GraphQL server in your [nuxt](v3.nuxtjs.org) application.
 
+## Features
+
+- Provides a virtual module `#graphql/schema` from where you can import your schema. Under the hood, it automatically merges multiple schema files together into a complete schema. Moreover, you no longer need to worry about deploying schema `graphql` files.
+
 ## Installation
 
 ```sh
