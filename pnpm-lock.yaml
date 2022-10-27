@@ -9,6 +9,7 @@ specifiers:
   '@apollo/server': ^4.0.4
   '@as-integrations/h3': ^1.1.0
   '@graphql-codegen/core': ^2.6.2
+  '@graphql-codegen/plugin-helpers': ^2.7.1
   '@graphql-codegen/typescript': ^2.8.0
   '@graphql-codegen/typescript-resolvers': ^2.7.5
   '@graphql-tools/graphql-file-loader': ^7.5.5
@@ -30,6 +31,7 @@ specifiers:
 
 dependencies:
   '@graphql-codegen/core': 2.6.2_graphql@16.6.0
+  '@graphql-codegen/plugin-helpers': 2.7.1_graphql@16.6.0
   '@graphql-codegen/typescript': 2.8.0_graphql@16.6.0
   '@graphql-codegen/typescript-resolvers': 2.7.5_graphql@16.6.0
   '@graphql-tools/graphql-file-loader': 7.5.6_graphql@16.6.0
