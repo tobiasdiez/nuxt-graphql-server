@@ -15,6 +15,6 @@ const resolvers: Resolvers = {
   },
 }
 
-const apollo = new ApolloServer({typeDefs: schema, resolvers})
+const apollo = new ApolloServer({ typeDefs: schema, resolvers })
 
 export default startServerAndCreateH3Handler(apollo)

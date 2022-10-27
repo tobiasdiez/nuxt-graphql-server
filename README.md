@@ -29,6 +29,7 @@ pnpm add @apollo/server graphql @as-integrations/h3 @tobiasdiez/nuxt-graphql-ser
 
 1. Define the GraphQL schema in `.graphql` files located in the `server` folder.
 2. Expose the GraphQL API endpoint by creating `server/api/graphql.ts` with the following content:
+
    ```ts
    import { Resolvers } from '#graphql/resolver'
    import { schema } from '#graphql/schema'
