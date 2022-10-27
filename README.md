@@ -10,6 +10,7 @@ This package allows you to easily develop a GraphQL server in your [nuxt](v3.nux
 ## Features
 
 - Provides a virtual module `#graphql/schema` from where you can import your schema. Under the hood, it automatically merges multiple schema files together into a complete schema. Moreover, you no longer need to worry about deploying schema `graphql` files.
+- Automatically generates typescript definitions for your resolvers.
 
 ## Installation
 
@@ -23,6 +24,31 @@ yarn add @apollo/server graphql @as-integrations/h3 @tobiasdiez/nuxt-graphql-ser
 # pnpm
 pnpm add @apollo/server graphql @as-integrations/h3 @tobiasdiez/nuxt-graphql-server
 ```
+
+## Usage
+
+1. Define the GraphQL schema in `.graphql` files located in the `server` folder.
+2. Expose the GraphQL API endpoint by creating `server/api/graphql.ts` with the following content:
+
+   ```ts
+   import { Resolvers } from '#graphql/resolver'
+   import { schema } from '#graphql/schema'
+   import { ApolloServer } from '@apollo/server'
+   import { startServerAndCreateH3Handler } from '@as-integrations/h3'
+
+   const resolvers: Resolvers = {
+      Query: {
+         // Typed resolvers
+      },
+   }
+
+   const apollo = new ApolloServer({typeDefs: schema, resolvers})
+
+   export default startServerAndCreateH3Handler(apollo, {
+      // Optional: Specify context
+      context: (event) => {...},
+   })
+   ```
 
 ## 💻 Development
 

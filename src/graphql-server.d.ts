@@ -1,3 +1,1 @@
-import { GraphQLSchema } from 'graphql'
-
-export const schema: GraphQLSchema
+export const schema: string

@@ -27,6 +27,10 @@
     "release": "standard-version && git push --follow-tags && pnpm publish"
   },
   "dependencies": {
+    "@graphql-codegen/core": "^2.6.2",
+    "@graphql-codegen/plugin-helpers": "^2.7.1",
+    "@graphql-codegen/typescript": "^2.8.0",
+    "@graphql-codegen/typescript-resolvers": "^2.7.5",
     "@graphql-tools/graphql-file-loader": "^7.5.5",
     "@graphql-tools/load": "^7.8.0",
     "@nuxt/kit": "^3.0.0-rc.12"
@@ -35,6 +39,8 @@
     "graphql": "^16.6.0"
   },
   "devDependencies": {
+    "@apollo/server": "^4.0.4",
+    "@as-integrations/h3": "^1.1.0",
     "@nuxt/module-builder": "^0.2.0",
     "@nuxt/schema": "^3.0.0-rc.12",
     "@nuxtjs/eslint-config-typescript": "^11.0.0",

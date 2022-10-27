@@ -22,10 +22,6 @@ export async function createSchemaImport(
 ): Promise<string> {
   const schema = await loadSchemaFromFiles(schemaPointers, cwd)
   return `
-      import { loadSchemaSync } from '@graphql-tools/load'
-      import { GraphQLFileLoader } from '@graphql-tools/graphql-file-loader'
-      export const schema = loadSchemaSync(\`${printSchema(schema)}\`, {
-        loaders: [new GraphQLFileLoader()]
-      })
+      export const schema = \`${printSchema(schema)}\`
     `
 }

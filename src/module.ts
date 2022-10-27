@@ -1,9 +1,11 @@
 import { addTemplate, createResolver, defineNuxtModule } from '@nuxt/kit'
 import { relative } from 'path'
+import { CodeGenConfig, createResolverTypeDefs } from './codegen'
 import { createSchemaImport } from './schema-loader'
 
 export interface ModuleOptions {
   schema: string | string[]
+  codegen?: CodeGenConfig
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -13,6 +15,10 @@ export default defineNuxtModule<ModuleOptions>({
   },
   defaults: {
     schema: './server/**/*.graphql',
+    codegen: {
+      // Needed for Apollo: https://the-guild.dev/graphql/codegen/plugins/typescript/typescript-resolvers#integration-with-apollo-server
+      useIndexSignature: true,
+    },
   },
   setup(options, nuxt) {
     // eslint-disable-next-line @typescript-eslint/unbound-method
@@ -29,16 +35,27 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Create types in build dir
     const { dst: typeDefPath } = addTemplate({
-      filename: 'graphql-server.d.ts',
+      filename: 'types/graphql-server.d.ts',
       src: resolve('graphql-server.d.ts'),
+    })
+    const { dst: resolverTypeDefPath } = addTemplate({
+      filename: 'types/graphql-server-resolver.d.ts',
+      getContents: () =>
+        createResolverTypeDefs(
+          options.schema,
+          options.codegen,
+          nuxt.options.rootDir
+        ),
     })
 
     // Add types to `nuxt.d.ts`
-    nuxt.hook('prepare:types', ({ references, tsConfig }) => {
+    nuxt.hook('prepare:types', ({ tsConfig }) => {
       tsConfig.compilerOptions.paths['#' + 'graphql/schema'] = [
         relative(nuxt.options.rootDir, typeDefPath),
       ]
-      references.push({ path: 'graphql-server.d.ts' })
+      tsConfig.compilerOptions.paths['#' + 'graphql/resolver'] = [
+        relative(nuxt.options.rootDir, resolverTypeDefPath),
+      ]
     })
   },
 })
