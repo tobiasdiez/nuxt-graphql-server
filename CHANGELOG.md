@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.1](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.0.0...v1.0.1) (2022-10-28)
+
+### 🐛 Bug Fixes
+
+- specify module name correctly ([160023d](https://github.com/tobiasdiez/nuxt-graphql-server/commit/160023d2ec6e4a6d7e818274c799539c1b1718e6))
+
 ## 1.0.0 (2022-10-27)
 
 ### 🔖 Features
