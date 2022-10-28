@@ -1,9 +1,9 @@
 import { defineNuxtConfig } from 'nuxt/config'
-import MyModule from '..'
+import GraphqlServerModule from '..'
 
 export default defineNuxtConfig({
-  modules: [MyModule],
-  myModule: {
-    addPlugin: true,
-  },
+  modules: [GraphqlServerModule],
+  graphqlServer: {
+    schema: './server/**/*.graphql',
+  },  
 })
