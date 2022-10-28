@@ -16,19 +16,34 @@ This package allows you to easily develop a GraphQL server in your [nuxt](v3.nux
 
 ```sh
 # npm
-npm install @apollo/server graphql @as-integrations/h3 @tobiasdiez/nuxt-graphql-server
+npm install @apollo/server graphql @as-integrations/h3 nuxt-graphql-server
 
 # yarn
-yarn add @apollo/server graphql @as-integrations/h3 @tobiasdiez/nuxt-graphql-server
+yarn add @apollo/server graphql @as-integrations/h3 nuxt-graphql-server
 
 # pnpm
-pnpm add @apollo/server graphql @as-integrations/h3 @tobiasdiez/nuxt-graphql-server
+pnpm add @apollo/server graphql @as-integrations/h3 nuxt-graphql-server
 ```
 
 ## Usage
 
-1. Define the GraphQL schema in `.graphql` files located in the `server` folder.
-2. Expose the GraphQL API endpoint by creating `server/api/graphql.ts` with the following content:
+1. Add the module in `nuxt.config.ts`:
+
+   ```ts
+   export default defineNuxtConfig({
+      modules: [
+         'graphql-server'
+      ],
+      graphqlServer: {
+         // Optional: config
+      }
+   })
+   ̀ ``
+
+   ```
+
+2. Define the GraphQL schema in `.graphql` files located in the `server` folder.
+3. Expose the GraphQL API endpoint by creating `server/api/graphql.ts` with the following content:
 
    ```ts
    import { Resolvers } from '#graphql/resolver'
@@ -66,11 +81,11 @@ Published under [MIT License](./LICENSE).
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/@as-integrations/h3?style=flat-square
-[npm-version-href]: https://npmjs.com/package/@as-integrations/h3
-[npm-downloads-src]: https://img.shields.io/npm/dm/@as-integrations/h3?style=flat-square
-[npm-downloads-href]: https://npmjs.com/package/@as-integrations/h3
-[github-actions-src]: https://img.shields.io/github/workflow/status/apollo-server-integrations/apollo-server-integration-h3/ci/main?style=flat-square
-[github-actions-href]: https://github.com/apollo-server-integrations/apollo-server-integration-h3/actions?query=workflow%3Aci
-[codecov-src]: https://img.shields.io/codecov/c/gh/apollo-server-integrations/apollo-server-integration-h3/main?style=flat-square
-[codecov-href]: https://codecov.io/gh/apollo-server-integrations/apollo-server-integration-h3
+[npm-version-src]: https://img.shields.io/npm/v/nuxt-graphql-server?style=flat-square
+[npm-version-href]: https://www.npmjs.com/package/nuxt-graphql-server
+[npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-graphql-server?style=flat-square
+[npm-downloads-href]: https://npmjs.com/package/nuxt-graphql-server
+[github-actions-src]: https://img.shields.io/github/workflow/status/tobiasdiez/nuxt-graphql-server/ci/main?style=flat-square
+[github-actions-href]: https://github.com/tobiasdiez/nuxt-graphql-server/actions?query=workflow%3Aci
+[codecov-src]: https://img.shields.io/codecov/c/gh/tobiasdiez/nuxt-graphql-server/main?style=flat-square
+[codecov-href]: https://codecov.io/gh/tobiasdiez/nuxt-graphql-server
