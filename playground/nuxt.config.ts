@@ -5,5 +5,5 @@ export default defineNuxtConfig({
   modules: [GraphqlServerModule],
   graphqlServer: {
     schema: './server/**/*.graphql',
-  },  
+  },
 })
