@@ -58,7 +58,7 @@
   "packageManager": "pnpm@7.14.2",
   "pnpm": {
     "patchedDependencies": {
-      "tslib@2.4.0": "patches/tslib@2.4.0.patch"
+      "tslib@2.4.1": "patches/tslib@2.4.1.patch"
     }
   }
 }
