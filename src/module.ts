@@ -50,9 +50,11 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Add types to `nuxt.d.ts`
     nuxt.hook('prepare:types', ({ tsConfig }) => {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access --- seems to be a eslint bug
       tsConfig.compilerOptions.paths['#' + 'graphql/schema'] = [
         relative(nuxt.options.rootDir, typeDefPath),
       ]
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access --- seems to be a eslint bug
       tsConfig.compilerOptions.paths['#' + 'graphql/resolver'] = [
         relative(nuxt.options.rootDir, resolverTypeDefPath),
       ]
