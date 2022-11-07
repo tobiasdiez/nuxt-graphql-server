@@ -7,7 +7,7 @@ patchedDependencies:
 
 specifiers:
   '@apollo/server': ^4.1.1
-  '@as-integrations/h3': ^1.1.0
+  '@as-integrations/h3': ^1.1.3
   '@graphql-codegen/core': ^2.6.5
   '@graphql-codegen/plugin-helpers': ^2.7.2
   '@graphql-codegen/typescript': ^2.8.1
@@ -40,7 +40,7 @@ dependencies:
 
 devDependencies:
   '@apollo/server': 4.1.1_graphql@16.6.0
-  '@as-integrations/h3': 1.1.0_@apollo+server@4.1.1
+  '@as-integrations/h3': 1.1.3_@apollo+server@4.1.1
   '@nuxt/module-builder': 0.2.0
   '@nuxt/schema': 3.0.0-rc.13
   '@nuxtjs/eslint-config-typescript': 11.0.0_rmayb2veg2btbq6mbmnyivgasy
@@ -271,11 +271,11 @@ packages:
       - supports-color
     dev: false
 
-  /@as-integrations/h3/1.1.0_@apollo+server@4.1.1:
-    resolution: {integrity: sha512-iaYXG+AD9TFDlVO7fmwTxUTRAY1ph2fjIgZh4IAq5+1YWm88kbYUKJrRCIyyOMdmaLyQwxBUUKntoxCCg83wSA==}
+  /@as-integrations/h3/1.1.3_@apollo+server@4.1.1:
+    resolution: {integrity: sha512-mypqisP5sdaQFWju+vc9gXRgS/PX9rWtcYaiwz3sBH1yaVDdCGgNguESYrYWvDP2+Tt5aRh/C+P0RgUURQq8BQ==}
     peerDependencies:
-      '@apollo/server': ^4.0.0
-      h3: ^0.8.1
+      '@apollo/server': ^4.1.1
+      h3: ^0.8.6
     dependencies:
       '@apollo/server': 4.1.1_graphql@16.6.0
     dev: true
