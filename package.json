@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@apollo/server": "^4.1.1",
-    "@as-integrations/h3": "^1.1.0",
+    "@as-integrations/h3": "^1.1.3",
     "@nuxt/module-builder": "^0.2.0",
     "@nuxt/schema": "^3.0.0-rc.13",
     "@nuxtjs/eslint-config-typescript": "^11.0.0",
