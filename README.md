@@ -32,7 +32,7 @@ pnpm add @apollo/server graphql @as-integrations/h3 nuxt-graphql-server
    ```ts
    export default defineNuxtConfig({
       modules: [
-         'graphql-server'
+         'nuxt-graphql-server'
       ],
       graphqlServer: {
          // Optional: config

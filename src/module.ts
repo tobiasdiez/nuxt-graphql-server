@@ -19,7 +19,7 @@ const logger = useLogger('graphql/server')
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'graphql-server',
+    name: 'nuxt-graphql-server',
     configKey: 'graphqlServer',
   },
   defaults: {
