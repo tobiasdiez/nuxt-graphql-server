@@ -33,7 +33,8 @@
     "@graphql-codegen/typescript-resolvers": "^2.7.6",
     "@graphql-tools/graphql-file-loader": "^7.5.10",
     "@graphql-tools/load": "^7.8.5",
-    "@nuxt/kit": "^3.0.0-rc.13"
+    "@nuxt/kit": "^3.0.0-rc.13",
+    "multimatch": "^6.0.0"
   },
   "peerDependencies": {
     "graphql": "^16.6.0"

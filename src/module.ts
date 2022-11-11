@@ -1,12 +1,21 @@
-import { addTemplate, createResolver, defineNuxtModule } from '@nuxt/kit'
+import {
+  addTemplate,
+  createResolver,
+  defineNuxtModule,
+  updateTemplates,
+  useLogger,
+} from '@nuxt/kit'
 import { relative } from 'path'
 import { CodeGenConfig, createResolverTypeDefs } from './codegen'
 import { createSchemaImport } from './schema-loader'
+import multimatch from 'multimatch'
 
 export interface ModuleOptions {
   schema: string | string[]
   codegen?: CodeGenConfig
 }
+
+const logger = useLogger('graphql/server')
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
@@ -24,14 +33,15 @@ export default defineNuxtModule<ModuleOptions>({
     // eslint-disable-next-line @typescript-eslint/unbound-method
     const { resolve } = createResolver(import.meta.url)
 
-    nuxt.hook('nitro:config', async (nitroConfig) => {
-      // Register #graphql/schema virtual module
-      nitroConfig.virtual = nitroConfig.virtual || {}
-      nitroConfig.virtual['#' + 'graphql/schema'] = await createSchemaImport(
-        options.schema,
-        nitroConfig.rootDir
-      )
+    // Register #graphql/schema virtual module
+    const { dst: schemaPath } = addTemplate({
+      filename: 'graphql-schema.mjs',
+      getContents: () =>
+        createSchemaImport(options.schema, nuxt.options.rootDir),
+      write: true,
     })
+    logger.debug(`GraphQL schema registered at ${schemaPath}`)
+    nuxt.options.alias['#' + 'graphql/schema'] = schemaPath
 
     // Create types in build dir
     const { dst: typeDefPath } = addTemplate({
@@ -40,12 +50,14 @@ export default defineNuxtModule<ModuleOptions>({
     })
     const { dst: resolverTypeDefPath } = addTemplate({
       filename: 'types/graphql-server-resolver.d.ts',
-      getContents: () =>
-        createResolverTypeDefs(
+      getContents: () => {
+        logger.debug('Generating graphql-server-resolver.d.ts')
+        return createResolverTypeDefs(
           options.schema,
           options.codegen ?? {},
           nuxt.options.rootDir
-        ),
+        )
+      },
     })
 
     // Add types to `nuxt.d.ts`
@@ -60,5 +72,27 @@ export default defineNuxtModule<ModuleOptions>({
         relative(nuxt.options.rootDir, resolverTypeDefPath),
       ]
     })
+
+    // HMR support for schema files
+    if (nuxt.options.dev) {
+      nuxt.hook('nitro:build:before', (nitro) => {
+        nuxt.hook('builder:watch', async (event, path) => {
+          if (multimatch(path, options.schema)) {
+            logger.debug('Schema changed', path)
+
+            // Update templates
+            await updateTemplates({
+              filter: (template) =>
+                template.filename.startsWith('types/graphql-server') ||
+                template.filename === 'graphql-schema.mjs',
+            })
+
+            // Reload nitro dev server
+            // Until https://github.com/nuxt/framework/issues/8720 is implemented, this is the best we can do
+            await nitro.hooks.callHook('dev:reload')
+          }
+        })
+      })
+    }
   },
 })

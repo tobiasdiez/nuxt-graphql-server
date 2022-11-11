@@ -1,5 +1,9 @@
 <template>
-  <div>Nuxt module playground!</div>
+  <h1>GraphQL Playground</h1>
+  <h2>Schema:</h2>
+  <pre>{{ schema }}</pre>
 </template>
 
-<script setup></script>
+<script setup>
+import { schema } from '#graphql/schema'
+</script>
