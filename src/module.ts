@@ -40,7 +40,7 @@ export default defineNuxtModule<ModuleOptions>({
         createSchemaImport(options.schema, nuxt.options.rootDir),
       write: true,
     })
-    logger.info(`GraphQL schema registered at ${schemaPath}`)
+    logger.debug(`GraphQL schema registered at ${schemaPath}`)
     nuxt.options.alias['#' + 'graphql/schema'] = schemaPath
 
     // Create types in build dir
@@ -75,24 +75,21 @@ export default defineNuxtModule<ModuleOptions>({
 
     // HMR support for schema files
     if (nuxt.options.dev) {
-      nuxt.hook('vite:serverCreated', (viteServer, ctx) => {
-        //if (ctx.isServer) {
-        //}
+      nuxt.hook('nitro:build:before', (nitro) => {
         nuxt.hook('builder:watch', async (event, path) => {
           if (multimatch(path, options.schema)) {
-            logger.debug('schema changed', path)
-            //logger.info(viteServer?.moduleGraph)
-            //const module = await viteServer?.moduleGraph.getModuleByUrl("#graphql/schema")
-            const module = viteServer?.moduleGraph.getModuleById(schemaPath)
-            logger.info('module', module)
-            if (module) {
-              await viteServer?.reloadModule(module)
-            }
+            logger.debug('Schema changed', path)
+
+            // Update templates
             await updateTemplates({
               filter: (template) =>
                 template.filename.startsWith('types/graphql-server') ||
                 template.filename === 'graphql-schema.mjs',
             })
+
+            // Reload nitro dev server
+            // Until https://github.com/nuxt/framework/issues/8720 is implemented, this is the best we can do
+            await nitro.hooks.callHook('dev:reload')
           }
         })
       })
