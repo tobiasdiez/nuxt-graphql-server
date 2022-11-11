@@ -19,7 +19,6 @@ jobs:
           node-version: 16
           cache: 'pnpm'
       - run: pnpm install --shamefully-hoist
-      - run: pnpm dev:prepare
       - run: pnpm lint
       - run: pnpm build
       #- run: pnpm vitest --coverage

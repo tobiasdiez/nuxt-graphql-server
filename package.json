@@ -17,11 +17,11 @@
     "dist"
   ],
   "scripts": {
+    "prepare": "nuxt-module-build --stub && nuxi prepare playground",
     "prepack": "nuxt-module-build",
     "build": "nuxt-module-build",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
     "lint": "pnpm lint:eslint && pnpm lint:prettier",
     "lint:eslint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --report-unused-disable-directives .",
     "lint:prettier": "prettier --check --ignore-path .gitignore . '!pnpm-lock.yaml'",
