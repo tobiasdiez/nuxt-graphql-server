@@ -2,11 +2,10 @@
 
 ## [1.1.1](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.1.0...v1.1.1) (2022-11-11)
 
-
 ### 🧹 Miscellaneous
 
-* call correct build command during release ([0575bc9](https://github.com/tobiasdiez/nuxt-graphql-server/commit/0575bc9ab85ed2469451b408e6133f05e7ac0263))
-* fix lint issues ([2994c9a](https://github.com/tobiasdiez/nuxt-graphql-server/commit/2994c9a1ade3a15509e28486a175c3e4c5c32c43))
+- call correct build command during release ([0575bc9](https://github.com/tobiasdiez/nuxt-graphql-server/commit/0575bc9ab85ed2469451b408e6133f05e7ac0263))
+- fix lint issues ([2994c9a](https://github.com/tobiasdiez/nuxt-graphql-server/commit/2994c9a1ade3a15509e28486a175c3e4c5c32c43))
 
 ## [1.1.0](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.0.1...v1.1.0) (2022-11-11)
 
