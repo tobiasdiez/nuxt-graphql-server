@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.3](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.1.2...v1.1.3) (2022-11-11)
+
+### 🧹 Miscellaneous
+
+- copy ts template along ([e9cfac6](https://github.com/tobiasdiez/nuxt-graphql-server/commit/e9cfac6ba60be3cdd1840ac5b0c2a710a71e8d0a))
+
 ## [1.1.2](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.1.1...v1.1.2) (2022-11-11)
 
 ### 🧹 Miscellaneous
