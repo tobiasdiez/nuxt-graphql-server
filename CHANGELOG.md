@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.2](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.1.1...v1.1.2) (2022-11-11)
+
+### 🧹 Miscellaneous
+
+- rename dev:prepare to rename ([f2e1900](https://github.com/tobiasdiez/nuxt-graphql-server/commit/f2e190011dcc68aecf4c242c56a00a21bb664fb0))
+
 ## [1.1.1](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.1.0...v1.1.1) (2022-11-11)
 
 ### 🧹 Miscellaneous
