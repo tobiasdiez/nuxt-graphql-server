@@ -60,7 +60,9 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install --shamefully-hoist
-      - name: Publish to npm
-        run: pnpm publish --access public
+      - name: Config npm
+        run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish to npm
+        run: pnpm publish --access public --no-git-checks
