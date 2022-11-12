@@ -5,12 +5,14 @@
 [![Github Actions][github-actions-src]][github-actions-href]
 [![Codecov][codecov-src]][codecov-href]
 
-This package allows you to easily develop a GraphQL server in your [nuxt](v3.nuxtjs.org) application.
+This package allows you to easily develop a GraphQL server in your [Nuxt 3](v3.nuxtjs.org) application.
+
+> For consuming a GraphQL API on the client-side, we recommend the modules [Nuxt Apollo](https://apollo.nuxtjs.org/), [Nuxt GraphQL Client](https://nuxt-graphql-client.web.app/) or [nuxt/graphql-client](https://nuxt-graphql-request.vercel.app/).
 
 ## Features
 
 - Provides a virtual module `#graphql/schema` from where you can import your schema. Under the hood, it automatically merges multiple schema files together into a complete schema. Moreover, you no longer need to worry about deploying schema `graphql` files.
-- Automatically generates typescript definitions for your resolvers.
+- Automatically generated typescript definitions for your resolvers via the virtual module `#graphql/resolver`.
 
 ## Installation
 
