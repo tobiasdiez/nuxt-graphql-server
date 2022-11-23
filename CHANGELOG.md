@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.4](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.1.3...v1.1.4) (2022-11-23)
+
+
+### 🧹 Miscellaneous
+
+* **deps:** update all non-major dependencies ([#20](https://github.com/tobiasdiez/nuxt-graphql-server/issues/20)) ([731bb7b](https://github.com/tobiasdiez/nuxt-graphql-server/commit/731bb7b710ec4c3f143eb23f7130c16a08edeb09))
+* **deps:** update devdependency @nuxtjs/eslint-config-typescript to v12 ([#21](https://github.com/tobiasdiez/nuxt-graphql-server/issues/21)) ([d6f5e9c](https://github.com/tobiasdiez/nuxt-graphql-server/commit/d6f5e9c17d1b799c9d2dac9ceb8db07691971c43))
+
 ## [1.1.3](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.1.2...v1.1.3) (2022-11-11)
 
 ### 🧹 Miscellaneous
