@@ -9,7 +9,7 @@ specifiers:
   '@apollo/server': ^4.2.0
   '@as-integrations/h3': ^1.1.4
   '@graphql-codegen/core': ^2.6.6
-  '@graphql-codegen/plugin-helpers': ^2.7.2
+  '@graphql-codegen/plugin-helpers': ^3.1.1
   '@graphql-codegen/typescript': ^2.8.2
   '@graphql-codegen/typescript-resolvers': ^2.7.7
   '@graphql-tools/graphql-file-loader': ^7.5.11
@@ -32,7 +32,7 @@ specifiers:
 
 dependencies:
   '@graphql-codegen/core': 2.6.6_graphql@16.6.0
-  '@graphql-codegen/plugin-helpers': 2.7.2_graphql@16.6.0
+  '@graphql-codegen/plugin-helpers': 3.1.1_graphql@16.6.0
   '@graphql-codegen/typescript': 2.8.2_graphql@16.6.0
   '@graphql-codegen/typescript-resolvers': 2.7.7_graphql@16.6.0
   '@graphql-tools/graphql-file-loader': 7.5.11_graphql@16.6.0
@@ -899,6 +899,20 @@ packages:
     dependencies:
       '@graphql-tools/utils': 8.13.1_graphql@16.6.0
       change-case-all: 1.0.14
+      common-tags: 1.8.2
+      graphql: 16.6.0
+      import-from: 4.0.0
+      lodash: 4.17.21
+      tslib: 2.4.1_mr6fswbjdrpwvdhgfw7mgwyhum
+    dev: false
+
+  /@graphql-codegen/plugin-helpers/3.1.1_graphql@16.6.0:
+    resolution: {integrity: sha512-+V1WK4DUhejVSbkZrAsyv9gA4oQABVrtEUkT7vWq7gSf7Ln6OEM59lDUDsjp5wpLPTBIDJANbAe3qEd+iCB3Ow==}
+    peerDependencies:
+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+    dependencies:
+      '@graphql-tools/utils': 8.13.1_graphql@16.6.0
+      change-case-all: 1.0.15
       common-tags: 1.8.2
       graphql: 16.6.0
       import-from: 4.0.0
@@ -2680,6 +2694,21 @@ packages:
 
   /change-case-all/1.0.14:
     resolution: {integrity: sha512-CWVm2uT7dmSHdO/z1CXT/n47mWonyypzBbuCy5tN7uMg22BsfkhwT6oHmFCAk+gL1LOOxhdbB9SZz3J1KTY3gA==}
+    dependencies:
+      change-case: 4.1.2
+      is-lower-case: 2.0.2
+      is-upper-case: 2.0.2
+      lower-case: 2.0.2
+      lower-case-first: 2.0.2
+      sponge-case: 1.0.1
+      swap-case: 2.0.2
+      title-case: 3.0.3
+      upper-case: 2.0.2
+      upper-case-first: 2.0.2
+    dev: false
+
+  /change-case-all/1.0.15:
+    resolution: {integrity: sha512-3+GIFhk3sNuvFAJKU46o26OdzudQlPNBCu1ZQi3cMeMHhty1bhDxu2WrEilVNYaGvqUtR1VSigFcJOiS13dRhQ==}
     dependencies:
       change-case: 4.1.2
       is-lower-case: 2.0.2
