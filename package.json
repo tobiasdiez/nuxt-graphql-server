@@ -28,12 +28,12 @@
     "release": "standard-version && git push --follow-tags && pnpm publish"
   },
   "dependencies": {
-    "@graphql-codegen/core": "^2.6.6",
-    "@graphql-codegen/plugin-helpers": "^3.1.1",
-    "@graphql-codegen/typescript": "^2.8.2",
-    "@graphql-codegen/typescript-resolvers": "^2.7.7",
-    "@graphql-tools/graphql-file-loader": "^7.5.11",
-    "@graphql-tools/load": "^7.8.6",
+    "@graphql-codegen/core": "^2.6.8",
+    "@graphql-codegen/plugin-helpers": "^3.1.2",
+    "@graphql-codegen/typescript": "^2.8.7",
+    "@graphql-codegen/typescript-resolvers": "^2.7.12",
+    "@graphql-tools/graphql-file-loader": "^7.5.13",
+    "@graphql-tools/load": "^7.8.8",
     "@nuxt/kit": "^3.0.0",
     "multimatch": "^6.0.0"
   },
@@ -41,23 +41,23 @@
     "graphql": "^16.6.0"
   },
   "devDependencies": {
-    "@apollo/server": "^4.2.0",
+    "@apollo/server": "^4.3.0",
     "@as-integrations/h3": "^1.1.4",
     "@nuxt/module-builder": "^0.2.1",
     "@nuxt/schema": "^3.0.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.44.0",
-    "@typescript-eslint/parser": "^5.44.0",
-    "eslint": "^8.28.0",
-    "eslint-config-prettier": "^8.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.48.0",
+    "@typescript-eslint/parser": "^5.48.0",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "graphql": "^16.6.0",
     "nuxt": "^3.0.0",
-    "prettier": "^2.8.0",
+    "prettier": "^2.8.1",
     "standard-version": "^9.5.0",
-    "typescript": "^4.9.3"
+    "typescript": "^4.9.4"
   },
-  "packageManager": "pnpm@7.17.0",
+  "packageManager": "pnpm@7.22.0",
   "pnpm": {
     "patchedDependencies": {
       "tslib@2.4.1": "patches/tslib@2.4.1.patch"
