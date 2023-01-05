@@ -2,11 +2,10 @@
 
 ## [1.1.5](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.1.4...v1.1.5) (2023-01-05)
 
-
 ### 🧹 Miscellaneous
 
-* **deps:** update all non-major dependencies ([#24](https://github.com/tobiasdiez/nuxt-graphql-server/issues/24)) ([1cd6b9d](https://github.com/tobiasdiez/nuxt-graphql-server/commit/1cd6b9d131cab47f30f5334615fd875f52b71017))
-* **deps:** update dependency @graphql-codegen/plugin-helpers to v3 ([#25](https://github.com/tobiasdiez/nuxt-graphql-server/issues/25)) ([f6d61fd](https://github.com/tobiasdiez/nuxt-graphql-server/commit/f6d61fdb29841ac9ac0850d7c4551307f3f58b17))
+- **deps:** update all non-major dependencies ([#24](https://github.com/tobiasdiez/nuxt-graphql-server/issues/24)) ([1cd6b9d](https://github.com/tobiasdiez/nuxt-graphql-server/commit/1cd6b9d131cab47f30f5334615fd875f52b71017))
+- **deps:** update dependency @graphql-codegen/plugin-helpers to v3 ([#25](https://github.com/tobiasdiez/nuxt-graphql-server/issues/25)) ([f6d61fd](https://github.com/tobiasdiez/nuxt-graphql-server/commit/f6d61fdb29841ac9ac0850d7c4551307f3f58b17))
 
 ## [1.1.4](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.1.3...v1.1.4) (2022-11-23)
 
