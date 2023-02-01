@@ -2,12 +2,11 @@
 
 ## [1.1.6](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.1.5...v1.1.6) (2023-02-01)
 
-
 ### 🧹 Miscellaneous
 
-* **deps:** update all non-major dependencies ([#27](https://github.com/tobiasdiez/nuxt-graphql-server/issues/27)) ([d5c9b14](https://github.com/tobiasdiez/nuxt-graphql-server/commit/d5c9b14e87cf79515c87232858b2a9e993d966a5))
-* **deps:** update all non-major dependencies ([#31](https://github.com/tobiasdiez/nuxt-graphql-server/issues/31)) ([accfad1](https://github.com/tobiasdiez/nuxt-graphql-server/commit/accfad15328d953661096e67f4683b47cbea9201))
-* **deps:** update devdependency eslint to ^8.33.0 ([#30](https://github.com/tobiasdiez/nuxt-graphql-server/issues/30)) ([31cf4fc](https://github.com/tobiasdiez/nuxt-graphql-server/commit/31cf4fc074552cc229c936a5b17622f034225078))
+- **deps:** update all non-major dependencies ([#27](https://github.com/tobiasdiez/nuxt-graphql-server/issues/27)) ([d5c9b14](https://github.com/tobiasdiez/nuxt-graphql-server/commit/d5c9b14e87cf79515c87232858b2a9e993d966a5))
+- **deps:** update all non-major dependencies ([#31](https://github.com/tobiasdiez/nuxt-graphql-server/issues/31)) ([accfad1](https://github.com/tobiasdiez/nuxt-graphql-server/commit/accfad15328d953661096e67f4683b47cbea9201))
+- **deps:** update devdependency eslint to ^8.33.0 ([#30](https://github.com/tobiasdiez/nuxt-graphql-server/issues/30)) ([31cf4fc](https://github.com/tobiasdiez/nuxt-graphql-server/commit/31cf4fc074552cc229c936a5b17622f034225078))
 
 ## [1.1.5](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.1.4...v1.1.5) (2023-01-05)
 
