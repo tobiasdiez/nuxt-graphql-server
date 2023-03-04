@@ -17,7 +17,7 @@
     "dist"
   ],
   "scripts": {
-    "prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "postinstall": "nuxt-module-build --stub && nuxi prepare playground",
     "prepack": "nuxt-module-build && cp src/graphql-server.d.ts dist",
     "build": "pnpm prepack",
     "dev": "nuxi dev playground",
