@@ -25,7 +25,9 @@
     "lint": "pnpm lint:eslint && pnpm lint:prettier",
     "lint:eslint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --report-unused-disable-directives .",
     "lint:prettier": "prettier --check --ignore-path .gitignore . '!pnpm-lock.yaml'",
-    "release": "standard-version && git push --follow-tags && pnpm publish"
+    "release": "standard-version && git push --follow-tags && pnpm publish",
+    "test": "vitest run",
+    "test:watch": "vitest watch"
   },
   "dependencies": {
     "@graphql-codegen/core": "^2.6.8",
@@ -45,6 +47,7 @@
     "@as-integrations/h3": "^1.1.4",
     "@nuxt/module-builder": "^0.2.1",
     "@nuxt/schema": "^3.1.1",
+    "@nuxt/test-utils": "^3.2.3",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@typescript-eslint/parser": "^5.50.0",
@@ -55,7 +58,8 @@
     "nuxt": "^3.1.1",
     "prettier": "^2.8.3",
     "standard-version": "^9.5.0",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "vitest": "^0.29.2"
   },
   "packageManager": "pnpm@7.26.3",
   "pnpm": {
