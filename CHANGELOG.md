@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.2.0](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.1.6...v1.2.0) (2023-03-04)
+
+
+### 🔖 Features
+
+* add devtools tab ([#41](https://github.com/tobiasdiez/nuxt-graphql-server/issues/41)) ([1a1901c](https://github.com/tobiasdiez/nuxt-graphql-server/commit/1a1901cb414b7caa4447e036e4433080a04edd5c))
+
+
+### 🧹 Miscellaneous
+
+* add basic ci tests ([#39](https://github.com/tobiasdiez/nuxt-graphql-server/issues/39)) ([2e9dc1f](https://github.com/tobiasdiez/nuxt-graphql-server/commit/2e9dc1f6467411d8c0ba6954d7790bce9b53ae5c))
+* add ci for windows and macos ([#40](https://github.com/tobiasdiez/nuxt-graphql-server/issues/40)) ([0e01d93](https://github.com/tobiasdiez/nuxt-graphql-server/commit/0e01d93c5ef9cc9a82c79b7184df6ff9bfbe4874))
+* create .npmrc ([#37](https://github.com/tobiasdiez/nuxt-graphql-server/issues/37)) ([1e34d61](https://github.com/tobiasdiez/nuxt-graphql-server/commit/1e34d618af1f031edb3d10dd14579191590df64f))
+* **deps:** update all non-major dependencies ([#32](https://github.com/tobiasdiez/nuxt-graphql-server/issues/32)) ([e2a3107](https://github.com/tobiasdiez/nuxt-graphql-server/commit/e2a31071f3b7fd5916e8521a79c60aacd9b00f30))
+* **deps:** update graphqlcodegenerator monorepo (major) ([#33](https://github.com/tobiasdiez/nuxt-graphql-server/issues/33)) ([87077b5](https://github.com/tobiasdiez/nuxt-graphql-server/commit/87077b53d2b667585da53469f28fd71f9af13ac3))
+* fix deployment ([#42](https://github.com/tobiasdiez/nuxt-graphql-server/issues/42)) ([12266e9](https://github.com/tobiasdiez/nuxt-graphql-server/commit/12266e90a2e064cdb00abc794ea0edb67158aefe))
+
 ## [1.1.6](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.1.5...v1.1.6) (2023-02-01)
 
 ### 🧹 Miscellaneous
