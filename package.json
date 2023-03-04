@@ -1,6 +1,6 @@
 {
   "name": "nuxt-graphql-server",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Easy GraphQL server implementation with Nuxt",
   "repository": "https://github.com/tobiasdiez/nuxt-graphql-server",
   "license": "MIT",
