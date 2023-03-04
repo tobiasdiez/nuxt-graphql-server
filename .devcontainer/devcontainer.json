@@ -4,7 +4,7 @@
   "name": "Ubuntu",
   "image": "mcr.microsoft.com/vscode/devcontainers/base:0-ubuntu-22.04",
 
-  "onCreateCommand": "corepack enable && pnpm install --shamefully-hoist && pnpm prepare || true",
+  "onCreateCommand": "corepack enable && pnpm install && pnpm prepare || true",
 
   "remoteUser": "vscode",
   "features": {
