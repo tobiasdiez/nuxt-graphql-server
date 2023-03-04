@@ -1,0 +1,2 @@
+# Force lf line ending, as recommended by prettier: https://prettier.io/docs/en/options.html#end-of-line
+* text=auto eol=lf
