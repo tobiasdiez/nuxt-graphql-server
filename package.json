@@ -27,6 +27,7 @@
     "lint:prettier": "prettier --check --ignore-path .gitignore . !pnpm-lock.yaml",
     "release": "standard-version && git push --follow-tags && pnpm publish",
     "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "test:watch": "vitest watch"
   },
   "dependencies": {
