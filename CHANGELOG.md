@@ -2,10 +2,9 @@
 
 ## [1.2.2](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.2.1...v1.2.2) (2023-03-04)
 
-
 ### 🧹 Miscellaneous
 
-* fix deployment workflow ([#45](https://github.com/tobiasdiez/nuxt-graphql-server/issues/45)) ([a81e75c](https://github.com/tobiasdiez/nuxt-graphql-server/commit/a81e75c56591d46489c36727d8102b9bbcb8822b))
+- fix deployment workflow ([#45](https://github.com/tobiasdiez/nuxt-graphql-server/issues/45)) ([a81e75c](https://github.com/tobiasdiez/nuxt-graphql-server/commit/a81e75c56591d46489c36727d8102b9bbcb8822b))
 
 ## [1.2.1](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.2.0...v1.2.1) (2023-03-04)
 
