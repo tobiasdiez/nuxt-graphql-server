@@ -2,10 +2,9 @@
 
 ## [1.2.1](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.2.0...v1.2.1) (2023-03-04)
 
-
 ### 🧹 Miscellaneous
 
-* fix error during postinstall ([#43](https://github.com/tobiasdiez/nuxt-graphql-server/issues/43)) ([c3923f3](https://github.com/tobiasdiez/nuxt-graphql-server/commit/c3923f3290b6ec73db340418f551d34b84e8088e))
+- fix error during postinstall ([#43](https://github.com/tobiasdiez/nuxt-graphql-server/issues/43)) ([c3923f3](https://github.com/tobiasdiez/nuxt-graphql-server/commit/c3923f3290b6ec73db340418f551d34b84e8088e))
 
 ## [1.2.0](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.1.6...v1.2.0) (2023-03-04)
 
