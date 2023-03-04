@@ -13,6 +13,7 @@ import multimatch from 'multimatch'
 export interface ModuleOptions {
   schema: string | string[]
   codegen?: CodeGenConfig
+  url?: string
 }
 
 const logger = useLogger('graphql/server')
@@ -28,6 +29,7 @@ export default defineNuxtModule<ModuleOptions>({
       // Needed for Apollo: https://the-guild.dev/graphql/codegen/plugins/typescript/typescript-resolvers#integration-with-apollo-server
       useIndexSignature: true,
     },
+    url: undefined,
   },
   setup(options, nuxt) {
     // eslint-disable-next-line @typescript-eslint/unbound-method
@@ -38,7 +40,7 @@ export default defineNuxtModule<ModuleOptions>({
       filename: 'graphql-schema.mjs',
       getContents: () =>
         createSchemaImport(options.schema, nuxt.options.rootDir),
-      write: true,
+      //write: true,
     })
     logger.debug(`GraphQL schema registered at ${schemaPath}`)
     nuxt.options.alias['#' + 'graphql/schema'] = schemaPath
@@ -91,6 +93,20 @@ export default defineNuxtModule<ModuleOptions>({
             // Until https://github.com/nuxt/framework/issues/8720 is implemented, this is the best we can do
             await nitro.hooks.callHook('dev:reload')
           }
+        })
+      })
+    }
+
+    // Add custom devtools tab
+    if (options.url) {
+      // @ts-expect-error: no type info yet
+      nuxt.hook('devtools:customTabs', (tabs) => {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
+        tabs.push({
+          name: 'graphql-server',
+          title: 'GraphQL server',
+          icon: 'simple-icons:graphql',
+          view: { type: 'iframe', src: options.url },
         })
       })
     }
