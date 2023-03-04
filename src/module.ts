@@ -40,7 +40,7 @@ export default defineNuxtModule<ModuleOptions>({
       filename: 'graphql-schema.mjs',
       getContents: () =>
         createSchemaImport(options.schema, nuxt.options.rootDir),
-      //write: true,
+      write: true,
     })
     logger.debug(`GraphQL schema registered at ${schemaPath}`)
     nuxt.options.alias['#' + 'graphql/schema'] = schemaPath
