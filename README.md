@@ -77,8 +77,8 @@ pnpm add @apollo/server graphql @as-integrations/h3 nuxt-graphql-server
 - Clone this repository
 - Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable` (use `npm i -g corepack` for Node.js < 16.10).
 - Install dependencies using `pnpm install`.
-- - Run `pnpm run prepare` to generate type stubs.
-- Use `pnpm run dev` to start [playground](./playground) in development mode.
+- - Run `pnpm stub` to generate type stubs.
+- Use `pnpm dev` to start [playground](./playground) in development mode.
 
 ## License
 
