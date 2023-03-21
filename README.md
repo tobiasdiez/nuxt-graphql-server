@@ -40,12 +40,17 @@ pnpm add @apollo/server graphql @as-integrations/h3 nuxt-graphql-server
        // config
      },
    })
-   
+
    // or
-   
+
    export default defineNuxtConfig({
      modules: [
-       ['nuxt-graphql-server', { /* Optional inline config */ }],
+       [
+         'nuxt-graphql-server',
+         {
+           /* Optional inline config */
+         },
+       ],
      ],
    })
    ```
@@ -80,7 +85,7 @@ pnpm add @apollo/server graphql @as-integrations/h3 nuxt-graphql-server
       url: '/api/graphql',
    }
    ```
-   
+
 ## Options
 
 ```ts
@@ -112,21 +117,21 @@ For example, you may want to:
 ```ts
 export defineNuxtConfig({
   modules: ['nuxt-graphql-server'],
-  
+
   graphqlServer: {
     codegen: {
       // Map your internal enum values to your GraphQL's enums.
-      enumValues: '~/graphql/enums/index', 
-      
+      enumValues: '~/graphql/enums/index',
+
       // Make use of your custom GraphQL Context type and let codegen use it so that the
       // generated resolvers automatically makes use of it.
       contextType: '~/server/graphql/GraphQLContext#GraphQLContext',
-      
+
       // Change the naming convention of your enum keys
       namingConvention: {
         enumValues: 'change-case-all#constantCase
       },
-      
+
       // ... and many more, refer to the plugin docs!
     },
   },
