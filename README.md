@@ -35,9 +35,23 @@ pnpm add @apollo/server graphql @as-integrations/h3 nuxt-graphql-server
    ```ts
    export default defineNuxtConfig({
      modules: ['nuxt-graphql-server'],
+     // Optional top-level config
      graphqlServer: {
-       // Optional: config
+       // config
      },
+   })
+
+   // or
+
+   export default defineNuxtConfig({
+     modules: [
+       [
+         'nuxt-graphql-server',
+         {
+           /* Optional inline config */
+         },
+       ],
+     ],
    })
    ```
 
@@ -71,6 +85,58 @@ pnpm add @apollo/server graphql @as-integrations/h3 nuxt-graphql-server
       url: '/api/graphql',
    }
    ```
+
+## Options
+
+```ts
+graphqlServer: {
+  url: '/relative/path/to/your/graphql/endpoint',
+  schema: './server/**/*.graphql',
+  codegen: {
+    maybeValue: T | null | undefined
+  }
+}
+```
+
+### url
+
+Relative url to your GraphQL Endpoint to enable the [Nuxt Devtools](https://devtools.nuxtjs.org) integration.
+
+### schema
+
+A glob pattern on how to locate your GraphQL Schema (`.graphql`) files.
+
+`Default: './server/**/*.graphql'`
+
+### codegen
+
+This module uses [GraphQL Code Generator](https://the-guild.dev/graphql/codegen) under the hood and makes use of the [TypeScript](https://the-guild.dev/graphql/codegen/plugins/typescript/typescript) and [TypeScript Resolvers](https://the-guild.dev/graphql/codegen/plugins/typescript/typescript-resolvers) plugins which means any options from those plugins can be passed here based on your needs.
+
+For example, you may want to:
+
+```ts
+export defineNuxtConfig({
+  modules: ['nuxt-graphql-server'],
+
+  graphqlServer: {
+    codegen: {
+      // Map your internal enum values to your GraphQL's enums.
+      enumValues: '~/graphql/enums/index',
+
+      // Make use of your custom GraphQL Context type and let codegen use it so that the
+      // generated resolvers automatically makes use of it.
+      contextType: '~/server/graphql/GraphQLContext#GraphQLContext',
+
+      // Change the naming convention of your enum keys
+      namingConvention: {
+        enumValues: 'change-case-all#constantCase
+      },
+
+      // ... and many more, refer to the plugin docs!
+    },
+  },
+})
+```
 
 ## 💻 Development
 
