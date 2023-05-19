@@ -9,6 +9,9 @@ import { relative } from 'path'
 import { CodeGenConfig, createResolverTypeDefs } from './codegen'
 import { createSchemaImport } from './schema-loader'
 import multimatch from 'multimatch'
+import { resolve as resolvePath } from 'path'
+import { Nuxt } from '@nuxt/schema'
+import { pathToFileURL } from 'url'
 
 export interface ModuleOptions {
   schema: string | string[]
@@ -17,6 +20,27 @@ export interface ModuleOptions {
 }
 
 const logger = useLogger('graphql/server')
+
+function setAlias(nuxt: Nuxt, alias: string, path: string) {
+  // workaround for https://github.com/nuxt/nuxt/issues/19453
+  if (process.env.NODE_ENV === 'development') {
+    // rollup needs a file URL
+    nuxt.options.alias[alias] = pathToFileURL(
+      resolvePath(nuxt.options.buildDir, path)
+    ).href
+
+    // vite needs a path
+    nuxt.hooks.hook('vite:extendConfig', (config) => {
+      config.resolve = config.resolve || {}
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        [alias]: path,
+      }
+    })
+  } else {
+    nuxt.options.alias[alias] = path
+  }
+}
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
@@ -43,7 +67,7 @@ export default defineNuxtModule<ModuleOptions>({
       write: true,
     })
     logger.debug(`GraphQL schema registered at ${schemaPath}`)
-    nuxt.options.alias['#' + 'graphql/schema'] = schemaPath
+    setAlias(nuxt, '#graphql/schema', schemaPath)
 
     // Create types in build dir
     const { dst: typeDefPath } = addTemplate({
@@ -66,11 +90,11 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.hook('prepare:types', ({ tsConfig }) => {
       tsConfig.compilerOptions = tsConfig.compilerOptions || { paths: [] }
       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access --- seems to be a eslint bug
-      tsConfig.compilerOptions.paths['#' + 'graphql/schema'] = [
+      tsConfig.compilerOptions.paths['#graphql/schema'] = [
         relative(nuxt.options.rootDir, typeDefPath),
       ]
       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access --- seems to be a eslint bug
-      tsConfig.compilerOptions.paths['#' + 'graphql/resolver'] = [
+      tsConfig.compilerOptions.paths['#graphql/resolver'] = [
         relative(nuxt.options.rootDir, resolverTypeDefPath),
       ]
     })
