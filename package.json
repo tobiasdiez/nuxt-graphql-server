@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "stub": "nuxt-module-build --stub && nuxi prepare playground",
-    "prepack": "nuxt-module-build && cp src/graphql-server.d.ts dist",
+    "prepack": "nuxt-module-build && shx cp src/graphql-server.d.ts dist",
     "build": "pnpm prepack",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
@@ -60,6 +60,7 @@
     "graphql": "^16.6.0",
     "nuxt": "^3.2.3",
     "prettier": "^2.8.4",
+    "shx": "^0.3.4",
     "standard-version": "^9.5.0",
     "typescript": "^5.0.4",
     "vitest": "^0.29.2"
