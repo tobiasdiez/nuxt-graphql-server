@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.0.0](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.2.2...v2.0.0) (2023-05-19)
+
+### ⚠ BREAKING CHANGES
+
+- **deps:** Drop Node 14 support. Require Node.js >= 16
+
+### 🐛 Bug Fixes
+
+- add workaround for ESM loader issue on Windows ([#54](https://github.com/tobiasdiez/nuxt-graphql-server/issues/54)) ([e226623](https://github.com/tobiasdiez/nuxt-graphql-server/commit/e226623b6118b65fdf2cf5e4b32f82bf120ce0eb))
+
+### 🧹 Miscellaneous
+
+- **deps:** update all non-major dependencies ([#47](https://github.com/tobiasdiez/nuxt-graphql-server/issues/47)) ([fa9a8c5](https://github.com/tobiasdiez/nuxt-graphql-server/commit/fa9a8c5934bda18d4b5300a943254ede024eb90a))
+- **deps:** update devdependency typescript to v5 ([#48](https://github.com/tobiasdiez/nuxt-graphql-server/issues/48)) ([bb36ea5](https://github.com/tobiasdiez/nuxt-graphql-server/commit/bb36ea5f32b266a86f69276a716981ef5ac25203))
+- **deps:** update graphql-tools monorepo to v8 ([#53](https://github.com/tobiasdiez/nuxt-graphql-server/issues/53)) ([158c52d](https://github.com/tobiasdiez/nuxt-graphql-server/commit/158c52da6ef1c344abd886b7358aea73fb0dfc2e))
+- **deps:** update pnpm to v8 ([#51](https://github.com/tobiasdiez/nuxt-graphql-server/issues/51)) ([b1ff4f5](https://github.com/tobiasdiez/nuxt-graphql-server/commit/b1ff4f5e43e313d85d9a91d84ab0df52c76b65a4))
+
 ## [1.2.2](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.2.1...v1.2.2) (2023-03-04)
 
 ### 🧹 Miscellaneous
