@@ -122,15 +122,14 @@ export default defineNuxtModule<ModuleOptions>({
     }
 
     // Add custom devtools tab
-    if (options.url) {
-      // @ts-expect-error: no type info yet
+    if (options.url !== undefined) {
       nuxt.hook('devtools:customTabs', (tabs) => {
         // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
         tabs.push({
           name: 'graphql-server',
           title: 'GraphQL server',
           icon: 'simple-icons:graphql',
-          view: { type: 'iframe', src: options.url },
+          view: { type: 'iframe', src: options.url ?? '' },
         })
       })
     }
