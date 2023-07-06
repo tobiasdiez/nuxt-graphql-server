@@ -8,7 +8,7 @@ import { GraphQLSchema, printSchema } from 'graphql'
  */
 export async function loadSchemaFromFiles(
   schemaPointers: string | string[],
-  cwd?: string
+  cwd?: string,
 ): Promise<GraphQLSchema> {
   return await loadGraphqlSchema(schemaPointers, {
     cwd,
@@ -18,7 +18,7 @@ export async function loadSchemaFromFiles(
 
 export async function createSchemaImport(
   schemaPointers: string | string[],
-  cwd?: string
+  cwd?: string,
 ): Promise<string> {
   const schema = await loadSchemaFromFiles(schemaPointers, cwd)
   return `

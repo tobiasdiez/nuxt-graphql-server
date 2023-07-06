@@ -10,10 +10,10 @@ export type CodeGenConfig = typescriptPlugin.TypeScriptPluginConfig &
 export async function createResolverTypeDefs(
   schema: string | string[],
   config: CodeGenConfig,
-  rootDir: string
+  rootDir: string,
 ) {
   const schemaAsDocumentNode = getCachedDocumentNodeFromSchema(
-    await loadSchemaFromFiles(schema, rootDir)
+    await loadSchemaFromFiles(schema, rootDir),
   )
   // Reference: https://the-guild.dev/graphql/codegen/docs/advanced/programmatic-usage
   return await codegen({
