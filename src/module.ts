@@ -26,7 +26,7 @@ function setAlias(nuxt: Nuxt, alias: string, path: string) {
   if (process.env.NODE_ENV === 'development') {
     // rollup needs a file URL
     nuxt.options.alias[alias] = pathToFileURL(
-      resolvePath(nuxt.options.buildDir, path)
+      resolvePath(nuxt.options.buildDir, path),
     ).href
 
     // vite needs a path
@@ -81,7 +81,7 @@ export default defineNuxtModule<ModuleOptions>({
         return createResolverTypeDefs(
           options.schema,
           options.codegen ?? {},
-          nuxt.options.rootDir
+          nuxt.options.rootDir,
         )
       },
     })
