@@ -2,13 +2,12 @@
 
 ## [2.0.1](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v2.0.0...v2.0.1) (2023-07-07)
 
-
 ### 🧹 Miscellaneous
 
-* **deps:** update all non-major dependencies ([#55](https://github.com/tobiasdiez/nuxt-graphql-server/issues/55)) ([487af9e](https://github.com/tobiasdiez/nuxt-graphql-server/commit/487af9e3ca4d44c85106792c00f969990163511b))
-* **deps:** update devdependency prettier to v3 ([#59](https://github.com/tobiasdiez/nuxt-graphql-server/issues/59)) ([ed73319](https://github.com/tobiasdiez/nuxt-graphql-server/commit/ed733190d1142e0b70c289eebf82a0b199212a8f))
-* **deps:** update graphqlcodegenerator monorepo ([#56](https://github.com/tobiasdiez/nuxt-graphql-server/issues/56)) ([6ca6032](https://github.com/tobiasdiez/nuxt-graphql-server/commit/6ca6032652e34962c2ae57bb7b2a818f6aa467b6))
-* use renovate widenPeerDependencies preset ([#61](https://github.com/tobiasdiez/nuxt-graphql-server/issues/61)) ([5ea0ee1](https://github.com/tobiasdiez/nuxt-graphql-server/commit/5ea0ee11a7ed00715814783d6b65edbe01507d64))
+- **deps:** update all non-major dependencies ([#55](https://github.com/tobiasdiez/nuxt-graphql-server/issues/55)) ([487af9e](https://github.com/tobiasdiez/nuxt-graphql-server/commit/487af9e3ca4d44c85106792c00f969990163511b))
+- **deps:** update devdependency prettier to v3 ([#59](https://github.com/tobiasdiez/nuxt-graphql-server/issues/59)) ([ed73319](https://github.com/tobiasdiez/nuxt-graphql-server/commit/ed733190d1142e0b70c289eebf82a0b199212a8f))
+- **deps:** update graphqlcodegenerator monorepo ([#56](https://github.com/tobiasdiez/nuxt-graphql-server/issues/56)) ([6ca6032](https://github.com/tobiasdiez/nuxt-graphql-server/commit/6ca6032652e34962c2ae57bb7b2a818f6aa467b6))
+- use renovate widenPeerDependencies preset ([#61](https://github.com/tobiasdiez/nuxt-graphql-server/issues/61)) ([5ea0ee1](https://github.com/tobiasdiez/nuxt-graphql-server/commit/5ea0ee11a7ed00715814783d6b65edbe01507d64))
 
 ## [2.0.0](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v1.2.2...v2.0.0) (2023-05-19)
 
