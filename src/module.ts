@@ -6,10 +6,10 @@ import {
   useLogger,
 } from '@nuxt/kit'
 import { relative } from 'path'
+import { defu } from 'defu'
 import { CodeGenConfig, createResolverTypeDefs } from './codegen'
 import { createSchemaImport } from './schema-loader'
 import multimatch from 'multimatch'
-import { resolve as resolvePath } from 'path'
 import { Nuxt } from '@nuxt/schema'
 import { pathToFileURL } from 'url'
 
@@ -22,24 +22,19 @@ export interface ModuleOptions {
 const logger = useLogger('graphql/server')
 
 function setAlias(nuxt: Nuxt, alias: string, path: string) {
-  // workaround for https://github.com/nuxt/nuxt/issues/19453
-  if (process.env.NODE_ENV === 'development') {
-    // rollup needs a file URL
-    nuxt.options.alias[alias] = pathToFileURL(
-      resolvePath(nuxt.options.buildDir, path),
-    ).href
+  nuxt.hook('nitro:config', nitroConfig => {
+    nitroConfig.alias = nitroConfig.alias || {}
 
-    // vite needs a path
-    nuxt.hooks.hook('vite:extendConfig', (config) => {
-      config.resolve = config.resolve || {}
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        [alias]: path,
-      }
-    })
-  } else {
+    nitroConfig.externals = defu(
+      typeof nitroConfig.externals === 'object' ? nitroConfig.externals : {},
+      {
+        inline: [path],
+      },
+    )
+
+    nitroConfig.alias[alias] = path
     nuxt.options.alias[alias] = path
-  }
+  })
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -87,6 +82,10 @@ export default defineNuxtModule<ModuleOptions>({
         )
       },
     })
+
+    setAlias(nuxt, '#gql/schema', schemaPath)
+    // no need to add to nuxt.d.ts as all types are exported from this alias
+    setAlias(nuxt, '#gql/resolver', resolverTypeDefPath)
 
     // Add types to `nuxt.d.ts`
     nuxt.hook('prepare:types', ({ references }) => {
