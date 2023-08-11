@@ -77,7 +77,7 @@ export default defineNuxtModule<ModuleOptions>({
     })
     const resolverTypesTemplateName = 'types/graphql-server-resolver.d.ts'
     const { dst: resolverTypeDefPath } = addTemplate({
-      filename: 'types/
+      filename: resolverTypesTemplateName,
       getContents: () => {
         logger.debug(`Generating ${resolverTypesTemplateName}`)
         return createResolverTypeDefs(
