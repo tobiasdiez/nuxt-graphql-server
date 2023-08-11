@@ -60,8 +60,9 @@ export default defineNuxtModule<ModuleOptions>({
     const { resolve } = createResolver(import.meta.url)
 
     // Register #graphql/schema virtual module
+    const schemaPathTemplateName = 'graphql-schema.mjs'
     const { dst: schemaPath } = addTemplate({
-      filename: 'graphql-schema.mjs',
+      filename: schemaPathTemplateName,
       getContents: () =>
         createSchemaImport(options.schema, nuxt.options.rootDir),
       write: true,
@@ -74,10 +75,11 @@ export default defineNuxtModule<ModuleOptions>({
       filename: 'types/graphql-server.d.ts',
       src: resolve('graphql-server.d.ts'),
     })
+    const resolverTypesTemplateName = 'types/graphql-server-resolver.d.ts'
     const { dst: resolverTypeDefPath } = addTemplate({
-      filename: 'types/graphql-server-resolver.d.ts',
+      filename: 'types/
       getContents: () => {
-        logger.debug('Generating graphql-server-resolver.d.ts')
+        logger.debug(`Generating ${resolverTypesTemplateName}`)
         return createResolverTypeDefs(
           options.schema,
           options.codegen ?? {},
@@ -109,8 +111,8 @@ export default defineNuxtModule<ModuleOptions>({
             // Update templates
             await updateTemplates({
               filter: (template) =>
-                template.filename.startsWith('types/graphql-server') ||
-                template.filename === 'graphql-schema.mjs',
+                template.filename === resolverTypesTemplateName ||
+                template.filename === schemaPathTemplateName
             })
 
             // Reload nitro dev server
