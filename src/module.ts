@@ -83,9 +83,9 @@ export default defineNuxtModule<ModuleOptions>({
       },
     })
 
-    setAlias(nuxt, '#gql/schema', schemaPath)
+    setAlias(nuxt, '#graphql/schema', schemaPath)
     // no need to add to nuxt.d.ts as all types are exported from this alias
-    setAlias(nuxt, '#gql/resolver', resolverTypeDefPath)
+    setAlias(nuxt, '#graphql/resolver', resolverTypeDefPath)
 
     // Add types to `nuxt.d.ts`
     nuxt.hook('prepare:types', ({ references }) => {
