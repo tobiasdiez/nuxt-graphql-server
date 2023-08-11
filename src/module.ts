@@ -103,7 +103,7 @@ export default defineNuxtModule<ModuleOptions>({
     if (nuxt.options.dev) {
       nuxt.hook('nitro:build:before', (nitro) => {
         nuxt.hook('builder:watch', async (event, path) => {
-          if (multimatch(path, options.schema)) {
+          if (multimatch(path, options.schema).length > 0) {
             logger.debug('Schema changed', path)
 
             // Update templates
