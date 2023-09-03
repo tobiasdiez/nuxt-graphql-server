@@ -20,6 +20,8 @@ export interface ModuleOptions {
 }
 
 const logger = useLogger('graphql/server')
+// Activate this to see debug logs if you run `pnpm dev --loglevel verbose`
+// logger.level = 5
 
 function setAlias(nuxt: Nuxt, alias: string, path: string) {
   // workaround for https://github.com/nuxt/nuxt/issues/19453
@@ -60,10 +62,13 @@ export default defineNuxtModule<ModuleOptions>({
     const { resolve } = createResolver(import.meta.url)
 
     // Register #graphql/schema virtual module
+    const schemaPathTemplateName = 'graphql-schema.mjs'
     const { dst: schemaPath } = addTemplate({
-      filename: 'graphql-schema.mjs',
-      getContents: () =>
-        createSchemaImport(options.schema, nuxt.options.rootDir),
+      filename: schemaPathTemplateName,
+      getContents: () => {
+        logger.debug(`Generating ${schemaPathTemplateName}`)
+        return createSchemaImport(options.schema, nuxt.options.rootDir)
+      },
       write: true,
     })
     logger.debug(`GraphQL schema registered at ${schemaPath}`)
@@ -74,10 +79,11 @@ export default defineNuxtModule<ModuleOptions>({
       filename: 'types/graphql-server.d.ts',
       src: resolve('graphql-server.d.ts'),
     })
+    const resolverTypesTemplateName = 'types/graphql-server-resolver.d.ts'
     const { dst: resolverTypeDefPath } = addTemplate({
-      filename: 'types/graphql-server-resolver.d.ts',
+      filename: resolverTypesTemplateName,
       getContents: () => {
-        logger.debug('Generating graphql-server-resolver.d.ts')
+        logger.debug(`Generating ${resolverTypesTemplateName}`)
         return createResolverTypeDefs(
           options.schema,
           options.codegen ?? {},
@@ -103,14 +109,22 @@ export default defineNuxtModule<ModuleOptions>({
     if (nuxt.options.dev) {
       nuxt.hook('nitro:build:before', (nitro) => {
         nuxt.hook('builder:watch', async (event, path) => {
-          if (multimatch(path, options.schema)) {
-            logger.debug('Schema changed', path)
+          logger.debug('File changed', path)
+          // Depending on the nuxt version, path is either absolute or relative
+          const absolutePath = resolve(nuxt.options.srcDir, path)
+          const schema = Array.isArray(options.schema)
+            ? options.schema.map((pattern) =>
+                resolve(nuxt.options.srcDir, pattern),
+              )
+            : resolve(nuxt.options.srcDir, options.schema)
+          if (multimatch(absolutePath, schema).length > 0) {
+            logger.debug('Schema changed', absolutePath)
 
             // Update templates
             await updateTemplates({
               filter: (template) =>
-                template.filename.startsWith('types/graphql-server') ||
-                template.filename === 'graphql-schema.mjs',
+                template.filename === resolverTypesTemplateName ||
+                template.filename === schemaPathTemplateName,
             })
 
             // Reload nitro dev server
