@@ -8,5 +8,6 @@
     "nuxi",
     "nuxt",
     "nuxtjs"
-  ]
+  ],
+  "vue.codeActions.enabled": false
 }

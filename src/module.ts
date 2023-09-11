@@ -65,8 +65,6 @@ export default defineNuxtModule<ModuleOptions>({
       write: true,
     })
     logger.debug(`GraphQL schema registered at ${schemaPath}`)
-    setAlias(nuxt, '#graphql/schema', schemaPath)
-
     // Create types in build dir
     const { dst: typeDefPath } = addTemplate({
       filename: 'types/graphql-server.d.ts',
@@ -86,11 +84,11 @@ export default defineNuxtModule<ModuleOptions>({
     })
 
     setAlias(nuxt, '#graphql/schema', schemaPath)
-    // no need to add to nuxt.d.ts as all types are exported from this alias
     setAlias(nuxt, '#graphql/resolver', resolverTypeDefPath)
 
     // Add types to `nuxt.d.ts`
     nuxt.hook('prepare:types', ({ references }) => {
+      // no need to add to nuxt.d.ts as all types are exported from this alias
       references.push({ path: typeDefPath })
     })
 
