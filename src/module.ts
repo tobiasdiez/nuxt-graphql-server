@@ -22,7 +22,7 @@ const logger = useLogger('graphql/server')
 // logger.level = 5
 
 function setAlias(nuxt: Nuxt, alias: string, path: string) {
-  nuxt.hook('nitro:config', nitroConfig => {
+  nuxt.hook('nitro:config', (nitroConfig) => {
     nitroConfig.alias = nitroConfig.alias || {}
 
     nitroConfig.externals = defu(
