@@ -20,6 +20,8 @@ export interface ModuleOptions {
 }
 
 const logger = useLogger('graphql/server')
+// Activate this to see debug logs if you run `pnpm dev --loglevel verbose`
+// logger.level = 5
 
 function setAlias(nuxt: Nuxt, alias: string, path: string) {
   nuxt.hook('nitro:config', nitroConfig => {
@@ -96,19 +98,22 @@ export default defineNuxtModule<ModuleOptions>({
     if (nuxt.options.dev) {
       nuxt.hook('nitro:build:before', (nitro) => {
         nuxt.hook('builder:watch', async (event, path) => {
-           const schema = Array.isArray(options.schema)
-            ? options.schema.map(pattern =>
-                resolve(nuxt.options.rootDir, pattern),
+          logger.debug('File changed', path)
+          // Depending on the nuxt version, path is either absolute or relative
+          const absolutePath = resolve(nuxt.options.srcDir, path)
+          const schema = Array.isArray(options.schema)
+            ? options.schema.map((pattern) =>
+                resolve(nuxt.options.srcDir, pattern),
               )
-            : resolve(nuxt.options.rootDir, options.schema)
-          if (multimatch(path, schema).length > 0) {
-            logger.debug('Schema changed', path)
+            : resolve(nuxt.options.srcDir, options.schema)
+          if (multimatch(absolutePath, schema).length > 0) {
+            logger.debug('Schema changed', absolutePath)
 
             // Update templates
             await updateTemplates({
               filter: (template) =>
                 template.filename === resolverTypesTemplateName ||
-                template.filename === schemaPathTemplateName
+                template.filename === schemaPathTemplateName,
             })
 
             // Reload nitro dev server
