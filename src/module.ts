@@ -5,13 +5,11 @@ import {
   updateTemplates,
   useLogger,
 } from '@nuxt/kit'
-import { relative } from 'path'
 import { defu } from 'defu'
 import { CodeGenConfig, createResolverTypeDefs } from './codegen'
 import { createSchemaImport } from './schema-loader'
 import multimatch from 'multimatch'
 import { Nuxt } from '@nuxt/schema'
-import { pathToFileURL } from 'url'
 
 export interface ModuleOptions {
   schema: string | string[]
@@ -104,6 +102,7 @@ export default defineNuxtModule<ModuleOptions>({
                 resolve(nuxt.options.srcDir, pattern),
               )
             : resolve(nuxt.options.srcDir, options.schema)
+          logger.debug('Checking if the file changed matches ', schema)
           if (multimatch(absolutePath, schema).length > 0) {
             logger.debug('Schema changed', absolutePath)
 
