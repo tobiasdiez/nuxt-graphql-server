@@ -1,5 +1,27 @@
 # Changelog
 
+## [3.0.0](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v2.0.1...v3.0.0) (2023-09-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* resolve path resolve issues (on windows) and types for virtual modules ([#68](https://github.com/tobiasdiez/nuxt-graphql-server/issues/68))
+
+### 🐛 Bug Fixes
+
+* hmr schema watcher had an always truthy conditional check ([#67](https://github.com/tobiasdiez/nuxt-graphql-server/issues/67)) ([4104b50](https://github.com/tobiasdiez/nuxt-graphql-server/commit/4104b50b1e36a77638c961378ce308b34f997725))
+* resolve path resolve issues (on windows) and types for virtual modules ([#68](https://github.com/tobiasdiez/nuxt-graphql-server/issues/68)) ([5256e31](https://github.com/tobiasdiez/nuxt-graphql-server/commit/5256e314a175485d717d2c3335f7bdbf511fe315))
+
+
+### 🧹 Miscellaneous
+
+* **deps:** update actions/checkout action to v4 ([#69](https://github.com/tobiasdiez/nuxt-graphql-server/issues/69)) ([4356e16](https://github.com/tobiasdiez/nuxt-graphql-server/commit/4356e1634695b276b219c8d2b2b720040cc9a09b))
+* **deps:** update all non-major dependencies ([#62](https://github.com/tobiasdiez/nuxt-graphql-server/issues/62)) ([c613500](https://github.com/tobiasdiez/nuxt-graphql-server/commit/c61350059ca7dfb026eef19cefd98a00bc45dfaf))
+* **deps:** update devdependency eslint-config-prettier to v9 ([#66](https://github.com/tobiasdiez/nuxt-graphql-server/issues/66)) ([b4591ce](https://github.com/tobiasdiez/nuxt-graphql-server/commit/b4591cee0287f9580ddf93ea85ef915ebb41d0b1))
+* **deps:** update devdependency eslint-plugin-unused-imports to v3 ([#65](https://github.com/tobiasdiez/nuxt-graphql-server/issues/65)) ([9211aea](https://github.com/tobiasdiez/nuxt-graphql-server/commit/9211aea3247e5d73eddaf5a0f8ff9747e046b9af))
+* **deps:** update typescript-eslint monorepo to v6 ([#63](https://github.com/tobiasdiez/nuxt-graphql-server/issues/63)) ([c718676](https://github.com/tobiasdiez/nuxt-graphql-server/commit/c718676a16262479c674c7906a2a4f5d5f61e15f))
+* fix badge url in the readme ([#73](https://github.com/tobiasdiez/nuxt-graphql-server/issues/73)) ([cd20c96](https://github.com/tobiasdiez/nuxt-graphql-server/commit/cd20c96fd2f11896c6159feb12223e87dc8fdd23))
+
 ## [2.0.1](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v2.0.0...v2.0.1) (2023-07-07)
 
 ### 🧹 Miscellaneous
