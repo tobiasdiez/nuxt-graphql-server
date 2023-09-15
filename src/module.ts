@@ -5,13 +5,11 @@ import {
   updateTemplates,
   useLogger,
 } from '@nuxt/kit'
-import { relative } from 'path'
+import { defu } from 'defu'
 import { CodeGenConfig, createResolverTypeDefs } from './codegen'
 import { createSchemaImport } from './schema-loader'
 import multimatch from 'multimatch'
-import { resolve as resolvePath } from 'path'
 import { Nuxt } from '@nuxt/schema'
-import { pathToFileURL } from 'url'
 
 export interface ModuleOptions {
   schema: string | string[]
@@ -24,24 +22,18 @@ const logger = useLogger('graphql/server')
 // logger.level = 5
 
 function setAlias(nuxt: Nuxt, alias: string, path: string) {
-  // workaround for https://github.com/nuxt/nuxt/issues/19453
-  if (process.env.NODE_ENV === 'development') {
-    // rollup needs a file URL
-    nuxt.options.alias[alias] = pathToFileURL(
-      resolvePath(nuxt.options.buildDir, path),
-    ).href
-
-    // vite needs a path
-    nuxt.hooks.hook('vite:extendConfig', (config) => {
-      config.resolve = config.resolve || {}
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        [alias]: path,
-      }
-    })
-  } else {
+  nuxt.hook('nitro:config', (nitroConfig) => {
+    // Workaround for https://github.com/nuxt/nuxt/issues/19453
+    nitroConfig.externals = defu(
+      typeof nitroConfig.externals === 'object' ? nitroConfig.externals : {},
+      {
+        inline: [path],
+      },
+    )
+    nitroConfig.alias = nitroConfig.alias || {}
+    nitroConfig.alias[alias] = path
     nuxt.options.alias[alias] = path
-  }
+  })
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -71,8 +63,8 @@ export default defineNuxtModule<ModuleOptions>({
       },
       write: true,
     })
-    logger.debug(`GraphQL schema registered at ${schemaPath}`)
     setAlias(nuxt, '#graphql/schema', schemaPath)
+    logger.debug(`GraphQL schema registered at ${schemaPath}`)
 
     // Create types in build dir
     const { dst: typeDefPath } = addTemplate({
@@ -91,18 +83,12 @@ export default defineNuxtModule<ModuleOptions>({
         )
       },
     })
+    setAlias(nuxt, '#graphql/resolver', resolverTypeDefPath)
 
     // Add types to `nuxt.d.ts`
-    nuxt.hook('prepare:types', ({ tsConfig }) => {
-      tsConfig.compilerOptions = tsConfig.compilerOptions || { paths: [] }
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access --- seems to be a eslint bug
-      tsConfig.compilerOptions.paths['#graphql/schema'] = [
-        relative(nuxt.options.rootDir, typeDefPath),
-      ]
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access --- seems to be a eslint bug
-      tsConfig.compilerOptions.paths['#graphql/resolver'] = [
-        relative(nuxt.options.rootDir, resolverTypeDefPath),
-      ]
+    nuxt.hook('prepare:types', ({ references }) => {
+      // no need to add the resolver types here, since they are exported from the corresponding alias
+      references.push({ path: typeDefPath })
     })
 
     // HMR support for schema files
@@ -117,6 +103,7 @@ export default defineNuxtModule<ModuleOptions>({
                 resolve(nuxt.options.srcDir, pattern),
               )
             : resolve(nuxt.options.srcDir, options.schema)
+          logger.debug('Checking if the file changed matches ', schema)
           if (multimatch(absolutePath, schema).length > 0) {
             logger.debug('Schema changed', absolutePath)
 
