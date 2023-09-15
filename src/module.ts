@@ -5,13 +5,11 @@ import {
   updateTemplates,
   useLogger,
 } from '@nuxt/kit'
-import { relative } from 'path'
 import { defu } from 'defu'
 import { CodeGenConfig, createResolverTypeDefs } from './codegen'
 import { createSchemaImport } from './schema-loader'
 import multimatch from 'multimatch'
 import { Nuxt } from '@nuxt/schema'
-import { pathToFileURL } from 'url'
 
 export interface ModuleOptions {
   schema: string | string[]
@@ -20,9 +18,11 @@ export interface ModuleOptions {
 }
 
 const logger = useLogger('graphql/server')
+// Activate this to see debug logs if you run `pnpm dev --loglevel verbose`
+// logger.level = 5
 
 function setAlias(nuxt: Nuxt, alias: string, path: string) {
-  nuxt.hook('nitro:config', nitroConfig => {
+  nuxt.hook('nitro:config', (nitroConfig) => {
     nitroConfig.alias = nitroConfig.alias || {}
 
     nitroConfig.externals = defu(
@@ -63,8 +63,6 @@ export default defineNuxtModule<ModuleOptions>({
       write: true,
     })
     logger.debug(`GraphQL schema registered at ${schemaPath}`)
-    setAlias(nuxt, '#graphql/schema', schemaPath)
-
     // Create types in build dir
     const { dst: typeDefPath } = addTemplate({
       filename: 'types/graphql-server.d.ts',
@@ -84,11 +82,11 @@ export default defineNuxtModule<ModuleOptions>({
     })
 
     setAlias(nuxt, '#graphql/schema', schemaPath)
-    // no need to add to nuxt.d.ts as all types are exported from this alias
     setAlias(nuxt, '#graphql/resolver', resolverTypeDefPath)
 
     // Add types to `nuxt.d.ts`
     nuxt.hook('prepare:types', ({ references }) => {
+      // no need to add to nuxt.d.ts as all types are exported from this alias
       references.push({ path: typeDefPath })
     })
 
@@ -96,19 +94,23 @@ export default defineNuxtModule<ModuleOptions>({
     if (nuxt.options.dev) {
       nuxt.hook('nitro:build:before', (nitro) => {
         nuxt.hook('builder:watch', async (event, path) => {
-           const schema = Array.isArray(options.schema)
-            ? options.schema.map(pattern =>
-                resolve(nuxt.options.rootDir, pattern),
+          logger.debug('File changed', path)
+          // Depending on the nuxt version, path is either absolute or relative
+          const absolutePath = resolve(nuxt.options.srcDir, path)
+          const schema = Array.isArray(options.schema)
+            ? options.schema.map((pattern) =>
+                resolve(nuxt.options.srcDir, pattern),
               )
-            : resolve(nuxt.options.rootDir, options.schema)
-          if (multimatch(path, schema).length > 0) {
-            logger.debug('Schema changed', path)
+            : resolve(nuxt.options.srcDir, options.schema)
+          logger.debug('Checking if the file changed matches ', schema)
+          if (multimatch(absolutePath, schema).length > 0) {
+            logger.debug('Schema changed', absolutePath)
 
             // Update templates
             await updateTemplates({
               filter: (template) =>
                 template.filename === resolverTypesTemplateName ||
-                template.filename === schemaPathTemplateName
+                template.filename === schemaPathTemplateName,
             })
 
             // Reload nitro dev server

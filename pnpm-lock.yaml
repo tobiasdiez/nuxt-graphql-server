@@ -31,6 +31,9 @@ dependencies:
   '@nuxt/kit':
     specifier: ^3.6.2
     version: 3.6.2(rollup@3.26.2)
+  defu:
+    specifier: ^6.1.2
+    version: 6.1.2
   multimatch:
     specifier: ^6.0.0
     version: 6.0.0
@@ -66,9 +69,6 @@ devDependencies:
   '@vitest/coverage-v8':
     specifier: ^0.33.0
     version: 0.33.0(vitest@0.33.0)
-  defu:
-    specifier: ^6.1.2
-    version: 6.1.2
   eslint:
     specifier: ^8.44.0
     version: 8.44.0
