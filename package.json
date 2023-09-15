@@ -38,6 +38,7 @@
     "@graphql-tools/graphql-file-loader": "^8.0.0",
     "@graphql-tools/load": "^8.0.0",
     "@nuxt/kit": "^3.6.2",
+    "defu": "^6.1.2",
     "multimatch": "^6.0.0"
   },
   "peerDependencies": {

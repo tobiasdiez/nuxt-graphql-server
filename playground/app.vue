@@ -4,6 +4,6 @@
   <pre>{{ schema }}</pre>
 </template>
 
-<script setup>
-import { schema } from '#graphql/schema'
+<script lang="ts" setup>
+const schema = await $fetch('/api/GetSchema')
 </script>
