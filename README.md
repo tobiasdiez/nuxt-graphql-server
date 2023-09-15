@@ -158,7 +158,7 @@ Published under [MIT License](./LICENSE).
 [npm-version-href]: https://www.npmjs.com/package/nuxt-graphql-server
 [npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-graphql-server?style=flat-square
 [npm-downloads-href]: https://npmjs.com/package/nuxt-graphql-server
-[github-actions-src]: https://img.shields.io/github/workflow/status/tobiasdiez/nuxt-graphql-server/ci/main?style=flat-square
+[github-actions-src]: https://img.shields.io/github/actions/workflow/status/tobiasdiez/nuxt-graphql-server/ci.yml?branch=main&style=flat-square
 [github-actions-href]: https://github.com/tobiasdiez/nuxt-graphql-server/actions?query=workflow%3Aci
 [codecov-src]: https://img.shields.io/codecov/c/gh/tobiasdiez/nuxt-graphql-server/main?style=flat-square
 [codecov-href]: https://codecov.io/gh/tobiasdiez/nuxt-graphql-server
