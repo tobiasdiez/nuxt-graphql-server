@@ -39,7 +39,7 @@
     "@graphql-tools/load": "^8.0.0",
     "@nuxt/kit": "^3.7.3",
     "defu": "^6.1.2",
-    "multimatch": "^6.0.0"
+    "multimatch": "^7.0.0"
   },
   "peerDependencies": {
     "graphql": "^16.7.1"
