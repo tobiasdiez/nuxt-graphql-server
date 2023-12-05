@@ -54,7 +54,7 @@
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@typescript-eslint/eslint-plugin": "^6.7.0",
     "@typescript-eslint/parser": "^6.7.0",
-    "@vitest/coverage-v8": "^0.34.4",
+    "@vitest/coverage-v8": "^1.0.1",
     "eslint": "^8.49.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-unused-imports": "^3.0.0",
@@ -64,7 +64,7 @@
     "shx": "^0.3.4",
     "standard-version": "^9.5.0",
     "typescript": "^5.2.2",
-    "vitest": "^0.34.4"
+    "vitest": "^1.0.1"
   },
   "packageManager": "pnpm@8.7.5",
   "pnpm": {
