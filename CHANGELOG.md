@@ -2,13 +2,12 @@
 
 ## [3.0.1](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v3.0.0...v3.0.1) (2024-02-13)
 
-
 ### 🧹 Miscellaneous
 
-* **deps:** update actions/setup-node action to v4 ([#77](https://github.com/tobiasdiez/nuxt-graphql-server/issues/77)) ([66ccdd1](https://github.com/tobiasdiez/nuxt-graphql-server/commit/66ccdd14790101077d0a797ee9319813a8224072))
-* **deps:** update dependency multimatch to v7 ([#79](https://github.com/tobiasdiez/nuxt-graphql-server/issues/79)) ([1c79522](https://github.com/tobiasdiez/nuxt-graphql-server/commit/1c79522d27003e654dbf19d0d215f0548a67889b))
-* **deps:** update typescript-eslint monorepo to v7 ([#84](https://github.com/tobiasdiez/nuxt-graphql-server/issues/84)) ([5e88764](https://github.com/tobiasdiez/nuxt-graphql-server/commit/5e8876444f9401db0374ce49bce8bb611fe41162))
-* **deps:** update vitest monorepo to v1 ([#81](https://github.com/tobiasdiez/nuxt-graphql-server/issues/81)) ([f25b382](https://github.com/tobiasdiez/nuxt-graphql-server/commit/f25b382eb9b7680cb9a61c821057c65fb636ff1f))
+- **deps:** update actions/setup-node action to v4 ([#77](https://github.com/tobiasdiez/nuxt-graphql-server/issues/77)) ([66ccdd1](https://github.com/tobiasdiez/nuxt-graphql-server/commit/66ccdd14790101077d0a797ee9319813a8224072))
+- **deps:** update dependency multimatch to v7 ([#79](https://github.com/tobiasdiez/nuxt-graphql-server/issues/79)) ([1c79522](https://github.com/tobiasdiez/nuxt-graphql-server/commit/1c79522d27003e654dbf19d0d215f0548a67889b))
+- **deps:** update typescript-eslint monorepo to v7 ([#84](https://github.com/tobiasdiez/nuxt-graphql-server/issues/84)) ([5e88764](https://github.com/tobiasdiez/nuxt-graphql-server/commit/5e8876444f9401db0374ce49bce8bb611fe41162))
+- **deps:** update vitest monorepo to v1 ([#81](https://github.com/tobiasdiez/nuxt-graphql-server/issues/81)) ([f25b382](https://github.com/tobiasdiez/nuxt-graphql-server/commit/f25b382eb9b7680cb9a61c821057c65fb636ff1f))
 
 ## [3.0.0](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v2.0.1...v3.0.0) (2023-09-15)
 
