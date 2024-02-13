@@ -29,4 +29,4 @@ jobs:
       - run: pnpm build
       - run: pnpm test:coverage
       #- run: pnpm test:integration
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
