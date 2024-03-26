@@ -1,3 +1,4 @@
+import { relative, resolve } from 'node:path'
 import {
   addTemplate,
   createResolver,
@@ -95,6 +96,7 @@ export default defineNuxtModule<ModuleOptions>({
     if (nuxt.options.dev) {
       nuxt.hook('nitro:build:before', (nitro) => {
         nuxt.hook('builder:watch', async (event, path) => {
+          path = relative(nuxt.options.srcDir, resolve(nuxt.options.srcDir, path))
           logger.debug('File changed', path)
           // Depending on the nuxt version, path is either absolute or relative
           const absolutePath = resolve(nuxt.options.srcDir, path)
