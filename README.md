@@ -19,6 +19,7 @@ This package allows you to easily develop a GraphQL server in your [Nuxt 3](v3.n
 
 ```sh
 npx nuxi@latest module add graphql-server
+npm i @apollo/server graphql @as-integrations/h3
 ```
 
 ## Usage
