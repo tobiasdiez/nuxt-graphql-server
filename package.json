@@ -57,7 +57,7 @@
     "@vitest/coverage-v8": "^2.0.1",
     "eslint": "^8.49.0",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-unused-imports": "^3.0.0",
+    "eslint-plugin-unused-imports": "^4.0.0",
     "graphql": "^16.8.0",
     "nuxt": "^3.7.3",
     "prettier": "^3.0.3",
