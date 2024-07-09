@@ -9,7 +9,6 @@ describe('api', async () => {
 
   describe('GetSchema', () => {
     it('returns the schema', async () => {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       const schema = await $fetch('/api/GetSchema')
       expect(schema).toMatchInlineSnapshot(`
         "type Query {
@@ -31,7 +30,6 @@ describe('api', async () => {
 
   describe('graphql', () => {
     it('returns the books', async () => {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       const books = await $fetch('/api/graphql', {
         method: 'POST',
         body: JSON.stringify({

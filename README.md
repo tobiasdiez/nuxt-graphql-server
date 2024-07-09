@@ -65,20 +65,24 @@ pnpm add @apollo/server graphql @as-integrations/h3 nuxt-graphql-server
    import { startServerAndCreateH3Handler } from '@as-integrations/h3'
 
    const resolvers: Resolvers = {
-      Query: {
-         // Typed resolvers
-      },
+     Query: {
+       // Typed resolvers
+     },
    }
 
-   const apollo = new ApolloServer({typeDefs: schema, resolvers})
+   const apollo = new ApolloServer({ typeDefs: schema, resolvers })
 
    export default startServerAndCreateH3Handler(apollo, {
-      // Optional: Specify context
-      context: (event) => {...},
+     // Optional: Specify context
+     context: (event) => {
+       /*...*/
+     },
    })
    ```
 
 4. Optionally, specify the (relative) url to the GraphQL endpoint in `nuxt.config.ts` to enable the [Nuxt Devtools](https://devtools.nuxtjs.org) integration.
+
+   <!-- eslint-skip -->
 
    ```ts
    graphqlServer: {
@@ -87,6 +91,8 @@ pnpm add @apollo/server graphql @as-integrations/h3 nuxt-graphql-server
    ```
 
 ## Options
+
+<!-- eslint-skip -->
 
 ```ts
 graphqlServer: {
@@ -115,7 +121,7 @@ This module uses [GraphQL Code Generator](https://the-guild.dev/graphql/codegen)
 For example, you may want to:
 
 ```ts
-export defineNuxtConfig({
+export default defineNuxtConfig({
   modules: ['nuxt-graphql-server'],
 
   graphqlServer: {
@@ -129,7 +135,7 @@ export defineNuxtConfig({
 
       // Change the naming convention of your enum keys
       namingConvention: {
-        enumValues: 'change-case-all#constantCase
+        enumValues: 'change-case-all#constantCase',
       },
 
       // ... and many more, refer to the plugin docs!
