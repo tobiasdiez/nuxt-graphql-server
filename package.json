@@ -7,6 +7,7 @@
   "type": "module",
   "exports": {
     ".": {
+      "types": "./dist/types.d.ts",
       "import": "./dist/module.mjs",
       "require": "./dist/module.cjs"
     }
@@ -17,18 +18,19 @@
     "dist"
   ],
   "scripts": {
-    "stub": "nuxt-module-build --stub && nuxi prepare playground",
-    "prepack": "nuxt-module-build && shx cp src/graphql-server.d.ts dist",
+    "prepack": "nuxt-module-build build",
     "build": "pnpm prepack",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build build --stub && nuxi prepare playground",
     "lint": "pnpm lint:eslint && pnpm lint:prettier",
     "lint:eslint": "eslint --report-unused-disable-directives .",
     "lint:prettier": "prettier --check --ignore-path .gitignore . !pnpm-lock.yaml",
     "release": "standard-version && git push --follow-tags && pnpm publish",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "test:watch": "vitest watch"
+    "test:watch": "vitest watch",
+    "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit"
   },
   "dependencies": {
     "@graphql-codegen/core": "^4.0.2",

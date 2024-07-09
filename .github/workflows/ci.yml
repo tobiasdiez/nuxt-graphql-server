@@ -24,7 +24,7 @@ jobs:
         with:
           node-version-file: package.json
           cache: 'pnpm'
-      - run: pnpm install && pnpm stub
+      - run: pnpm install && pnpm dev:prepare
       - run: pnpm lint
       - run: pnpm build
       - run: pnpm test:coverage
