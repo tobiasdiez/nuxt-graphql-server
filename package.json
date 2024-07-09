@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "@apollo/server": "^4.10.4",
-    "@as-integrations/h3": "^1.1.6",
+    "@as-integrations/h3": "^1.2.1",
     "@nuxt/devtools": "^0.8.5",
     "@nuxt/module-builder": "^0.8.1",
     "@nuxt/schema": "^3.12.3",
@@ -59,6 +59,7 @@
     "eslint-config-unjs": "^0.3.2",
     "eslint-plugin-unused-imports": "^4.0.0",
     "graphql": "^16.9.0",
+    "graphql-ws": "^5.16.0",
     "nuxt": "^3.12.3",
     "prettier": "^3.3.2",
     "shx": "^0.3.4",
