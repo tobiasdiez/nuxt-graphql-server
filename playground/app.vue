@@ -5,5 +5,5 @@
 </template>
 
 <script lang="ts" setup>
-const schema = await $fetch('/api/GetSchema')
+import { schema } from '#graphql/schema'
 </script>

@@ -21,21 +21,6 @@ const logger = useLogger('graphql/server')
 // Activate this to see debug logs if you run `pnpm dev --loglevel verbose`
 // logger.level = 5
 
-function setAlias(nuxt: Nuxt, alias: string, path: string) {
-  nuxt.hook('nitro:config', (nitroConfig) => {
-    // Workaround for https://github.com/nuxt/nuxt/issues/19453
-    nitroConfig.externals = defu(
-      typeof nitroConfig.externals === 'object' ? nitroConfig.externals : {},
-      {
-        inline: [path],
-      },
-    )
-    nitroConfig.alias = nitroConfig.alias || {}
-    nitroConfig.alias[alias] = path
-    nuxt.options.alias[alias] = path
-  })
-}
-
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'nuxt-graphql-server',
@@ -62,12 +47,12 @@ export default defineNuxtModule<ModuleOptions>({
       },
       write: true,
     })
-    setAlias(nuxt, '#graphql/schema', schemaPath)
+    nuxt.options.alias['#graphql/schema'] = schemaPath
     logger.debug(`GraphQL schema registered at ${schemaPath}`)
 
     // Create types in build dir
-    const { dst: typeDefPath } = addTemplate({
-      filename: 'types/graphql-server.d.ts',
+    addTemplate({
+      filename: 'graphql-schema.d.ts', // This needs to be named exactly like the virtual module (but with .d.ts extension)
       src: resolve('graphql-server.d.ts'),
     })
     const resolverTypesTemplateName = 'types/graphql-server-resolver.d.ts'
@@ -82,13 +67,7 @@ export default defineNuxtModule<ModuleOptions>({
         )
       },
     })
-    setAlias(nuxt, '#graphql/resolver', resolverTypeDefPath)
-
-    // Add types to `nuxt.d.ts`
-    nuxt.hook('prepare:types', ({ references }) => {
-      // no need to add the resolver types here, since they are exported from the corresponding alias
-      references.push({ path: typeDefPath })
-    })
+    nuxt.options.alias['#graphql/resolver'] = resolverTypeDefPath
 
     // HMR support for schema files
     if (nuxt.options.dev) {
