@@ -7,9 +7,9 @@ describe('api', async () => {
     rootDir: fileURLToPath(new URL('../playground', import.meta.url)),
   })
 
-  describe('GetSchema', () => {
+  describe('get-schema', () => {
     it('returns the schema', async () => {
-      const schema = await $fetch('/api/GetSchema')
+      const schema = await $fetch('/api/get-schema')
       expect(schema).toMatchInlineSnapshot(`
         "type Query {
           books: [Book]
