@@ -5,11 +5,9 @@ import {
   updateTemplates,
   useLogger,
 } from '@nuxt/kit'
-import { defu } from 'defu'
 import { type CodeGenConfig, createResolverTypeDefs } from './codegen'
 import { createSchemaImport } from './schema-loader'
 import multimatch from 'multimatch'
-import type { Nuxt } from '@nuxt/schema'
 
 export interface ModuleOptions {
   schema: string | string[]
