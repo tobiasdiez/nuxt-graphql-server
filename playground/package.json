@@ -1,4 +1,14 @@
 {
   "private": true,
-  "name": "playground"
+  "name": "playground",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi generate"
+  },
+  "dependencies": {
+    "nuxt": "^3.12.3",
+    "@as-integrations/h3": "^1.2.1"
+  }
 }

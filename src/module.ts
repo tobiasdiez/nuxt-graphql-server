@@ -6,10 +6,10 @@ import {
   useLogger,
 } from '@nuxt/kit'
 import { defu } from 'defu'
-import { CodeGenConfig, createResolverTypeDefs } from './codegen'
+import { type CodeGenConfig, createResolverTypeDefs } from './codegen'
 import { createSchemaImport } from './schema-loader'
 import multimatch from 'multimatch'
-import { Nuxt } from '@nuxt/schema'
+import type { Nuxt } from '@nuxt/schema'
 
 export interface ModuleOptions {
   schema: string | string[]
@@ -50,7 +50,6 @@ export default defineNuxtModule<ModuleOptions>({
     url: undefined,
   },
   setup(options, nuxt) {
-    // eslint-disable-next-line @typescript-eslint/unbound-method
     const { resolve } = createResolver(import.meta.url)
 
     // Register #graphql/schema virtual module
@@ -125,7 +124,6 @@ export default defineNuxtModule<ModuleOptions>({
     // Add custom devtools tab
     if (options.url !== undefined) {
       nuxt.hook('devtools:customTabs', (tabs) => {
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
         tabs.push({
           name: 'graphql-server',
           title: 'GraphQL server',
