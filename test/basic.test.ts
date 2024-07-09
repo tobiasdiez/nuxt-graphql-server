@@ -7,10 +7,9 @@ describe('api', async () => {
     rootDir: fileURLToPath(new URL('../playground', import.meta.url)),
   })
 
-  describe('GetSchema', () => {
+  describe('get-schema', () => {
     it('returns the schema', async () => {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      const schema = await $fetch('/api/GetSchema')
+      const schema = await $fetch('/api/get-schema')
       expect(schema).toMatchInlineSnapshot(`
         "type Query {
           books: [Book]
@@ -31,7 +30,6 @@ describe('api', async () => {
 
   describe('graphql', () => {
     it('returns the books', async () => {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       const books = await $fetch('/api/graphql', {
         method: 'POST',
         body: JSON.stringify({

@@ -22,11 +22,11 @@ jobs:
       - uses: pnpm/action-setup@v2
       - uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version-file: package.json
           cache: 'pnpm'
-      - run: pnpm install && pnpm stub
+      - run: pnpm install && pnpm dev:prepare
       - run: pnpm lint
       - run: pnpm build
       - run: pnpm test:coverage
       #- run: pnpm test:integration
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
