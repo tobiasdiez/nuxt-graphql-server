@@ -1,3 +1,1 @@
-declare module '#graphql/schema' {
-  const schema: string
-}
+export const schema: string
