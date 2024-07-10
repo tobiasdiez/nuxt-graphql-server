@@ -8,7 +8,7 @@ import {
 } from '@as-integrations/h3'
 import { makeExecutableSchema } from '@graphql-tools/schema'
 import type { Resolvers } from '#graphql/resolver'
-import { schema } from '#graphql/schema'
+import { typeDefs } from '#graphql/schema'
 
 // Used to publish subscription events
 const pubsub = new PubSub()
@@ -33,16 +33,16 @@ const resolvers: Resolvers = {
 
 // Create schema, which will be used separately by ApolloServer and
 // the WebSocket server.
-const executableSchema = makeExecutableSchema({ typeDefs: schema, resolvers })
+const schema = makeExecutableSchema({ typeDefs, resolvers })
 
 // Set up ApolloServer.
 const apollo = new ApolloServer({
-  schema: executableSchema,
+  schema,
 })
 
 export default startServerAndCreateH3Handler(apollo, {
   websocket: {
-    ...defineGraphqlWebSocket({ schema: executableSchema }),
+    ...defineGraphqlWebSocket({ schema }),
     error(peer, error) {
       console.error('[ws] error', peer, error)
       // In a real app, you would want to properly log this error
