@@ -1,5 +1,45 @@
 # Changelog
 
+## [3.1.0](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v3.0.0...v3.1.0) (2024-07-10)
+
+
+### 🔖 Features
+
+* expose `typeDefs` instead of `schema` from `#graphql/schema` for easier use with Apollo server ([#99](https://github.com/tobiasdiez/nuxt-graphql-server/issues/99)) ([7171731](https://github.com/tobiasdiez/nuxt-graphql-server/commit/71717314a99c1927a3cabc153bb855860453345b))
+
+
+### 🐛 Bug Fixes
+
+* provide typescript info for virtual import `#graphql/schema` ([#97](https://github.com/tobiasdiez/nuxt-graphql-server/issues/97)) ([8f5018d](https://github.com/tobiasdiez/nuxt-graphql-server/commit/8f5018dd53480d999de239ec89dc35bbf0c1acd5))
+
+
+### 📚 Documentation
+
+* add subscription example ([#98](https://github.com/tobiasdiez/nuxt-graphql-server/issues/98)) ([21ef02b](https://github.com/tobiasdiez/nuxt-graphql-server/commit/21ef02b4452e02841fd9f1b24e42a2c030f5c62f))
+* use new `nuxi module add` command in installation ([#86](https://github.com/tobiasdiez/nuxt-graphql-server/issues/86)) ([b2457e6](https://github.com/tobiasdiez/nuxt-graphql-server/commit/b2457e606dd8e62b04116e582ada6cebedc4aaec))
+
+
+### 🧹 Miscellaneous
+
+* add `.release-please-manifest.json` to git add command in release workflow ([#101](https://github.com/tobiasdiez/nuxt-graphql-server/issues/101)) ([41c4882](https://github.com/tobiasdiez/nuxt-graphql-server/commit/41c488270aade57e3d3ae7454565bd04b8f84c35))
+* **deps:** update actions/setup-node action to v4 ([#77](https://github.com/tobiasdiez/nuxt-graphql-server/issues/77)) ([66ccdd1](https://github.com/tobiasdiez/nuxt-graphql-server/commit/66ccdd14790101077d0a797ee9319813a8224072))
+* **deps:** update all non-major dependencies ([#75](https://github.com/tobiasdiez/nuxt-graphql-server/issues/75)) ([055388c](https://github.com/tobiasdiez/nuxt-graphql-server/commit/055388caf5a23361252631beba6eeb32e83bdfcc))
+* **deps:** update codecov/codecov-action action to v4 ([#83](https://github.com/tobiasdiez/nuxt-graphql-server/issues/83)) ([7c40db8](https://github.com/tobiasdiez/nuxt-graphql-server/commit/7c40db84d2e8539377fe213214aafcf0df4f7804))
+* **deps:** update dependency multimatch to v7 ([#79](https://github.com/tobiasdiez/nuxt-graphql-server/issues/79)) ([1c79522](https://github.com/tobiasdiez/nuxt-graphql-server/commit/1c79522d27003e654dbf19d0d215f0548a67889b))
+* **deps:** update devdependency @as-integrations/h3 to ^1.2.1 ([#95](https://github.com/tobiasdiez/nuxt-graphql-server/issues/95)) ([d0770f4](https://github.com/tobiasdiez/nuxt-graphql-server/commit/d0770f47dc3a0e918d8205fbd7f57b83d0a35d7b))
+* **deps:** update devdependency @nuxt/devtools to v1 ([#76](https://github.com/tobiasdiez/nuxt-graphql-server/issues/76)) ([699f2a0](https://github.com/tobiasdiez/nuxt-graphql-server/commit/699f2a08954fa6ceab4c29035ab839f23dbdaa3e))
+* **deps:** update devdependency eslint to v9 ([#89](https://github.com/tobiasdiez/nuxt-graphql-server/issues/89)) ([0b3334a](https://github.com/tobiasdiez/nuxt-graphql-server/commit/0b3334a2bb981a3103cf84f9d56d76570f7ee72b))
+* **deps:** update devdependency eslint-plugin-unused-imports to v4 ([#91](https://github.com/tobiasdiez/nuxt-graphql-server/issues/91)) ([5345043](https://github.com/tobiasdiez/nuxt-graphql-server/commit/534504369e0b8b16d3aae13a6c693325298cf277))
+* **deps:** update google-github-actions/release-please-action action to v4 ([#93](https://github.com/tobiasdiez/nuxt-graphql-server/issues/93)) ([623598c](https://github.com/tobiasdiez/nuxt-graphql-server/commit/623598c0e733fe7061914f58ef17fdd9391fbab5))
+* **deps:** update mcr.microsoft.com/vscode/devcontainers/base docker tag to v1 ([#90](https://github.com/tobiasdiez/nuxt-graphql-server/issues/90)) ([646084f](https://github.com/tobiasdiez/nuxt-graphql-server/commit/646084f2e24f7b86f3e079d9b329ffbcb78fba33))
+* **deps:** update pnpm to v9 ([#88](https://github.com/tobiasdiez/nuxt-graphql-server/issues/88)) ([7ac7ea0](https://github.com/tobiasdiez/nuxt-graphql-server/commit/7ac7ea0ce56e6c811fe7b12d5e552d605dbe12ca))
+* **deps:** update typescript-eslint monorepo to v7 ([#84](https://github.com/tobiasdiez/nuxt-graphql-server/issues/84)) ([5e88764](https://github.com/tobiasdiez/nuxt-graphql-server/commit/5e8876444f9401db0374ce49bce8bb611fe41162))
+* **deps:** update vitest monorepo to v1 ([#81](https://github.com/tobiasdiez/nuxt-graphql-server/issues/81)) ([f25b382](https://github.com/tobiasdiez/nuxt-graphql-server/commit/f25b382eb9b7680cb9a61c821057c65fb636ff1f))
+* **deps:** update vitest monorepo to v2 ([#92](https://github.com/tobiasdiez/nuxt-graphql-server/issues/92)) ([32c6c76](https://github.com/tobiasdiez/nuxt-graphql-server/commit/32c6c7696a2cd866dc30262c2ff91499bf5314ea))
+* fix formatting of release-please-manifest in release workflow ([#100](https://github.com/tobiasdiez/nuxt-graphql-server/issues/100)) ([c9d300d](https://github.com/tobiasdiez/nuxt-graphql-server/commit/c9d300df2ad4c5b02bcf43d83f34e4b9adbb526e))
+* update Node.js version to 16.10.0 or &gt;=18.0.0 in package.json ([#94](https://github.com/tobiasdiez/nuxt-graphql-server/issues/94)) ([e093155](https://github.com/tobiasdiez/nuxt-graphql-server/commit/e093155b22ca81c7e09d51f6d1a2f3022e5c63ee))
+* update repo based on nuxt starter ([#96](https://github.com/tobiasdiez/nuxt-graphql-server/issues/96)) ([c726c0d](https://github.com/tobiasdiez/nuxt-graphql-server/commit/c726c0dbdb81416503081b5d73d5c515748a8096))
+
 ## [3.0.0](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v2.0.1...v3.0.0) (2023-09-15)
 
 ### ⚠ BREAKING CHANGES
