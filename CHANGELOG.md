@@ -2,10 +2,9 @@
 
 ## [3.1.1](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v3.1.0...v3.1.1) (2024-07-10)
 
-
 ### 🧹 Miscellaneous
 
-* push changes to release files only if there is a pull request ([#102](https://github.com/tobiasdiez/nuxt-graphql-server/issues/102)) ([cc0967d](https://github.com/tobiasdiez/nuxt-graphql-server/commit/cc0967d3f5d8bde84c95ce6a13f89a323279f848))
+- push changes to release files only if there is a pull request ([#102](https://github.com/tobiasdiez/nuxt-graphql-server/issues/102)) ([cc0967d](https://github.com/tobiasdiez/nuxt-graphql-server/commit/cc0967d3f5d8bde84c95ce6a13f89a323279f848))
 
 ## [3.1.0](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v3.0.0...v3.1.0) (2024-07-10)
 
