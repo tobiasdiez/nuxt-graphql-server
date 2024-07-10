@@ -1,5 +1,5 @@
 import type { Resolvers } from '#graphql/resolver'
-import { schema } from '#graphql/schema'
+import { typeDefs } from '#graphql/schema'
 import { ApolloServer } from '@apollo/server'
 import { startServerAndCreateH3Handler } from '@as-integrations/h3'
 
@@ -15,6 +15,6 @@ const resolvers: Resolvers = {
   },
 }
 
-const apollo = new ApolloServer({ typeDefs: schema, resolvers })
+const apollo = new ApolloServer({ typeDefs, resolvers })
 
 export default startServerAndCreateH3Handler(apollo)

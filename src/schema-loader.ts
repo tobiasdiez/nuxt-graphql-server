@@ -22,6 +22,7 @@ export async function createSchemaImport(
 ): Promise<string> {
   const schema = await loadSchemaFromFiles(schemaPointers, cwd)
   return `
-      export const schema = \`${printSchema(schema)}\`
+  export const typeDefs = \`${printSchema(schema)}\`
+  export const schema = typeDefs
     `
 }

@@ -64,7 +64,7 @@ pnpm add @apollo/server graphql @as-integrations/h3 nuxt-graphql-server
 
    ```ts
    import { Resolvers } from '#graphql/resolver'
-   import { schema } from '#graphql/schema'
+   import { typeDefs } from '#graphql/schema'
    import { ApolloServer } from '@apollo/server'
    import { startServerAndCreateH3Handler } from '@as-integrations/h3'
 
@@ -74,7 +74,7 @@ pnpm add @apollo/server graphql @as-integrations/h3 nuxt-graphql-server
      },
    }
 
-   const apollo = new ApolloServer({ typeDefs: schema, resolvers })
+   const apollo = new ApolloServer({ typeDefs, resolvers })
 
    export default startServerAndCreateH3Handler(apollo, {
      // Optional: Specify context
@@ -136,7 +136,7 @@ import {
 } from '@as-integrations/h3'
 import { makeExecutableSchema } from '@graphql-tools/schema'
 import type { Resolvers } from '#graphql/resolver'
-import { schema } from '#graphql/schema'
+import { typeDefs } from '#graphql/schema'
 
 const resolvers: Resolvers = {
   Query: {
@@ -147,10 +147,10 @@ const resolvers: Resolvers = {
   },
 }
 
-const executableSchema = makeExecutableSchema({ typeDefs: schema, resolvers })
-const apollo = new ApolloServer({ schema: executableSchema })
+const schema = makeExecutableSchema({ typeDefs, resolvers })
+const apollo = new ApolloServer({ schema })
 export default startServerAndCreateH3Handler(apollo, {
-  websocket: defineGraphqlWebSocket({ schema: executableSchema }),
+  websocket: defineGraphqlWebSocket({ schema }),
 })
 ```
 
@@ -215,7 +215,7 @@ export default defineNuxtConfig({
 - Clone this repository
 - Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable` (use `npm i -g corepack` for Node.js < 16.10).
 - Install dependencies using `pnpm install`.
-- - Run `pnpm stub` to generate type stubs.
+- Run `pnpm dev:prepare` to generate type stubs.
 - Use `pnpm dev` to start [playground](./playground) in development mode.
 
 ## License
