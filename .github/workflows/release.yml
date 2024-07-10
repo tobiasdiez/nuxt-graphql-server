@@ -63,7 +63,7 @@ jobs:
           node-version-file: package.json
           cache: 'pnpm'
       - name: Install dependencies
-        run: pnpm install && pnpm stub
+        run: pnpm install
       - name: Config npm
         run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
         env:
