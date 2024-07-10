@@ -13,6 +13,7 @@ describe('api', async () => {
       expect(schema).toMatchInlineSnapshot(`
         "type Query {
           books: [Book]
+          currentNumber: Int
         }
 
         type Book {
@@ -23,6 +24,10 @@ describe('api', async () => {
         type Author {
           name: String
           books: [Book]
+        }
+
+        type Subscription {
+          numberIncremented: Int
         }"
       `)
     })

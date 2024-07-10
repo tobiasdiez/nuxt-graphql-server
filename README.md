@@ -13,6 +13,7 @@ This package allows you to easily develop a GraphQL server in your [Nuxt 3](v3.n
 
 - Provides a virtual module `#graphql/schema` from where you can import your schema. Under the hood, it automatically merges multiple schema files together into a complete schema. Moreover, you no longer need to worry about deploying schema `graphql` files.
 - Automatically generated typescript definitions for your resolvers via the virtual module `#graphql/resolver`.
+- Support for GraphQL subscriptions.
 - [Nuxt Devtools](https://devtools.nuxtjs.org) integration: adds the Apollo Studio Sandbox directly in the devtools.
 
 ## Installation
@@ -92,6 +93,68 @@ pnpm add @apollo/server graphql @as-integrations/h3 nuxt-graphql-server
       url: '/api/graphql',
    }
    ```
+
+## Subscriptions
+
+To enable subscriptions, you need to install a few more dependencies:
+
+```sh
+# npm
+npm install graphql-ws graphql-subscriptions
+
+# yarn
+yarn add graphql-ws graphql-subscriptions
+
+# pnpm
+pnpm add graphql-ws graphql-subscriptions
+```
+
+The package `graphql-ws` is a lightweight WebSocket server that can be used to handle GraphQL subscriptions. The package `graphql-subscriptions` provides the `PubSub` class that can be used to publish and subscribe to events.
+
+> Note that the default `PubSub` implementation is intended for demo purposes. It only works if you have a single instance of your server and doesn't scale beyond a couple of connections.
+> For production usage you'll want to use one of the [PubSub implementations](https://github.com/apollographql/graphql-subscriptions?tab=readme-ov-file#pubsub-implementations) backed by an external store. (e.g. Redis).
+
+Activate websocket support in your `nuxt.config.ts`:
+
+<!-- eslint-skip -->
+
+```ts
+nitro: {
+  experimental: {
+    websocket: true,
+  },
+},
+```
+
+Then, create the endpoint `server/api/graphql.ts` with the following content:
+
+```ts
+import { ApolloServer } from '@apollo/server'
+import {
+  startServerAndCreateH3Handler,
+  defineGraphqlWebSocket,
+} from '@as-integrations/h3'
+import { makeExecutableSchema } from '@graphql-tools/schema'
+import type { Resolvers } from '#graphql/resolver'
+import { schema } from '#graphql/schema'
+
+const resolvers: Resolvers = {
+  Query: {
+    // Typed resolvers
+  },
+  Subscription: {
+    // Typed resolvers
+  },
+}
+
+const executableSchema = makeExecutableSchema({ typeDefs: schema, resolvers })
+const apollo = new ApolloServer({ schema: executableSchema })
+export default startServerAndCreateH3Handler(apollo, {
+  websocket: defineGraphqlWebSocket({ schema: executableSchema }),
+})
+```
+
+A full example can be found in the [playground](./playground) folder under `server/api/subscription.ts`.
 
 ## Options
 

@@ -1,5 +1,6 @@
 type Query {
   books: [Book]
+  currentNumber: Int
 }
 
 type Book {
@@ -10,4 +11,8 @@ type Book {
 type Author {
   name: String
   books: [Book]
+}
+
+type Subscription {
+  numberIncremented: Int
 }
