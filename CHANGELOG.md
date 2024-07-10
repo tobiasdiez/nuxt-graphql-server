@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.1.3](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v3.1.2...v3.1.3) (2024-07-10)
+
+### 🧹 Miscellaneous
+
+- update prepack script to include nuxi prepare command ([#106](https://github.com/tobiasdiez/nuxt-graphql-server/issues/106)) ([d110710](https://github.com/tobiasdiez/nuxt-graphql-server/commit/d110710c4338838848d1a05f4b787e361c4fe0cd))
+
 ## [3.1.2](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v3.1.1...v3.1.2) (2024-07-10)
 
 ### 🧹 Miscellaneous
