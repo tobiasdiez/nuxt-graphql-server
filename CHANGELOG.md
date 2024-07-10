@@ -2,10 +2,9 @@
 
 ## [3.1.2](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v3.1.1...v3.1.2) (2024-07-10)
 
-
 ### 🧹 Miscellaneous
 
-* fix release script ([#104](https://github.com/tobiasdiez/nuxt-graphql-server/issues/104)) ([88ba080](https://github.com/tobiasdiez/nuxt-graphql-server/commit/88ba080f7fd04c78dae9fb69bf20f64da71a810f))
+- fix release script ([#104](https://github.com/tobiasdiez/nuxt-graphql-server/issues/104)) ([88ba080](https://github.com/tobiasdiez/nuxt-graphql-server/commit/88ba080f7fd04c78dae9fb69bf20f64da71a810f))
 
 ## [3.1.1](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v3.1.0...v3.1.1) (2024-07-10)
 
