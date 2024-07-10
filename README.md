@@ -116,6 +116,7 @@ The package `graphql-ws` is a lightweight WebSocket server that can be used to h
 
 Activate websocket support in your `nuxt.config.ts`:
 
+<!-- eslint-skip -->
 ```ts
 nitro: {
   experimental: {
