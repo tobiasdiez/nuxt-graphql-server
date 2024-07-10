@@ -44,6 +44,7 @@ jobs:
           git commit -m 'chore: Format CHANGELOG.md with Prettier' --no-verify
 
       - name: Push changes
+        if: ${{ steps.release.outputs.pr }}
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.RELEASE_PR_TOKEN }}
