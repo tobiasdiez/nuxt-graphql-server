@@ -8,5 +8,11 @@ export default defineNuxtConfig({
     url: '/api/graphql',
   },
 
+  nitro: {
+    experimental: {
+      websocket: true,
+    },
+  },
+
   compatibilityDate: '2024-07-10',
 })
