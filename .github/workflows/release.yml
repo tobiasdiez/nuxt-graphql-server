@@ -35,7 +35,7 @@ jobs:
 
       - name: Format CHANGELOG.md
         if: ${{ steps.release.outputs.pr }}
-        run: npx prettier --write CHANGELOG.md
+        run: npx prettier --write CHANGELOG.md .release-please-manifest.json
 
       - name: Commit
         if: ${{ steps.release.outputs.pr }}
