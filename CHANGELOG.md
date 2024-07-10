@@ -2,10 +2,9 @@
 
 ## [3.1.4](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v3.1.3...v3.1.4) (2024-07-10)
 
-
 ### 🐛 Bug Fixes
 
-* copy graphql-server.d.ts to dist ([#108](https://github.com/tobiasdiez/nuxt-graphql-server/issues/108)) ([2ea66ca](https://github.com/tobiasdiez/nuxt-graphql-server/commit/2ea66ca0e9757c17ee0d44399c89758dfe0337db))
+- copy graphql-server.d.ts to dist ([#108](https://github.com/tobiasdiez/nuxt-graphql-server/issues/108)) ([2ea66ca](https://github.com/tobiasdiez/nuxt-graphql-server/commit/2ea66ca0e9757c17ee0d44399c89758dfe0337db))
 
 ## [3.1.3](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v3.1.2...v3.1.3) (2024-07-10)
 
