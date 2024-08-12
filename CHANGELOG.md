@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.5](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v3.1.4...v3.1.5) (2024-08-12)
+
+
+### 🧹 Miscellaneous
+
+* **deps:** update all non-major dependencies ([#110](https://github.com/tobiasdiez/nuxt-graphql-server/issues/110)) ([7f64cd4](https://github.com/tobiasdiez/nuxt-graphql-server/commit/7f64cd49da3d7a21b320c115413eb90c7c190377))
+
 ## [3.1.4](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v3.1.3...v3.1.4) (2024-07-10)
 
 ### 🐛 Bug Fixes
