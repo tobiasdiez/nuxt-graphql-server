@@ -1,4 +1,0 @@
-{
-  "extends": ["@nuxtjs", ":widenPeerDependencies"],
-  "dependencyDashboard": false
-}
