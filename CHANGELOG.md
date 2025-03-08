@@ -1,5 +1,20 @@
 # Changelog
 
+## [3.1.5](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v3.1.4...v3.1.5) (2025-03-08)
+
+### 🧹 Miscellaneous
+
+- **deps:** update all non-major dependencies ([#110](https://github.com/tobiasdiez/nuxt-graphql-server/issues/110)) ([7f64cd4](https://github.com/tobiasdiez/nuxt-graphql-server/commit/7f64cd49da3d7a21b320c115413eb90c7c190377))
+- **deps:** update codecov/codecov-action action to v5 ([#115](https://github.com/tobiasdiez/nuxt-graphql-server/issues/115)) ([77d75de](https://github.com/tobiasdiez/nuxt-graphql-server/commit/77d75de03d7bb9d301e094e571a4adc5a3eb02ae))
+- **deps:** update dependency @nuxt/devtools to v2 ([#122](https://github.com/tobiasdiez/nuxt-graphql-server/issues/122)) ([da14cc7](https://github.com/tobiasdiez/nuxt-graphql-server/commit/da14cc7ccac6ae469817aef9fcf662b64ab07214))
+- **deps:** update dependency eslint-config-prettier to v10 ([#118](https://github.com/tobiasdiez/nuxt-graphql-server/issues/118)) ([76390da](https://github.com/tobiasdiez/nuxt-graphql-server/commit/76390da106874cb8e028291cb1f9e18814445b43))
+- **deps:** update dependency graphql-subscriptions to v3 ([#114](https://github.com/tobiasdiez/nuxt-graphql-server/issues/114)) ([dd747dc](https://github.com/tobiasdiez/nuxt-graphql-server/commit/dd747dc5091cd732a4207f6260a4253cd43841b7))
+- **deps:** update dependency graphql-ws to v6 ([#119](https://github.com/tobiasdiez/nuxt-graphql-server/issues/119)) ([c6d6d13](https://github.com/tobiasdiez/nuxt-graphql-server/commit/c6d6d1328578a5c3f3e30ee4868fccce480ecf85))
+- **deps:** update pnpm to v10 ([#121](https://github.com/tobiasdiez/nuxt-graphql-server/issues/121)) ([f933697](https://github.com/tobiasdiez/nuxt-graphql-server/commit/f933697e23dd0c258c2bbbb9335053712c23da93))
+- **deps:** update vitest monorepo to v3 ([#120](https://github.com/tobiasdiez/nuxt-graphql-server/issues/120)) ([cffef3c](https://github.com/tobiasdiez/nuxt-graphql-server/commit/cffef3ca2734fb87b553d2d21fdbc18e4ca1f170))
+- remove outdated tslib patch ([#124](https://github.com/tobiasdiez/nuxt-graphql-server/issues/124)) ([956feb8](https://github.com/tobiasdiez/nuxt-graphql-server/commit/956feb8ea9f17e7de9ae9a1b8c220ed9a44ce2b4))
+- update renovate config ([#123](https://github.com/tobiasdiez/nuxt-graphql-server/issues/123)) ([ce083ad](https://github.com/tobiasdiez/nuxt-graphql-server/commit/ce083ad6605a0b347dd2ff23b9c85b3d08b124d7))
+
 ## [3.1.4](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v3.1.3...v3.1.4) (2024-07-10)
 
 ### 🐛 Bug Fixes
