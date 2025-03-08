@@ -18,7 +18,7 @@
     "dist"
   ],
   "scripts": {
-    "prepack": "nuxi prepare playground && nuxt-module-build build && shx cp src/graphql-server.d.ts dist",
+    "prepack": "nuxi prepare playground && nuxt-module-build build",
     "build": "pnpm prepack",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
