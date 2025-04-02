@@ -37,7 +37,7 @@ importers:
         version: 7.0.0
     devDependencies:
       '@apollo/server':
-        specifier: ^4.11.0
+        specifier: 4.11.0
         version: 4.11.0(encoding@0.1.13)(graphql@16.9.0)
       '@as-integrations/h3':
         specifier: 1.2.1
@@ -76,7 +76,7 @@ importers:
         specifier: 16.9.0
         version: 16.9.0
       graphql-subscriptions:
-        specifier: ^3.0.0
+        specifier: 3.0.0
         version: 3.0.0(graphql@16.9.0)
       graphql-ws:
         specifier: 6.0.4
