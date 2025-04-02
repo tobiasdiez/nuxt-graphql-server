@@ -46,8 +46,8 @@ importers:
         specifier: 2.2.1
         version: 2.2.1(vite@5.4.0(@types/node@18.11.9)(terser@5.17.4))(vue@3.4.37(typescript@5.5.4))
       '@nuxt/module-builder':
-        specifier: 0.8.1
-        version: 0.8.1(@nuxt/kit@3.12.4(magicast@0.3.5)(rollup@4.18.1))(nuxi@3.12.0)(typescript@5.5.4)
+        specifier: 0.8.4
+        version: 0.8.4(@nuxt/kit@3.12.4(magicast@0.3.5)(rollup@4.18.1))(nuxi@3.12.0)(typescript@5.5.4)
       '@nuxt/schema':
         specifier: 3.12.4
         version: 3.12.4(rollup@4.18.1)
@@ -1480,12 +1480,12 @@ packages:
     resolution: {integrity: sha512-yPfhk58BG6wJhELkGOTCOlkMDbZkizk3IaINcyTKm+hBKiK3SheLt7S9HStNL+qZSfH2Cf7A8sYp6M72lOIEtA==}
     engines: {node: '>=18.12.0'}
 
-  '@nuxt/module-builder@0.8.1':
-    resolution: {integrity: sha512-pWIRF2x6zx63WEh3z7zM37CTfwhsWz21QnFWOeLacqDIBF1G92cRxF5BiS8mn7qfybFop8HRyZGzGDQeCsI20A==}
+  '@nuxt/module-builder@0.8.4':
+    resolution: {integrity: sha512-RSPRfCpBLuJtbDRaAKmc3Qzt3O98kSeRItXcgx0ZLptvROWT+GywoLhnYznRp8kbkz+6Qb5Hfiwa/RYEMRuJ4Q==}
     hasBin: true
     peerDependencies:
-      '@nuxt/kit': ^3.12.2
-      nuxi: ^3.12.0
+      '@nuxt/kit': ^3.13.1
+      nuxi: ^3.13.1
 
   '@nuxt/schema@3.12.4':
     resolution: {integrity: sha512-H7FwBV4ChssMaeiLyPdVLOLUa0326ebp3pNbJfGgFt7rSoKh1MmgjorecA8JMxOQZziy3w6EELf4+5cgLh/F1w==}
@@ -5360,8 +5360,8 @@ packages:
     peerDependencies:
       typescript: '>=4.2.0'
 
-  tsconfck@3.1.1:
-    resolution: {integrity: sha512-00eoI6WY57SvZEVjm13stEVE90VkEdJAFGgpFLTsZbJyW/LwFQ7uQxJHWpZ2hzSWgCPKc9AnBnNP+0X7o3hAmQ==}
+  tsconfck@3.1.5:
+    resolution: {integrity: sha512-CLDfGgUp7XPswWnezWwsCRxNmgQjhYq3VXHM0/XIRxhVrKw0M1if9agzryh1QS3nxjCROvV+xWxoJO1YctzzWg==}
     engines: {node: ^18 || >=20}
     hasBin: true
     peerDependencies:
@@ -7309,7 +7309,7 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
-  '@nuxt/module-builder@0.8.1(@nuxt/kit@3.12.4(magicast@0.3.5)(rollup@4.18.1))(nuxi@3.12.0)(typescript@5.5.4)':
+  '@nuxt/module-builder@0.8.4(@nuxt/kit@3.12.4(magicast@0.3.5)(rollup@4.18.1))(nuxi@3.12.0)(typescript@5.5.4)':
     dependencies:
       '@nuxt/kit': 3.12.4(magicast@0.3.5)(rollup@4.18.1)
       citty: 0.1.6
@@ -7320,7 +7320,7 @@ snapshots:
       nuxi: 3.12.0
       pathe: 1.1.2
       pkg-types: 1.3.1
-      tsconfck: 3.1.1(typescript@5.5.4)
+      tsconfck: 3.1.5(typescript@5.5.4)
       unbuild: 2.0.0(typescript@5.5.4)
     transitivePeerDependencies:
       - sass
@@ -11819,7 +11819,7 @@ snapshots:
     dependencies:
       typescript: 5.5.4
 
-  tsconfck@3.1.1(typescript@5.5.4):
+  tsconfck@3.1.5(typescript@5.5.4):
     optionalDependencies:
       typescript: 5.5.4
 
