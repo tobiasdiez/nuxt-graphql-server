@@ -85,8 +85,8 @@ importers:
         specifier: 3.12.4
         version: 3.12.4(@parcel/watcher@2.4.1)(@types/node@18.11.9)(encoding@0.1.13)(eslint@9.23.0(jiti@2.4.2))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.3)(rollup@4.18.1)(terser@5.17.4)(typescript@5.5.4)(vite@5.4.0(@types/node@18.11.9)(terser@5.17.4))(vue-tsc@2.0.29(typescript@5.5.4))
       prettier:
-        specifier: 3.3.3
-        version: 3.3.3
+        specifier: 3.5.3
+        version: 3.5.3
       shx:
         specifier: 0.3.4
         version: 0.3.4
@@ -5083,8 +5083,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier@3.3.3:
-    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+  prettier@3.5.3:
+    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -11846,7 +11846,7 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier@3.3.3: {}
+  prettier@3.5.3: {}
 
   pretty-bytes@6.1.1: {}
 

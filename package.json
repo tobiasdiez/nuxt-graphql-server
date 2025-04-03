@@ -62,7 +62,7 @@
     "graphql-subscriptions": "3.0.0",
     "graphql-ws": "6.0.4",
     "nuxt": "3.12.4",
-    "prettier": "3.3.3",
+    "prettier": "3.5.3",
     "shx": "0.3.4",
     "commit-and-tag-version": "9.6.0",
     "typescript": "5.5.4",
