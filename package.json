@@ -64,7 +64,7 @@
     "nuxt": "3.12.4",
     "prettier": "3.3.3",
     "shx": "0.3.4",
-    "commit-and-tag-version": "9.5.0",
+    "commit-and-tag-version": "9.6.0",
     "typescript": "5.5.4",
     "vitest": "3.0.8",
     "vue-tsc": "2.0.29"

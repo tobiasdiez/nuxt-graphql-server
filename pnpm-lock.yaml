@@ -58,8 +58,8 @@ importers:
         specifier: 3.0.8
         version: 3.0.8(vitest@3.0.8(@types/node@18.11.9)(terser@5.17.4))
       commit-and-tag-version:
-        specifier: 9.5.0
-        version: 9.5.0
+        specifier: 9.6.0
+        version: 9.6.0
       eslint:
         specifier: 9.9.0
         version: 9.9.0(jiti@2.4.2)
@@ -2815,8 +2815,8 @@ packages:
     resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
     engines: {node: '>= 12'}
 
-  commit-and-tag-version@9.5.0:
-    resolution: {integrity: sha512-XpYAhoa87HfrVY2B9Rle3XbxFNI8eVusMF66H49oom2UNYAU0u5JbLL6x5MuCJw8wfac4KKpoJmUWCYuLHDdUw==}
+  commit-and-tag-version@9.6.0:
+    resolution: {integrity: sha512-5tuYV9lFqV9rYDMJhF+HDp46S11je7XwzD/tvGT8LJM2lzXv33eeEetqpZ8Z0e9OSo0nS/67+JIH0cKJXB1Dpw==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -9202,7 +9202,7 @@ snapshots:
 
   commander@8.3.0: {}
 
-  commit-and-tag-version@9.5.0:
+  commit-and-tag-version@9.6.0:
     dependencies:
       chalk: 2.4.2
       conventional-changelog: 3.1.25
