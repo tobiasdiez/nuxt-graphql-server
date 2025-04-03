@@ -67,7 +67,7 @@
     "commit-and-tag-version": "9.6.0",
     "typescript": "5.5.4",
     "vitest": "3.0.8",
-    "vue-tsc": "2.0.29"
+    "vue-tsc": "2.2.8"
   },
   "packageManager": "pnpm@10.6.1",
   "engines": {
