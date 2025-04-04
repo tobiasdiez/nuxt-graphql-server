@@ -34,9 +34,9 @@
   },
   "dependencies": {
     "@graphql-codegen/core": "4.0.2",
-    "@graphql-codegen/plugin-helpers": "5.0.4",
-    "@graphql-codegen/typescript": "4.0.9",
-    "@graphql-codegen/typescript-resolvers": "4.2.1",
+    "@graphql-codegen/plugin-helpers": "5.1.0",
+    "@graphql-codegen/typescript": "4.1.6",
+    "@graphql-codegen/typescript-resolvers": "4.5.0",
     "@graphql-tools/graphql-file-loader": "8.0.19",
     "@graphql-tools/load": "8.0.19",
     "@nuxt/kit": "3.12.4",
