@@ -2,10 +2,8 @@
 // https://github.com/apollographql/docs-examples/tree/main/apollo-server/v4/subscriptions-graphql-ws
 import { ApolloServer } from '@apollo/server'
 import { PubSub } from 'graphql-subscriptions'
-import {
-  startServerAndCreateH3Handler,
-  defineGraphqlWebSocket,
-} from '@as-integrations/h3'
+import { startServerAndCreateH3Handler } from '@as-integrations/h3'
+import { defineGraphqlWebSocket } from '@as-integrations/h3/websocket'
 import { makeExecutableSchema } from '@graphql-tools/schema'
 import type { Resolvers } from '#graphql/resolver'
 import { typeDefs } from '#graphql/schema'

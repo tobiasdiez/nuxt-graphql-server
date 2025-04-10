@@ -40,8 +40,8 @@ importers:
         specifier: 4.11.3
         version: 4.11.3(graphql@16.10.0)
       '@as-integrations/h3':
-        specifier: 1.2.1
-        version: 1.2.1(@apollo/server@4.11.3(graphql@16.10.0))(crossws@0.3.4)(graphql-ws@6.0.4(graphql@16.10.0)(ws@8.18.1))(graphql@16.10.0)(h3@1.15.1)
+        specifier: 2.0.0
+        version: 2.0.0(@apollo/server@4.11.3(graphql@16.10.0))(crossws@0.3.4)(graphql-ws@6.0.4(graphql@16.10.0)(ws@8.18.1))(graphql@16.10.0)(h3@1.15.1)
       '@nuxt/devtools':
         specifier: 2.3.2
         version: 2.3.2(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.3))
@@ -189,20 +189,24 @@ packages:
     resolution: {integrity: sha512-YBDiuAX9i1lLc6GeTy1m7DGLFn/gMnvXqlalOIMjM7DeOgIacEjjfwPqb0M1CQ2v11HhR15d1NmxJoRCfrNqcA==}
     engines: {node: '>=14'}
 
+  '@apollo/utils.withrequired@3.0.0':
+    resolution: {integrity: sha512-aaxeavfJ+RHboh7c2ofO5HHtQobGX4AgUujXP4CXpREHp9fQ9jPi6K9T1jrAKe7HIipoP0OJ1gd6JamSkFIpvA==}
+    engines: {node: '>=16'}
+
   '@ardatan/relay-compiler@12.0.3':
     resolution: {integrity: sha512-mBDFOGvAoVlWaWqs3hm1AciGHSQE1rqFc/liZTyYz/Oek9yZdT5H26pH2zAFuEiTiBVPPyMuqf5VjOFPI2DGsQ==}
     hasBin: true
     peerDependencies:
       graphql: '*'
 
-  '@as-integrations/h3@1.2.1':
-    resolution: {integrity: sha512-dX0hLKgMuTpEhJFZtUE3pMhzt8QbO5tAXQdV4VE62LeFB/416xnxziJj0WinwqCOhVFcqUa0F4OAATJ1Kc44VA==}
-    engines: {node: ^16.10.0 || >=18.0.0}
+  '@as-integrations/h3@2.0.0':
+    resolution: {integrity: sha512-yNTKn9lUiGtFYBtrlAozMbxP7xmXcLMdIT4D+JPqhmxOtHpUNxzLRiwb+xSDaQnz5xzIKzI2A7i8wRFUzRfjVw==}
+    engines: {node: 23.9.0}
     peerDependencies:
       '@apollo/server': ^4.1.1
-      crossws: ^0.2.4
+      crossws: ^0.3.0
       graphql: ^16.0.0
-      graphql-ws: ^5.0.0
+      graphql-ws: ^5.0.0 || ^6.0.0
       h3: ^1.11.0
     peerDependenciesMeta:
       graphql-ws:
@@ -5274,6 +5278,8 @@ snapshots:
 
   '@apollo/utils.withrequired@2.0.1': {}
 
+  '@apollo/utils.withrequired@3.0.0': {}
+
   '@ardatan/relay-compiler@12.0.3(graphql@16.10.0)':
     dependencies:
       '@babel/generator': 7.27.0
@@ -5290,9 +5296,10 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@as-integrations/h3@1.2.1(@apollo/server@4.11.3(graphql@16.10.0))(crossws@0.3.4)(graphql-ws@6.0.4(graphql@16.10.0)(ws@8.18.1))(graphql@16.10.0)(h3@1.15.1)':
+  '@as-integrations/h3@2.0.0(@apollo/server@4.11.3(graphql@16.10.0))(crossws@0.3.4)(graphql-ws@6.0.4(graphql@16.10.0)(ws@8.18.1))(graphql@16.10.0)(h3@1.15.1)':
     dependencies:
       '@apollo/server': 4.11.3(graphql@16.10.0)
+      '@apollo/utils.withrequired': 3.0.0
       crossws: 0.3.4
       graphql: 16.10.0
       h3: 1.15.1
