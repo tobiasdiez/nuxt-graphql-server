@@ -17,6 +17,11 @@
   ],
   // Always squash PRs: https://docs.renovatebot.com/configuration-options/#automergestrategy
   automergeStrategy: 'squash',
-  // Pin all dependencies: https://docs.renovatebot.com/dependency-pinning/
-  rangeStrategy: 'pin',
+  packageRules: [
+    {
+      // Pin all dependencies in the playground following https://docs.renovatebot.com/dependency-pinning/
+      matchFileNames: ['playground/package.json'],
+      rangeStrategy: 'pin',
+    },
+  ],
 }
