@@ -38,7 +38,6 @@ const apollo = new ApolloServer({
   schema,
 })
 
-// @ts-expect-error: Version mismatch
 export default startServerAndCreateH3Handler(apollo, {
   websocket: {
     ...defineGraphqlWebSocket({ schema }),
