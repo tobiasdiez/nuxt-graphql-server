@@ -17,4 +17,5 @@ const resolvers: Resolvers = {
 
 const apollo = new ApolloServer({ typeDefs, resolvers })
 
+// @ts-expect-error: Version mismatch
 export default startServerAndCreateH3Handler(apollo)
