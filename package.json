@@ -45,7 +45,7 @@
     "graphql": "^16.7.1"
   },
   "devDependencies": {
-    "@apollo/server": "4.11.3",
+    "@apollo/server": "4.12.0",
     "@as-integrations/h3": "2.0.0",
     "@nuxt/devtools": "2.3.2",
     "@nuxt/module-builder": "1.0.1",
