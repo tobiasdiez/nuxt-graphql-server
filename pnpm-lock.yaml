@@ -41,7 +41,7 @@ importers:
         version: 4.12.1(graphql@16.11.0)
       '@as-integrations/h3':
         specifier: 2.0.0
-        version: 2.0.0(@apollo/server@4.12.1(graphql@16.11.0))(crossws@0.3.5)(graphql-ws@6.0.4(graphql@16.11.0)(ws@8.18.2))(graphql@16.11.0)(h3@1.15.3)
+        version: 2.0.0(@apollo/server@4.12.1(graphql@16.11.0))(crossws@0.3.5)(graphql-ws@6.0.5(crossws@0.3.5)(graphql@16.11.0)(ws@8.18.2))(graphql@16.11.0)(h3@1.15.3)
       '@nuxt/devtools':
         specifier: 2.4.1
         version: 2.4.1(vite@6.3.5(@types/node@22.15.29)(jiti@2.4.2)(terser@5.40.0)(yaml@2.8.0))(vue@3.5.16(typescript@5.8.3))
@@ -79,8 +79,8 @@ importers:
         specifier: 3.0.0
         version: 3.0.0(graphql@16.11.0)
       graphql-ws:
-        specifier: 6.0.4
-        version: 6.0.4(graphql@16.11.0)(ws@8.18.2)
+        specifier: 6.0.5
+        version: 6.0.5(crossws@0.3.5)(graphql@16.11.0)(ws@8.18.2)
       nuxt:
         specifier: 3.17.2
         version: 3.17.2(@parcel/watcher@2.5.1)(@types/node@22.15.29)(db0@0.3.2)(eslint@9.26.0(jiti@2.4.2))(ioredis@5.6.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.41.1)(terser@5.40.0)(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.29)(jiti@2.4.2)(terser@5.40.0)(yaml@2.8.0))(vue-tsc@2.2.10(typescript@5.8.3))(yaml@2.8.0)
@@ -3175,16 +3175,19 @@ packages:
     peerDependencies:
       graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
 
-  graphql-ws@6.0.4:
-    resolution: {integrity: sha512-8b4OZtNOvv8+NZva8HXamrc0y1jluYC0+13gdh7198FKjVzXyTvVc95DCwGzaKEfn3YuWZxUqjJlHe3qKM/F2g==}
+  graphql-ws@6.0.5:
+    resolution: {integrity: sha512-HzYw057ch0hx2gZjkbgk1pur4kAtgljlWRP+Gccudqm3BRrTpExjWCQ9OHdIsq47Y6lHL++1lTvuQHhgRRcevw==}
     engines: {node: '>=20'}
     peerDependencies:
       '@fastify/websocket': ^10 || ^11
+      crossws: ~0.3
       graphql: ^15.10.1 || ^16
       uWebSockets.js: ^20
       ws: ^8
     peerDependenciesMeta:
       '@fastify/websocket':
+        optional: true
+      crossws:
         optional: true
       uWebSockets.js:
         optional: true
@@ -6036,7 +6039,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@as-integrations/h3@2.0.0(@apollo/server@4.12.1(graphql@16.11.0))(crossws@0.3.5)(graphql-ws@6.0.4(graphql@16.11.0)(ws@8.18.2))(graphql@16.11.0)(h3@1.15.3)':
+  '@as-integrations/h3@2.0.0(@apollo/server@4.12.1(graphql@16.11.0))(crossws@0.3.5)(graphql-ws@6.0.5(crossws@0.3.5)(graphql@16.11.0)(ws@8.18.2))(graphql@16.11.0)(h3@1.15.3)':
     dependencies:
       '@apollo/server': 4.12.1(graphql@16.11.0)
       '@apollo/utils.withrequired': 3.0.0
@@ -6044,7 +6047,7 @@ snapshots:
       graphql: 16.11.0
       h3: 1.15.3
     optionalDependencies:
-      graphql-ws: 6.0.4(graphql@16.11.0)(ws@8.18.2)
+      graphql-ws: 6.0.5(crossws@0.3.5)(graphql@16.11.0)(ws@8.18.2)
 
   '@asamuzakjp/css-color@3.2.0':
     dependencies:
@@ -9520,10 +9523,11 @@ snapshots:
       graphql: 16.11.0
       tslib: 2.8.1
 
-  graphql-ws@6.0.4(graphql@16.11.0)(ws@8.18.2):
+  graphql-ws@6.0.5(crossws@0.3.5)(graphql@16.11.0)(ws@8.18.2):
     dependencies:
       graphql: 16.11.0
     optionalDependencies:
+      crossws: 0.3.5
       ws: 8.18.2
 
   graphql@16.11.0: {}
