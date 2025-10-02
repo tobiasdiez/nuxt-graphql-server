@@ -55,7 +55,7 @@
     "eslint": "9.32.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-config-unjs": "0.5.0",
-    "eslint-plugin-unused-imports": "4.1.4",
+    "eslint-plugin-unused-imports": "4.2.0",
     "graphql": "16.11.0",
     "graphql-subscriptions": "3.0.0",
     "graphql-ws": "6.0.6",
