@@ -31,10 +31,10 @@
     "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit"
   },
   "dependencies": {
-    "@graphql-codegen/core": "^4.0.2",
-    "@graphql-codegen/plugin-helpers": "^5.1.0",
-    "@graphql-codegen/typescript": "^4.1.6",
-    "@graphql-codegen/typescript-resolvers": "^4.5.0",
+    "@graphql-codegen/core": "^5.0.0",
+    "@graphql-codegen/plugin-helpers": "^6.0.0",
+    "@graphql-codegen/typescript": "^5.0.0",
+    "@graphql-codegen/typescript-resolvers": "^5.0.0",
     "@graphql-tools/graphql-file-loader": "^8.0.19",
     "@graphql-tools/load": "^8.0.19",
     "@nuxt/kit": "^4.0.0",
