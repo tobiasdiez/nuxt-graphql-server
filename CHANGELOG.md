@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.1.7](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v3.1.6...v3.1.7) (2025-11-01)
+
+
+### 🧹 Miscellaneous
+
+* **deps:** lock file maintenance ([#237](https://github.com/tobiasdiez/nuxt-graphql-server/issues/237)) ([6e9ae7f](https://github.com/tobiasdiez/nuxt-graphql-server/commit/6e9ae7fdfecc8ff0ce47273348a6bb23bacb6430))
+* **deps:** lock file maintenance ([#239](https://github.com/tobiasdiez/nuxt-graphql-server/issues/239)) ([30f4e80](https://github.com/tobiasdiez/nuxt-graphql-server/commit/30f4e808776e95e7abc00002963152c946a9099b))
+
 ## [3.1.6](https://github.com/tobiasdiez/nuxt-graphql-server/compare/v3.1.5...v3.1.6) (2025-10-05)
 
 ### 🧹 Miscellaneous
