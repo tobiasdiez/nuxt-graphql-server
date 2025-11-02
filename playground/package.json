@@ -10,6 +10,6 @@
   "dependencies": {
     "@as-integrations/h3": "2.0.0",
     "graphql-subscriptions": "3.0.0",
-    "nuxt": "4.1.2"
+    "nuxt": "4.2.0"
   }
 }
