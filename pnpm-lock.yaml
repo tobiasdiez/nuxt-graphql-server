@@ -37,11 +37,11 @@ importers:
         version: 7.0.0
     devDependencies:
       '@apollo/server':
-        specifier: 5.0.0
-        version: 5.0.0(graphql@16.11.0)
+        specifier: 5.1.0
+        version: 5.1.0(graphql@16.11.0)
       '@as-integrations/h3':
         specifier: 2.0.0
-        version: 2.0.0(@apollo/server@5.0.0(graphql@16.11.0))(crossws@0.3.5)(graphql-ws@6.0.6(crossws@0.3.5)(graphql@16.11.0)(ws@8.18.3))(graphql@16.11.0)(h3@1.15.4)
+        version: 2.0.0(@apollo/server@5.1.0(graphql@16.11.0))(crossws@0.3.5)(graphql-ws@6.0.6(crossws@0.3.5)(graphql@16.11.0)(ws@8.18.3))(graphql@16.11.0)(h3@1.15.4)
       '@nuxt/devtools':
         specifier: 2.6.5
         version: 2.6.5(vite@7.1.12(jiti@2.6.1)(terser@5.44.0)(yaml@2.8.1))(vue@3.5.22(typescript@5.9.3))
@@ -120,8 +120,8 @@ packages:
     peerDependencies:
       graphql: 14.x || 15.x || 16.x
 
-  '@apollo/server@5.0.0':
-    resolution: {integrity: sha512-PHopOm7pr69k7eDJvCBU4cZy9Z19qyCFKB9/luLnf2YCatu2WOYhoQPNr3dAoe//xv0RZFhxXbRcnK6IXIP7Nw==}
+  '@apollo/server@5.1.0':
+    resolution: {integrity: sha512-azqwwmKp23TMFQkjE66622sdY2Ao9d+LrebW++b3rFCNxU6XAl/vRwInOh9ejNgShDQzVS+bdCIFQnH9+r+N1A==}
     engines: {node: '>=20'}
     peerDependencies:
       graphql: ^16.11.0
@@ -5470,7 +5470,7 @@ snapshots:
       '@apollo/utils.logger': 3.0.0
       graphql: 16.11.0
 
-  '@apollo/server@5.0.0(graphql@16.11.0)':
+  '@apollo/server@5.1.0(graphql@16.11.0)':
     dependencies:
       '@apollo/cache-control-types': 1.0.3(graphql@16.11.0)
       '@apollo/server-gateway-interface': 2.0.0(graphql@16.11.0)
@@ -5565,9 +5565,9 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@as-integrations/h3@2.0.0(@apollo/server@5.0.0(graphql@16.11.0))(crossws@0.3.5)(graphql-ws@6.0.6(crossws@0.3.5)(graphql@16.11.0)(ws@8.18.3))(graphql@16.11.0)(h3@1.15.4)':
+  '@as-integrations/h3@2.0.0(@apollo/server@5.1.0(graphql@16.11.0))(crossws@0.3.5)(graphql-ws@6.0.6(crossws@0.3.5)(graphql@16.11.0)(ws@8.18.3))(graphql@16.11.0)(h3@1.15.4)':
     dependencies:
-      '@apollo/server': 5.0.0(graphql@16.11.0)
+      '@apollo/server': 5.1.0(graphql@16.11.0)
       '@apollo/utils.withrequired': 3.0.0
       crossws: 0.3.5
       graphql: 16.11.0
