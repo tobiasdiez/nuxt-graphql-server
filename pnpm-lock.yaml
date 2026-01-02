@@ -16,10 +16,10 @@ importers:
         version: 6.1.0(graphql@16.12.0)
       '@graphql-codegen/typescript':
         specifier: ^5.0.0
-        version: 5.0.6(graphql@16.12.0)
+        version: 5.0.7(graphql@16.12.0)
       '@graphql-codegen/typescript-resolvers':
         specifier: ^5.0.0
-        version: 5.1.4(graphql@16.12.0)
+        version: 5.1.5(graphql@16.12.0)
       '@graphql-tools/graphql-file-loader':
         specifier: ^8.0.19
         version: 8.1.8(graphql@16.12.0)
@@ -603,8 +603,8 @@ packages:
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
 
-  '@graphql-codegen/typescript-resolvers@5.1.4':
-    resolution: {integrity: sha512-dgDs68p+M6n24IQ0yHfgrPFZaAJtFDQIU5kXGSDY4MmUAvl/rY0Iv3vZoRixFyf8iYS/ySjJ9KV8gHCnCLkrOw==}
+  '@graphql-codegen/typescript-resolvers@5.1.5':
+    resolution: {integrity: sha512-eIheL41Whjs03sJOwBEYpWA6ISQdf4vgN3rXXm57sWuMlZJPYc/cR+vaP9GJdRp14XBQJ8tfKsrtjG5NtPpp3w==}
     engines: {node: '>=16'}
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
@@ -613,14 +613,14 @@ packages:
       graphql-sock:
         optional: true
 
-  '@graphql-codegen/typescript@5.0.6':
-    resolution: {integrity: sha512-rKW3wYInAnmO/DmKjhW3/KLMxUauUCZuMEPQmuoHChnwIuMjn5kVXCdArGyQqv+vVtFj55aS+sJLN4MPNNjSNg==}
+  '@graphql-codegen/typescript@5.0.7':
+    resolution: {integrity: sha512-kZwcu9Iat5RWXxLGPnDbG6qVbGTigF25/aGqCG/DCQ1Al8RufSjVXhIOkJBp7QWAqXn3AupHXL1WTMXP7xs4dQ==}
     engines: {node: '>=16'}
     peerDependencies:
       graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
 
-  '@graphql-codegen/visitor-plugin-common@6.2.1':
-    resolution: {integrity: sha512-5QT1hCV3286mrmoIC7vlFXsTlwELMexhuFIkjh+oVGGL1E8hxkIPAU0kfH/lsPbQHKi8zKmic2pl3tAdyYxNyg==}
+  '@graphql-codegen/visitor-plugin-common@6.2.2':
+    resolution: {integrity: sha512-wEJ4zJj58PKlXISItZfr0xIHyM1lAuRfoflPegsb1L17Mx5+YzNOy0WAlLele3yzyV89WvCiprFKMcVQ7KfDXg==}
     engines: {node: '>=16'}
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
@@ -3758,8 +3758,8 @@ packages:
       '@types/node':
         optional: true
 
-  nwsapi@2.2.22:
-    resolution: {integrity: sha512-ujSMe1OWVn55euT1ihwCI1ZcAaAU3nxUiDwfDQldc51ZXaB9m2AyOn6/jh1BLe2t/G8xd6uKG1UBF2aZJeg2SQ==}
+  nwsapi@2.2.23:
+    resolution: {integrity: sha512-7wfH4sLbt4M0gCDzGE6vzQBo0bfTKjU7Sfpqy/7gs1qBfYz2vEJH6vXcBKpO3+6Yu1telwd0t9HpyOoLEQQbIQ==}
 
   nypm@0.6.2:
     resolution: {integrity: sha512-7eM+hpOtrKrBDCh7Ypu2lJ9Z7PNZBdi/8AT3AX8xoCj43BBVHD0hPSTEvMtkMpfs8FCqBGhxB+uToIQimA111g==}
@@ -5895,11 +5895,11 @@ snapshots:
       graphql: 16.12.0
       tslib: 2.6.3
 
-  '@graphql-codegen/typescript-resolvers@5.1.4(graphql@16.12.0)':
+  '@graphql-codegen/typescript-resolvers@5.1.5(graphql@16.12.0)':
     dependencies:
       '@graphql-codegen/plugin-helpers': 6.1.0(graphql@16.12.0)
-      '@graphql-codegen/typescript': 5.0.6(graphql@16.12.0)
-      '@graphql-codegen/visitor-plugin-common': 6.2.1(graphql@16.12.0)
+      '@graphql-codegen/typescript': 5.0.7(graphql@16.12.0)
+      '@graphql-codegen/visitor-plugin-common': 6.2.2(graphql@16.12.0)
       '@graphql-tools/utils': 10.11.0(graphql@16.12.0)
       auto-bind: 4.0.0
       graphql: 16.12.0
@@ -5907,18 +5907,18 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@graphql-codegen/typescript@5.0.6(graphql@16.12.0)':
+  '@graphql-codegen/typescript@5.0.7(graphql@16.12.0)':
     dependencies:
       '@graphql-codegen/plugin-helpers': 6.1.0(graphql@16.12.0)
       '@graphql-codegen/schema-ast': 5.0.0(graphql@16.12.0)
-      '@graphql-codegen/visitor-plugin-common': 6.2.1(graphql@16.12.0)
+      '@graphql-codegen/visitor-plugin-common': 6.2.2(graphql@16.12.0)
       auto-bind: 4.0.0
       graphql: 16.12.0
       tslib: 2.6.3
     transitivePeerDependencies:
       - encoding
 
-  '@graphql-codegen/visitor-plugin-common@6.2.1(graphql@16.12.0)':
+  '@graphql-codegen/visitor-plugin-common@6.2.2(graphql@16.12.0)':
     dependencies:
       '@graphql-codegen/plugin-helpers': 6.1.0(graphql@16.12.0)
       '@graphql-tools/optimize': 2.0.0(graphql@16.12.0)
@@ -5972,14 +5972,14 @@ snapshots:
   '@graphql-tools/optimize@2.0.0(graphql@16.12.0)':
     dependencies:
       graphql: 16.12.0
-      tslib: 2.8.1
+      tslib: 2.6.3
 
   '@graphql-tools/relay-operation-optimizer@7.0.26(graphql@16.12.0)':
     dependencies:
       '@ardatan/relay-compiler': 12.0.3(graphql@16.12.0)
       '@graphql-tools/utils': 10.11.0(graphql@16.12.0)
       graphql: 16.12.0
-      tslib: 2.8.1
+      tslib: 2.6.3
     transitivePeerDependencies:
       - encoding
 
@@ -7465,7 +7465,7 @@ snapshots:
   camel-case@4.1.2:
     dependencies:
       pascal-case: 3.1.2
-      tslib: 2.8.1
+      tslib: 2.6.3
 
   camelcase-keys@6.2.2:
     dependencies:
@@ -7487,7 +7487,7 @@ snapshots:
   capital-case@1.0.4:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.8.1
+      tslib: 2.6.3
       upper-case-first: 2.0.2
 
   chai@6.2.1: {}
@@ -7651,7 +7651,7 @@ snapshots:
   constant-case@3.0.4:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.8.1
+      tslib: 2.6.3
       upper-case: 2.0.2
 
   content-type@1.0.5: {}
@@ -7985,7 +7985,7 @@ snapshots:
   dot-case@3.0.4:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.8.1
+      tslib: 2.6.3
 
   dot-prop@10.1.0:
     dependencies:
@@ -8528,7 +8528,7 @@ snapshots:
   graphql-tag@2.12.6(graphql@16.12.0):
     dependencies:
       graphql: 16.12.0
-      tslib: 2.8.1
+      tslib: 2.6.3
 
   graphql-ws@6.0.6(crossws@0.3.5)(graphql@16.12.0)(ws@8.18.3):
     dependencies:
@@ -8587,7 +8587,7 @@ snapshots:
   header-case@2.0.4:
     dependencies:
       capital-case: 1.0.4
-      tslib: 2.8.1
+      tslib: 2.6.3
 
   hookable@5.5.3: {}
 
@@ -8878,7 +8878,7 @@ snapshots:
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.6
       is-potential-custom-element-name: 1.0.1
-      nwsapi: 2.2.22
+      nwsapi: 2.2.23
       parse5: 7.3.0
       rrweb-cssom: 0.7.1
       saxes: 6.0.0
@@ -9342,7 +9342,7 @@ snapshots:
   no-case@3.0.4:
     dependencies:
       lower-case: 2.0.2
-      tslib: 2.8.1
+      tslib: 2.6.3
 
   node-addon-api@7.1.1: {}
 
@@ -9527,7 +9527,7 @@ snapshots:
       - xml2js
       - yaml
 
-  nwsapi@2.2.22:
+  nwsapi@2.2.23:
     optional: true
 
   nypm@0.6.2:
@@ -9690,7 +9690,7 @@ snapshots:
   param-case@3.0.4:
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.8.1
+      tslib: 2.6.3
 
   parent-module@1.0.1:
     dependencies:
@@ -9742,14 +9742,14 @@ snapshots:
   pascal-case@3.1.2:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.8.1
+      tslib: 2.6.3
 
   path-browserify@1.0.1: {}
 
   path-case@3.0.4:
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.8.1
+      tslib: 2.6.3
 
   path-exists@3.0.0: {}
 
@@ -10239,7 +10239,7 @@ snapshots:
   sentence-case@3.0.4:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.8.1
+      tslib: 2.6.3
       upper-case-first: 2.0.2
 
   serialize-javascript@6.0.2:
@@ -10367,7 +10367,7 @@ snapshots:
   snake-case@3.0.4:
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.8.1
+      tslib: 2.6.3
 
   source-map-js@1.2.1: {}
 
