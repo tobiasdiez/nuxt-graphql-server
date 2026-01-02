@@ -52,7 +52,7 @@
     "@nuxt/schema": "4.2.1",
     "@nuxt/test-utils": "3.20.1",
     "@vitest/coverage-v8": "4.0.14",
-    "eslint": "9.39.1",
+    "eslint": "9.39.2",
     "eslint-config-prettier": "10.1.8",
     "eslint-config-unjs": "0.5.0",
     "eslint-plugin-unused-imports": "4.3.0",
