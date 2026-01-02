@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@apollo/server": "5.2.0",
-    "@as-integrations/h3": "2.0.0",
+    "@as-integrations/h3": "2.0.2",
     "@nuxt/devtools": "3.1.1",
     "@nuxt/module-builder": "1.0.2",
     "@nuxt/schema": "4.2.1",
