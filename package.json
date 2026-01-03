@@ -67,7 +67,7 @@
     "vitest": "4.0.16",
     "vue-tsc": "3.2.1"
   },
-  "packageManager": "pnpm@10.26.2",
+  "packageManager": "pnpm@10.27.0",
   "engines": {
     "node": ">=18.12.0"
   }
