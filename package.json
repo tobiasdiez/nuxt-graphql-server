@@ -51,7 +51,7 @@
     "@nuxt/module-builder": "1.0.2",
     "@nuxt/schema": "4.2.2",
     "@nuxt/test-utils": "3.21.0",
-    "@vitest/coverage-v8": "4.0.16",
+    "@vitest/coverage-v8": "4.0.18",
     "eslint": "9.39.2",
     "eslint-config-prettier": "10.1.8",
     "eslint-config-unjs": "0.6.2",
@@ -64,7 +64,7 @@
     "shx": "0.4.0",
     "commit-and-tag-version": "12.6.1",
     "typescript": "5.9.3",
-    "vitest": "4.0.16",
+    "vitest": "4.0.18",
     "vue-tsc": "3.2.1"
   },
   "packageManager": "pnpm@10.27.0",
