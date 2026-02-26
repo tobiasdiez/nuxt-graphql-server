@@ -58,11 +58,7 @@ export default defineNuxtModule<ModuleOptions>({
       filename: resolverTypesTemplateName,
       getContents: () => {
         logger.debug(`Generating ${resolverTypesTemplateName}`)
-        return createResolverTypeDefs(
-          options.schema,
-          options.codegen ?? {},
-          nuxt.options.rootDir,
-        )
+        return createResolverTypeDefs(options.schema, options.codegen ?? {}, nuxt.options.rootDir)
       },
     })
     nuxt.options.alias['#graphql/resolver'] = resolverTypeDefPath
@@ -75,9 +71,7 @@ export default defineNuxtModule<ModuleOptions>({
           // Depending on the nuxt version, path is either absolute or relative
           const absolutePath = resolve(nuxt.options.srcDir, path)
           const schema = Array.isArray(options.schema)
-            ? options.schema.map((pattern) =>
-                resolve(nuxt.options.srcDir, pattern),
-              )
+            ? options.schema.map((pattern) => resolve(nuxt.options.srcDir, pattern))
             : resolve(nuxt.options.srcDir, options.schema)
           logger.debug('Checking if the file changed matches ', schema)
           if (multimatch(absolutePath, schema).length > 0) {

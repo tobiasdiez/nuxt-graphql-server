@@ -1,12 +1,3 @@
 {
-  "cSpell.words": [
-    "Codecov",
-    "codegen",
-    "Corepack",
-    "defu",
-    "multimatch",
-    "nuxi",
-    "nuxt",
-    "nuxtjs"
-  ]
+  "cSpell.words": ["Codecov", "codegen", "Corepack", "defu", "multimatch", "nuxi", "nuxt", "nuxtjs"]
 }

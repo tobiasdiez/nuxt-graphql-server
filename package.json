@@ -2,28 +2,28 @@
   "name": "nuxt-graphql-server",
   "version": "3.1.6",
   "description": "Easy GraphQL server implementation with Nuxt",
-  "repository": "https://github.com/tobiasdiez/nuxt-graphql-server",
   "license": "MIT",
+  "repository": "https://github.com/tobiasdiez/nuxt-graphql-server",
+  "files": [
+    "dist"
+  ],
   "type": "module",
+  "main": "./dist/module.mjs",
   "exports": {
     ".": {
       "types": "./dist/types.d.mts",
       "import": "./dist/module.mjs"
     }
   },
-  "main": "./dist/module.mjs",
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "prepack": "nuxi prepare playground && nuxt-module-build build",
     "build": "pnpm prepack",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxi prepare playground",
-    "lint": "pnpm lint:eslint && pnpm lint:prettier",
+    "lint": "pnpm lint:eslint && pnpm lint:oxfmt",
     "lint:eslint": "eslint --report-unused-disable-directives .",
-    "lint:prettier": "prettier --check --ignore-path .gitignore . !pnpm-lock.yaml",
+    "lint:oxfmt": "oxfmt --check",
     "release": "standard-version && git push --follow-tags && pnpm publish",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
@@ -41,9 +41,6 @@
     "defu": "^6.1.4",
     "multimatch": "^7.0.0"
   },
-  "peerDependencies": {
-    "graphql": "^16.7.1"
-  },
   "devDependencies": {
     "@apollo/server": "5.3.0",
     "@as-integrations/h3": "2.0.2",
@@ -52,6 +49,7 @@
     "@nuxt/schema": "4.2.2",
     "@nuxt/test-utils": "3.21.0",
     "@vitest/coverage-v8": "4.0.18",
+    "commit-and-tag-version": "12.6.1",
     "eslint": "9.39.2",
     "eslint-config-prettier": "10.1.8",
     "eslint-config-unjs": "0.6.2",
@@ -60,15 +58,17 @@
     "graphql-subscriptions": "3.0.0",
     "graphql-ws": "6.0.7",
     "nuxt": "4.2.2",
-    "prettier": "3.8.1",
+    "oxfmt": "^0.35.0",
     "shx": "0.4.0",
-    "commit-and-tag-version": "12.6.1",
     "typescript": "5.9.3",
     "vitest": "4.0.18",
     "vue-tsc": "3.2.4"
   },
-  "packageManager": "pnpm@10.28.2",
+  "peerDependencies": {
+    "graphql": "^16.7.1"
+  },
   "engines": {
     "node": ">=18.12.0"
-  }
+  },
+  "packageManager": "pnpm@10.28.2"
 }

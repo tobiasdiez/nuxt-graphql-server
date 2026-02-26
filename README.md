@@ -130,10 +130,7 @@ Then, create the endpoint `server/api/graphql.ts` with the following content:
 
 ```ts
 import { ApolloServer } from '@apollo/server'
-import {
-  startServerAndCreateH3Handler,
-  defineGraphqlWebSocket,
-} from '@as-integrations/h3'
+import { startServerAndCreateH3Handler, defineGraphqlWebSocket } from '@as-integrations/h3'
 import { makeExecutableSchema } from '@graphql-tools/schema'
 import type { Resolvers } from '#graphql/resolver'
 import { typeDefs } from '#graphql/schema'
