@@ -64,9 +64,7 @@ export default startServerAndCreateH3Handler(apollo, {
 // In the background, increment a number every second and notify subscribers when it changes.
 function incrementNumber() {
   currentNumber++
-  pubsub
-    .publish('NUMBER_INCREMENTED', { numberIncremented: currentNumber })
-    .catch(console.error)
+  pubsub.publish('NUMBER_INCREMENTED', { numberIncremented: currentNumber }).catch(console.error)
   setTimeout(incrementNumber, 1000)
 }
 
