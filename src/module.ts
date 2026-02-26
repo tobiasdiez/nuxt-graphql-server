@@ -5,6 +5,7 @@ import {
   updateTemplates,
   useLogger,
 } from '@nuxt/kit'
+import { addCustomTab } from '@nuxt/devtools-kit'
 import { type CodeGenConfig, createResolverTypeDefs } from './codegen'
 import { createSchemaImport } from './schema-loader'
 import multimatch from 'multimatch'
@@ -100,13 +101,11 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Add custom devtools tab
     if (options.url !== undefined) {
-      nuxt.hook('devtools:customTabs', (tabs) => {
-        tabs.push({
-          name: 'graphql-server',
-          title: 'GraphQL server',
-          icon: 'simple-icons:graphql',
-          view: { type: 'iframe', src: options.url ?? '' },
-        })
+      addCustomTab({
+        name: 'graphql-server',
+        title: 'GraphQL server',
+        icon: 'simple-icons:graphql',
+        view: { type: 'iframe', src: options.url ?? '' },
       })
     }
   },
