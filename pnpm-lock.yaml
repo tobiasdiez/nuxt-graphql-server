@@ -43,8 +43,8 @@ importers:
         specifier: 5.3.0
         version: 5.3.0(graphql@16.12.0)
       '@as-integrations/h3':
-        specifier: 2.0.2
-        version: 2.0.2(@apollo/server@5.3.0(graphql@16.12.0))(crossws@0.3.5)(graphql-ws@6.0.7(crossws@0.3.5)(graphql@16.12.0)(ws@8.19.0))(graphql@16.12.0)(h3@1.15.5)
+        specifier: 2.0.3
+        version: 2.0.3(@apollo/server@5.3.0(graphql@16.12.0))(crossws@0.3.5)(graphql-ws@6.0.7(crossws@0.3.5)(graphql@16.12.0)(ws@8.19.0))(graphql@16.12.0)(h3@1.15.5)
       '@nuxt/devtools':
         specifier: 3.1.1
         version: 3.1.1(vite@7.3.1(jiti@2.6.1)(terser@5.46.0)(yaml@2.8.2))(vue@3.5.29(typescript@5.9.3))
@@ -195,8 +195,8 @@ packages:
     peerDependencies:
       graphql: '*'
 
-  '@as-integrations/h3@2.0.2':
-    resolution: {integrity: sha512-6EBq6QA8PTfheiqe7/ljyhUghrHbi3oXXk7RYuxZFi6BkHUPpsNZZw31CKaYHg3WpOijWm8m2HrjJGoPmgvRXA==}
+  '@as-integrations/h3@2.0.3':
+    resolution: {integrity: sha512-YKatLFhX5P+VNxGk3zfcD0B3jniXVYkfdY37/aL654cdydVSAAQy7tkTDLoAhnOVKK7pfQivJ7qlNL8JYUqtcQ==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       '@apollo/server': ^4.1.1 || ^5.0.0
@@ -6018,7 +6018,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@as-integrations/h3@2.0.2(@apollo/server@5.3.0(graphql@16.12.0))(crossws@0.3.5)(graphql-ws@6.0.7(crossws@0.3.5)(graphql@16.12.0)(ws@8.19.0))(graphql@16.12.0)(h3@1.15.5)':
+  '@as-integrations/h3@2.0.3(@apollo/server@5.3.0(graphql@16.12.0))(crossws@0.3.5)(graphql-ws@6.0.7(crossws@0.3.5)(graphql@16.12.0)(ws@8.19.0))(graphql@16.12.0)(h3@1.15.5)':
     dependencies:
       '@apollo/server': 5.3.0(graphql@16.12.0)
       '@apollo/utils.withrequired': 3.0.0
