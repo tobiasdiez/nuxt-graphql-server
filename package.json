@@ -40,7 +40,7 @@
     "@nuxt/devtools-kit": "^3.2.2",
     "@nuxt/kit": "^4.0.0",
     "defu": "^6.1.4",
-    "multimatch": "^7.0.0"
+    "multimatch": "^8.0.0"
   },
   "devDependencies": {
     "@apollo/server": "5.4.0",
