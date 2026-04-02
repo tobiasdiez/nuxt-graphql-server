@@ -44,7 +44,7 @@ importers:
         version: 5.4.0(graphql@16.13.2)
       '@as-integrations/h3':
         specifier: 2.0.3
-        version: 2.0.3(@apollo/server@5.4.0(graphql@16.13.2))(crossws@0.3.5)(graphql-ws@6.0.7(crossws@0.3.5)(graphql@16.13.2)(ws@8.20.0))(graphql@16.13.2)(h3@1.15.10)
+        version: 2.0.3(@apollo/server@5.4.0(graphql@16.13.2))(crossws@0.3.5)(graphql-ws@6.0.8(crossws@0.3.5)(graphql@16.13.2)(ws@8.20.0))(graphql@16.13.2)(h3@1.15.10)
       '@nuxt/devtools':
         specifier: 3.2.4
         version: 3.2.4(vite@7.3.1(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.31(typescript@5.9.3))
@@ -82,8 +82,8 @@ importers:
         specifier: 3.0.0
         version: 3.0.0(graphql@16.13.2)
       graphql-ws:
-        specifier: 6.0.7
-        version: 6.0.7(crossws@0.3.5)(graphql@16.13.2)(ws@8.20.0)
+        specifier: 6.0.8
+        version: 6.0.8(crossws@0.3.5)(graphql@16.13.2)(ws@8.20.0)
       nuxt:
         specifier: 4.3.1
         version: 4.3.1(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@parcel/watcher@2.5.6)(@vue/compiler-sfc@3.5.31)(cac@6.7.14)(db0@0.3.4)(eslint@10.0.2(jiti@2.6.1))(ioredis@5.10.1)(magicast@0.5.2)(optionator@0.9.4)(rollup@4.60.1)(terser@5.46.1)(typescript@5.9.3)(vite@7.3.1(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))(vue-tsc@3.2.5(typescript@5.9.3))(yaml@2.8.3)
@@ -3385,8 +3385,8 @@ packages:
     peerDependencies:
       graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
 
-  graphql-ws@6.0.7:
-    resolution: {integrity: sha512-yoLRW+KRlDmnnROdAu7sX77VNLC0bsFoZyGQJLy1cF+X/SkLg/fWkRGrEEYQK8o2cafJ2wmEaMqMEZB3U3DYDg==}
+  graphql-ws@6.0.8:
+    resolution: {integrity: sha512-m3EOaNsUBXwAnkBWbzPfe0Nq8pXUfxsWnolC54sru3FzHvhTZL0Ouf/BoQsaGAXqM+YPerXOJ47BUnmgmoupCw==}
     engines: {node: '>=20'}
     peerDependencies:
       '@fastify/websocket': ^10 || ^11
@@ -5954,7 +5954,7 @@ snapshots:
       immutable: 5.1.5
       invariant: 2.2.4
 
-  '@as-integrations/h3@2.0.3(@apollo/server@5.4.0(graphql@16.13.2))(crossws@0.3.5)(graphql-ws@6.0.7(crossws@0.3.5)(graphql@16.13.2)(ws@8.20.0))(graphql@16.13.2)(h3@1.15.10)':
+  '@as-integrations/h3@2.0.3(@apollo/server@5.4.0(graphql@16.13.2))(crossws@0.3.5)(graphql-ws@6.0.8(crossws@0.3.5)(graphql@16.13.2)(ws@8.20.0))(graphql@16.13.2)(h3@1.15.10)':
     dependencies:
       '@apollo/server': 5.4.0(graphql@16.13.2)
       '@apollo/utils.withrequired': 3.0.0
@@ -5962,7 +5962,7 @@ snapshots:
       graphql: 16.13.2
       h3: 1.15.10
     optionalDependencies:
-      graphql-ws: 6.0.7(crossws@0.3.5)(graphql@16.13.2)(ws@8.20.0)
+      graphql-ws: 6.0.8(crossws@0.3.5)(graphql@16.13.2)(ws@8.20.0)
 
   '@babel/code-frame@7.29.0':
     dependencies:
@@ -9207,7 +9207,7 @@ snapshots:
       graphql: 16.13.2
       tslib: 2.6.3
 
-  graphql-ws@6.0.7(crossws@0.3.5)(graphql@16.13.2)(ws@8.20.0):
+  graphql-ws@6.0.8(crossws@0.3.5)(graphql@16.13.2)(ws@8.20.0):
     dependencies:
       graphql: 16.13.2
     optionalDependencies:
