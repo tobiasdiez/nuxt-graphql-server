@@ -44,7 +44,7 @@ importers:
         version: 5.5.0(graphql@16.13.2)
       '@as-integrations/h3':
         specifier: 2.0.3
-        version: 2.0.3(@apollo/server@5.5.0(graphql@16.13.2))(crossws@0.3.5)(graphql-ws@6.0.8(crossws@0.3.5)(graphql@16.13.2)(ws@8.20.0))(graphql@16.13.2)(h3@1.15.10)
+        version: 2.0.3(@apollo/server@5.5.0(graphql@16.13.2))(graphql-ws@6.0.8(graphql@16.13.2)(ws@8.20.0))(graphql@16.13.2)(h3@2.0.1-rc.20)
       '@nuxt/devtools':
         specifier: 3.2.4
         version: 3.2.4(vite@7.3.1(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.31(typescript@6.0.2))
@@ -55,8 +55,8 @@ importers:
         specifier: 4.4.2
         version: 4.4.2
       '@nuxt/test-utils':
-        specifier: 3.21.0
-        version: 3.21.0(magicast@0.5.2)(typescript@6.0.2)(vitest@4.1.2(vite@7.3.1(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)))
+        specifier: 3.23.0
+        version: 3.23.0(magicast@0.5.2)(typescript@6.0.2)(vitest@4.1.2(vite@7.3.1(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)))
       '@vitest/coverage-v8':
         specifier: 4.1.2
         version: 4.1.2(vitest@4.1.2(vite@7.3.1(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)))
@@ -83,7 +83,7 @@ importers:
         version: 3.0.0(graphql@16.13.2)
       graphql-ws:
         specifier: 6.0.8
-        version: 6.0.8(crossws@0.3.5)(graphql@16.13.2)(ws@8.20.0)
+        version: 6.0.8(graphql@16.13.2)(ws@8.20.0)
       nuxt:
         specifier: 4.4.2
         version: 4.4.2(@babel/core@7.29.0)(@babel/plugin-syntax-jsx@7.28.6(@babel/core@7.29.0))(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@parcel/watcher@2.5.6)(@vue/compiler-sfc@3.5.31)(cac@6.7.14)(db0@0.3.4)(eslint@10.1.0(jiti@2.6.1))(ioredis@5.10.1)(magicast@0.5.2)(optionator@0.9.4)(rollup-plugin-visualizer@7.0.1(rollup@4.60.1))(rollup@4.60.1)(terser@5.46.1)(typescript@6.0.2)(vite@7.3.1(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))(vue-tsc@3.2.6(typescript@6.0.2))(yaml@2.8.3)
@@ -346,8 +346,14 @@ packages:
       commander:
         optional: true
 
+  '@clack/core@1.0.0-alpha.7':
+    resolution: {integrity: sha512-3vdh6Ar09D14rVxJZIm3VQJkU+ZOKKT5I5cC0cOVazy70CNyYYjiwRj9unwalhESndgxx6bGc/m6Hhs4EKF5XQ==}
+
   '@clack/core@1.2.0':
     resolution: {integrity: sha512-qfxof/3T3t9DPU/Rj3OmcFyZInceqj/NVtO9rwIuJqCUgh32gwPjpFQQp/ben07qKlhpwq7GzfWpST4qdJ5Drg==}
+
+  '@clack/prompts@1.0.0-alpha.9':
+    resolution: {integrity: sha512-sKs0UjiHFWvry4SiRfBi5Qnj0C/6AYx8aKkFPZQSuUZXgAram25ZDmhQmP7vj1aFyLpfHWtLQjWvOvcat0TOLg==}
 
   '@clack/prompts@1.2.0':
     resolution: {integrity: sha512-4jmztR9fMqPMjz6H/UZXj0zEmE43ha1euENwkckKKel4XpSfokExPo5AiVStdHSAlHekz4d0CA/r45Ok1E4D3w==}
@@ -978,9 +984,9 @@ packages:
     peerDependencies:
       '@nuxt/kit': '>=3.0.0'
 
-  '@nuxt/test-utils@3.21.0':
-    resolution: {integrity: sha512-A6XExfgHq88+XuXAU4MMr5QBHS2mWA5qRVSvsMPP2U+YSsnk+Vt7P7dxbvJPE4+n6LHbC1IM0QjTVteo+VCxOA==}
-    engines: {node: ^20.0.0 || ^22.0.0 || >=24.0.0}
+  '@nuxt/test-utils@3.23.0':
+    resolution: {integrity: sha512-NZKWSwvfIiTO2qhMoJHVbUQLgJMe96J9ccLhPPqN5+a/XzISZ027LG9wWVp1tC5oB0qQ3eUDhrxmq6Lj8EQLMQ==}
+    engines: {node: ^20.11.1 || ^22.0.0 || >=24.0.0}
     peerDependencies:
       '@cucumber/cucumber': ^10.3.1 || >=11.0.0
       '@jest/globals': ^29.5.0 || >=30.0.0
@@ -3415,6 +3421,16 @@ packages:
 
   h3@1.15.10:
     resolution: {integrity: sha512-YzJeWSkDZxAhvmp8dexjRK5hxziRO7I9m0N53WhvYL5NiWfkUkzssVzY9jvGu0HBoLFW6+duYmNSn6MaZBCCtg==}
+
+  h3@2.0.1-rc.20:
+    resolution: {integrity: sha512-28ljodXuUp0fZovdiSRq4G9OgrxCztrJe5VdYzXAB7ueRvI7pIUqLU14Xi3XqdYJ/khXjfpUOOD2EQa6CmBgsg==}
+    engines: {node: '>=20.11.1'}
+    hasBin: true
+    peerDependencies:
+      crossws: ^0.4.1
+    peerDependenciesMeta:
+      crossws:
+        optional: true
 
   handlebars@4.7.9:
     resolution: {integrity: sha512-4E71E0rpOaQuJR2A3xDZ+GM1HyWYv1clR58tC8emQNeQe3RH7MAzSbat+V0wG78LQBo6m6bzSG/L4pBuCsgnUQ==}
@@ -5932,15 +5948,14 @@ snapshots:
       immutable: 5.1.5
       invariant: 2.2.4
 
-  '@as-integrations/h3@2.0.3(@apollo/server@5.5.0(graphql@16.13.2))(crossws@0.3.5)(graphql-ws@6.0.8(crossws@0.3.5)(graphql@16.13.2)(ws@8.20.0))(graphql@16.13.2)(h3@1.15.10)':
+  '@as-integrations/h3@2.0.3(@apollo/server@5.5.0(graphql@16.13.2))(graphql-ws@6.0.8(graphql@16.13.2)(ws@8.20.0))(graphql@16.13.2)(h3@2.0.1-rc.20)':
     dependencies:
       '@apollo/server': 5.5.0(graphql@16.13.2)
       '@apollo/utils.withrequired': 3.0.0
-      crossws: 0.3.5
       graphql: 16.13.2
-      h3: 1.15.10
+      h3: 2.0.1-rc.20
     optionalDependencies:
-      graphql-ws: 6.0.8(crossws@0.3.5)(graphql@16.13.2)(ws@8.20.0)
+      graphql-ws: 6.0.8(graphql@16.13.2)(ws@8.20.0)
 
   '@babel/code-frame@7.29.0':
     dependencies:
@@ -6118,9 +6133,20 @@ snapshots:
       cac: 6.7.14
       citty: 0.2.1
 
+  '@clack/core@1.0.0-alpha.7':
+    dependencies:
+      picocolors: 1.1.1
+      sisteransi: 1.0.5
+
   '@clack/core@1.2.0':
     dependencies:
       fast-wrap-ansi: 0.1.6
+      sisteransi: 1.0.5
+
+  '@clack/prompts@1.0.0-alpha.9':
+    dependencies:
+      '@clack/core': 1.0.0-alpha.7
+      picocolors: 1.1.1
       sisteransi: 1.0.5
 
   '@clack/prompts@1.2.0':
@@ -6845,8 +6871,9 @@ snapshots:
       rc9: 3.0.0
       std-env: 4.0.0
 
-  '@nuxt/test-utils@3.21.0(magicast@0.5.2)(typescript@6.0.2)(vitest@4.1.2(vite@7.3.1(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)))':
+  '@nuxt/test-utils@3.23.0(magicast@0.5.2)(typescript@6.0.2)(vitest@4.1.2(vite@7.3.1(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)))':
     dependencies:
+      '@clack/prompts': 1.0.0-alpha.9
       '@nuxt/kit': 3.21.2(magicast@0.5.2)
       c12: 3.3.3(magicast@0.5.2)
       consola: 3.4.2
@@ -6857,10 +6884,12 @@ snapshots:
       fake-indexeddb: 6.2.5
       get-port-please: 3.2.0
       h3: 1.15.10
+      h3-next: h3@2.0.1-rc.20
       local-pkg: 1.1.2
       magic-string: 0.30.21
       node-fetch-native: 1.6.7
       node-mock-http: 1.0.4
+      nypm: 0.6.5
       ofetch: 1.5.1
       pathe: 2.0.3
       perfect-debounce: 2.1.0
@@ -6875,6 +6904,7 @@ snapshots:
     optionalDependencies:
       vitest: 4.1.2(vite@7.3.1(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))
     transitivePeerDependencies:
+      - crossws
       - magicast
       - typescript
 
@@ -9156,11 +9186,10 @@ snapshots:
       graphql: 16.13.2
       tslib: 2.8.1
 
-  graphql-ws@6.0.8(crossws@0.3.5)(graphql@16.13.2)(ws@8.20.0):
+  graphql-ws@6.0.8(graphql@16.13.2)(ws@8.20.0):
     dependencies:
       graphql: 16.13.2
     optionalDependencies:
-      crossws: 0.3.5
       ws: 8.20.0
 
   graphql@16.13.2: {}
@@ -9180,6 +9209,11 @@ snapshots:
       radix3: 1.1.2
       ufo: 1.6.3
       uncrypto: 0.1.3
+
+  h3@2.0.1-rc.20:
+    dependencies:
+      rou3: 0.8.1
+      srvx: 0.11.13
 
   handlebars@4.7.9:
     dependencies:
@@ -11765,7 +11799,7 @@ snapshots:
 
   vitest-environment-nuxt@1.0.1(magicast@0.5.2)(typescript@6.0.2)(vitest@4.1.2(vite@7.3.1(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))):
     dependencies:
-      '@nuxt/test-utils': 3.21.0(magicast@0.5.2)(typescript@6.0.2)(vitest@4.1.2(vite@7.3.1(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)))
+      '@nuxt/test-utils': 3.23.0(magicast@0.5.2)(typescript@6.0.2)(vitest@4.1.2(vite@7.3.1(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)))
     transitivePeerDependencies:
       - '@cucumber/cucumber'
       - '@jest/globals'
@@ -11773,6 +11807,7 @@ snapshots:
       - '@testing-library/vue'
       - '@vitest/ui'
       - '@vue/test-utils'
+      - crossws
       - happy-dom
       - jsdom
       - magicast
