@@ -59,7 +59,7 @@
     "graphql-subscriptions": "3.0.0",
     "graphql-ws": "6.0.8",
     "nuxt": "4.4.2",
-    "oxfmt": "0.43.0",
+    "oxfmt": "0.47.0",
     "shx": "0.4.0",
     "typescript": "6.0.3",
     "vitest": "4.1.5",
