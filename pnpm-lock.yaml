@@ -44,7 +44,7 @@ importers:
         version: 5.5.0(graphql@16.13.2)
       '@as-integrations/h3':
         specifier: 2.0.3
-        version: 2.0.3(@apollo/server@5.5.0(graphql@16.13.2))(crossws@0.4.5(srvx@0.11.15))(graphql-ws@6.0.8(crossws@0.4.5(srvx@0.11.15))(graphql@16.13.2)(ws@8.20.0))(graphql@16.13.2)(h3@1.15.11)
+        version: 2.0.3(@apollo/server@5.5.0(graphql@16.13.2))(crossws@0.4.5(srvx@0.11.15))(graphql-ws@6.0.8(crossws@0.4.5(srvx@0.11.15))(graphql@16.13.2)(ws@8.20.0))(graphql@16.13.2)(h3@2.0.1-rc.22(crossws@0.4.5(srvx@0.11.15)))
       '@nuxt/devtools':
         specifier: 3.2.4
         version: 3.2.4(vite@7.3.2(jiti@2.6.1)(terser@5.46.2)(yaml@2.8.3))(vue@3.5.33(typescript@6.0.3))
@@ -55,8 +55,8 @@ importers:
         specifier: 4.4.4
         version: 4.4.4
       '@nuxt/test-utils':
-        specifier: 3.21.0
-        version: 3.21.0(magicast@0.5.2)(typescript@6.0.3)(vitest@4.1.5)
+        specifier: 3.23.0
+        version: 3.23.0(crossws@0.4.5(srvx@0.11.15))(magicast@0.5.2)(typescript@6.0.3)(vitest@4.1.5)
       '@vitest/coverage-v8':
         specifier: 4.1.5
         version: 4.1.5(vitest@4.1.5)
@@ -346,9 +346,15 @@ packages:
       commander:
         optional: true
 
+  '@clack/core@1.0.0-alpha.7':
+    resolution: {integrity: sha512-3vdh6Ar09D14rVxJZIm3VQJkU+ZOKKT5I5cC0cOVazy70CNyYYjiwRj9unwalhESndgxx6bGc/m6Hhs4EKF5XQ==}
+
   '@clack/core@1.3.0':
     resolution: {integrity: sha512-xJPHpAmEQUBrXSLx0gF+q5K/IyihXpsHZcha+jB+tyahsKRK3Dxo4D0coZDewHo12NhiuzC3dTtMPbm53GEAAA==}
     engines: {node: '>= 20.12.0'}
+
+  '@clack/prompts@1.0.0-alpha.9':
+    resolution: {integrity: sha512-sKs0UjiHFWvry4SiRfBi5Qnj0C/6AYx8aKkFPZQSuUZXgAram25ZDmhQmP7vj1aFyLpfHWtLQjWvOvcat0TOLg==}
 
   '@clack/prompts@1.3.0':
     resolution: {integrity: sha512-GgcWwRCs/xPtaqlMy8qRhPnZf9vlWcWZNHAitnVQ3yk7JmSralSiq5q07yaffYE8SogtDm7zFeKccx1QNVARpw==}
@@ -1146,9 +1152,9 @@ packages:
     peerDependencies:
       '@nuxt/kit': '>=3.0.0'
 
-  '@nuxt/test-utils@3.21.0':
-    resolution: {integrity: sha512-A6XExfgHq88+XuXAU4MMr5QBHS2mWA5qRVSvsMPP2U+YSsnk+Vt7P7dxbvJPE4+n6LHbC1IM0QjTVteo+VCxOA==}
-    engines: {node: ^20.0.0 || ^22.0.0 || >=24.0.0}
+  '@nuxt/test-utils@3.23.0':
+    resolution: {integrity: sha512-NZKWSwvfIiTO2qhMoJHVbUQLgJMe96J9ccLhPPqN5+a/XzISZ027LG9wWVp1tC5oB0qQ3eUDhrxmq6Lj8EQLMQ==}
+    engines: {node: ^20.11.1 || ^22.0.0 || >=24.0.0}
     peerDependencies:
       '@cucumber/cucumber': ^10.3.1 || >=11.0.0
       '@jest/globals': ^29.5.0 || >=30.0.0
@@ -3579,6 +3585,16 @@ packages:
 
   h3@1.15.11:
     resolution: {integrity: sha512-L3THSe2MPeBwgIZVSH5zLdBBU90TOxarvhK9d04IDY2AmVS8j2Jz2LIWtwsGOU3lu2I5jCN7FNvVfY2+XyF+mg==}
+
+  h3@2.0.1-rc.22:
+    resolution: {integrity: sha512-Esv0DMIuPkCTSWCA0vO73vcTqwzH1wjSrAO1TXNu/K3up1sZHa9EKMapbmxCDYBeymC3fVTk4qxp7ogQWQ+KgA==}
+    engines: {node: '>=20.11.1'}
+    hasBin: true
+    peerDependencies:
+      crossws: ^0.4.1
+    peerDependenciesMeta:
+      crossws:
+        optional: true
 
   handlebars@4.7.9:
     resolution: {integrity: sha512-4E71E0rpOaQuJR2A3xDZ+GM1HyWYv1clR58tC8emQNeQe3RH7MAzSbat+V0wG78LQBo6m6bzSG/L4pBuCsgnUQ==}
@@ -6064,13 +6080,13 @@ snapshots:
       immutable: 5.1.5
       invariant: 2.2.4
 
-  '@as-integrations/h3@2.0.3(@apollo/server@5.5.0(graphql@16.13.2))(crossws@0.4.5(srvx@0.11.15))(graphql-ws@6.0.8(crossws@0.4.5(srvx@0.11.15))(graphql@16.13.2)(ws@8.20.0))(graphql@16.13.2)(h3@1.15.11)':
+  '@as-integrations/h3@2.0.3(@apollo/server@5.5.0(graphql@16.13.2))(crossws@0.4.5(srvx@0.11.15))(graphql-ws@6.0.8(crossws@0.4.5(srvx@0.11.15))(graphql@16.13.2)(ws@8.20.0))(graphql@16.13.2)(h3@2.0.1-rc.22(crossws@0.4.5(srvx@0.11.15)))':
     dependencies:
       '@apollo/server': 5.5.0(graphql@16.13.2)
       '@apollo/utils.withrequired': 3.0.0
       crossws: 0.4.5(srvx@0.11.15)
       graphql: 16.13.2
-      h3: 1.15.11
+      h3: 2.0.1-rc.22(crossws@0.4.5(srvx@0.11.15))
     optionalDependencies:
       graphql-ws: 6.0.8(crossws@0.4.5(srvx@0.11.15))(graphql@16.13.2)(ws@8.20.0)
 
@@ -6250,9 +6266,20 @@ snapshots:
       cac: 6.7.14
       citty: 0.2.2
 
+  '@clack/core@1.0.0-alpha.7':
+    dependencies:
+      picocolors: 1.1.1
+      sisteransi: 1.0.5
+
   '@clack/core@1.3.0':
     dependencies:
       fast-wrap-ansi: 0.2.0
+      sisteransi: 1.0.5
+
+  '@clack/prompts@1.0.0-alpha.9':
+    dependencies:
+      '@clack/core': 1.0.0-alpha.7
+      picocolors: 1.1.1
       sisteransi: 1.0.5
 
   '@clack/prompts@1.3.0':
@@ -7063,8 +7090,9 @@ snapshots:
       rc9: 3.0.1
       std-env: 4.1.0
 
-  '@nuxt/test-utils@3.21.0(magicast@0.5.2)(typescript@6.0.3)(vitest@4.1.5)':
+  '@nuxt/test-utils@3.23.0(crossws@0.4.5(srvx@0.11.15))(magicast@0.5.2)(typescript@6.0.3)(vitest@4.1.5)':
     dependencies:
+      '@clack/prompts': 1.0.0-alpha.9
       '@nuxt/kit': 3.21.4(magicast@0.5.2)
       c12: 3.3.4(magicast@0.5.2)
       consola: 3.4.2
@@ -7075,10 +7103,12 @@ snapshots:
       fake-indexeddb: 6.2.5
       get-port-please: 3.2.0
       h3: 1.15.11
+      h3-next: h3@2.0.1-rc.22(crossws@0.4.5(srvx@0.11.15))
       local-pkg: 1.1.2
       magic-string: 0.30.21
       node-fetch-native: 1.6.7
       node-mock-http: 1.0.4
+      nypm: 0.6.6
       ofetch: 1.5.1
       pathe: 2.0.3
       perfect-debounce: 2.1.0
@@ -7088,11 +7118,12 @@ snapshots:
       tinyexec: 1.1.2
       ufo: 1.6.4
       unplugin: 2.3.11
-      vitest-environment-nuxt: 1.0.1(magicast@0.5.2)(typescript@6.0.3)(vitest@4.1.5)
+      vitest-environment-nuxt: 1.0.1(crossws@0.4.5(srvx@0.11.15))(magicast@0.5.2)(typescript@6.0.3)(vitest@4.1.5)
       vue: 3.5.33(typescript@6.0.3)
     optionalDependencies:
       vitest: 4.1.5(@vitest/coverage-v8@4.1.5)(vite@7.3.2(jiti@2.6.1)(terser@5.46.2)(yaml@2.8.3))
     transitivePeerDependencies:
+      - crossws
       - magicast
       - typescript
 
@@ -9377,6 +9408,13 @@ snapshots:
       radix3: 1.1.2
       ufo: 1.6.4
       uncrypto: 0.1.3
+
+  h3@2.0.1-rc.22(crossws@0.4.5(srvx@0.11.15)):
+    dependencies:
+      rou3: 0.8.1
+      srvx: 0.11.15
+    optionalDependencies:
+      crossws: 0.4.5(srvx@0.11.15)
 
   handlebars@4.7.9:
     dependencies:
@@ -11894,9 +11932,9 @@ snapshots:
       terser: 5.46.2
       yaml: 2.8.3
 
-  vitest-environment-nuxt@1.0.1(magicast@0.5.2)(typescript@6.0.3)(vitest@4.1.5):
+  vitest-environment-nuxt@1.0.1(crossws@0.4.5(srvx@0.11.15))(magicast@0.5.2)(typescript@6.0.3)(vitest@4.1.5):
     dependencies:
-      '@nuxt/test-utils': 3.21.0(magicast@0.5.2)(typescript@6.0.3)(vitest@4.1.5)
+      '@nuxt/test-utils': 3.23.0(crossws@0.4.5(srvx@0.11.15))(magicast@0.5.2)(typescript@6.0.3)(vitest@4.1.5)
     transitivePeerDependencies:
       - '@cucumber/cucumber'
       - '@jest/globals'
@@ -11904,6 +11942,7 @@ snapshots:
       - '@testing-library/vue'
       - '@vitest/ui'
       - '@vue/test-utils'
+      - crossws
       - happy-dom
       - jsdom
       - magicast
