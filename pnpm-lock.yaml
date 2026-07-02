@@ -40,11 +40,11 @@ importers:
         version: 8.0.0
     devDependencies:
       '@apollo/server':
-        specifier: 5.5.0
-        version: 5.5.0(graphql@16.13.2)
+        specifier: 5.5.1
+        version: 5.5.1(graphql@16.13.2)
       '@as-integrations/h3':
         specifier: 2.0.3
-        version: 2.0.3(@apollo/server@5.5.0(graphql@16.13.2))(crossws@0.4.7(srvx@0.11.18))(graphql-ws@6.0.8(crossws@0.4.7(srvx@0.11.18))(graphql@16.13.2)(ws@8.21.0))(graphql@16.13.2)(h3@1.15.11)
+        version: 2.0.3(@apollo/server@5.5.1(graphql@16.13.2))(crossws@0.4.7(srvx@0.11.18))(graphql-ws@6.0.8(crossws@0.4.7(srvx@0.11.18))(graphql@16.13.2)(ws@8.21.0))(graphql@16.13.2)(h3@1.15.11)
       '@nuxt/devtools':
         specifier: 3.2.4
         version: 3.2.4(vite@7.3.6(jiti@2.7.0)(terser@5.48.0)(yaml@2.9.0))(vue@3.5.39(typescript@6.0.3))
@@ -119,8 +119,8 @@ packages:
     peerDependencies:
       graphql: 14.x || 15.x || 16.x
 
-  '@apollo/server@5.5.0':
-    resolution: {integrity: sha512-vWtodBOK/SZwBTJzItECOmLfL8E8pn/IdvP7pnxN5g2tny9iW4+9sxdajE798wV1H2+PYp/rRcl/soSHIBKMPw==}
+  '@apollo/server@5.5.1':
+    resolution: {integrity: sha512-Rn3g5TJQsMSUY23CWZTghWdBWyjX7dP1eaEBPkvmM2RHi82cDcpgTIkSCbGvtTUEGjwopLv1AAooU/n7iIZ20A==}
     engines: {node: '>=20'}
     peerDependencies:
       graphql: ^16.11.0
@@ -5501,10 +5501,6 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
-  uuid@11.1.1:
-    resolution: {integrity: sha512-vIYxrBCC/N/K+Js3qSN88go7kIfNPssr/hHCesKCQNAjmgvYS2oqr69kIufEG+O4+PfezOH4EbIeHCfFov8ZgQ==}
-    hasBin: true
-
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
 
@@ -5884,7 +5880,7 @@ snapshots:
       '@apollo/utils.logger': 3.0.0
       graphql: 16.13.2
 
-  '@apollo/server@5.5.0(graphql@16.13.2)':
+  '@apollo/server@5.5.1(graphql@16.13.2)':
     dependencies:
       '@apollo/cache-control-types': 1.0.3(graphql@16.13.2)
       '@apollo/server-gateway-interface': 2.0.0(graphql@16.13.2)
@@ -5906,7 +5902,6 @@ snapshots:
       loglevel: 1.9.2
       lru-cache: 11.5.1
       negotiator: 1.0.0
-      uuid: 11.1.1
       whatwg-mimetype: 4.0.0
     transitivePeerDependencies:
       - supports-color
@@ -5971,9 +5966,9 @@ snapshots:
       immutable: 5.1.9
       invariant: 2.2.4
 
-  '@as-integrations/h3@2.0.3(@apollo/server@5.5.0(graphql@16.13.2))(crossws@0.4.7(srvx@0.11.18))(graphql-ws@6.0.8(crossws@0.4.7(srvx@0.11.18))(graphql@16.13.2)(ws@8.21.0))(graphql@16.13.2)(h3@1.15.11)':
+  '@as-integrations/h3@2.0.3(@apollo/server@5.5.1(graphql@16.13.2))(crossws@0.4.7(srvx@0.11.18))(graphql-ws@6.0.8(crossws@0.4.7(srvx@0.11.18))(graphql@16.13.2)(ws@8.21.0))(graphql@16.13.2)(h3@1.15.11)':
     dependencies:
-      '@apollo/server': 5.5.0(graphql@16.13.2)
+      '@apollo/server': 5.5.1(graphql@16.13.2)
       '@apollo/utils.withrequired': 3.0.0
       crossws: 0.4.7(srvx@0.11.18)
       graphql: 16.13.2
@@ -11683,8 +11678,6 @@ snapshots:
       punycode: 2.3.1
 
   util-deprecate@1.0.2: {}
-
-  uuid@11.1.1: {}
 
   validate-npm-package-license@3.0.4:
     dependencies:
