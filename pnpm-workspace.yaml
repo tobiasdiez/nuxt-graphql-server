@@ -1,0 +1,5 @@
+packages:
+  - playground
+allowBuilds:
+  '@apollo/protobufjs': false
+  esbuild: false
