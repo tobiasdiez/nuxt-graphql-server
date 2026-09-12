@@ -1,0 +1,3 @@
+allowBuilds:
+  '@apollo/protobufjs': false
+  esbuild: false
