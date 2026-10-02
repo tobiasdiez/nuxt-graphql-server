@@ -51,7 +51,7 @@
     "@nuxt/test-utils": "4.3.2",
     "@vitest/coverage-v8": "4.1.11",
     "commit-and-tag-version": "13.2.1",
-    "eslint": "10.9.1",
+    "eslint": "10.11.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-config-unjs": "0.6.2",
     "eslint-plugin-unused-imports": "4.4.1",
