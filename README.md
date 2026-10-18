@@ -52,7 +52,7 @@ pnpm add @apollo/server graphql @as-integrations/h3 nuxt-graphql-server
        [
          'nuxt-graphql-server',
          {
-           /* Optional inline config */
+           // Optional inline config
          },
        ],
      ],
