@@ -3,3 +3,7 @@ packages:
 allowBuilds:
   '@apollo/protobufjs': false
   esbuild: false
+patchedDependencies:
+  # Resolve the `module-sync` condition like Node does, so that graphql v17 is loaded as ESM in the playground
+  # Remove once https://github.com/unjs/jiti/pull/482 is released
+  jiti@2.7.0: patches/jiti@2.7.0.patch
