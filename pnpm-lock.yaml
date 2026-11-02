@@ -267,8 +267,8 @@ importers:
         specifier: 2.0.3
         version: 2.0.3(@apollo/server@5.5.1(graphql@16.14.2)(supports-color@10.2.2))(crossws@0.3.5)(graphql-ws@6.3.0(crossws@0.3.5)(graphql@16.14.2)(ws@8.22.0))(graphql@16.14.2)(h3@1.15.11)
       '@graphql-tools/schema':
-        specifier: 10.1.3
-        version: 10.1.3(graphql@16.14.2)
+        specifier: 10.1.5
+        version: 10.1.5(graphql@16.14.2)
       graphql-subscriptions:
         specifier: 3.0.0
         version: 3.0.0(graphql@16.14.2)
