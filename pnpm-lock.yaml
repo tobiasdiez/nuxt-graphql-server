@@ -267,8 +267,8 @@ importers:
         specifier: 2.0.3
         version: 2.0.3(@apollo/server@5.5.1(graphql@16.14.2)(supports-color@10.2.2))(crossws@0.3.5)(graphql-ws@6.4.1(crossws@0.3.5)(graphql@16.14.2)(ws@8.22.0))(graphql@16.14.2)(h3@1.15.11)
       '@graphql-tools/schema':
-        specifier: 11.0.7
-        version: 11.0.7(graphql@16.14.2)
+        specifier: 11.0.8
+        version: 11.0.8(graphql@16.14.2)
       graphql-subscriptions:
         specifier: 3.0.0
         version: 3.0.0(graphql@16.14.2)
@@ -1199,12 +1199,6 @@ packages:
     engines: {node: '>=16.0.0'}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
-
-  '@graphql-tools/schema@11.0.7':
-    resolution: {integrity: sha512-YYi+ODhGjsL2J1ATsf8dquhH7OBdtdS/xqs6TKSweIhcsOTqSOxbwJXi5tIP9djruf35YqPMFnkgSSPyv2QokA==}
-    engines: {node: '>=22.18.0'}
-    peerDependencies:
-      graphql: ^16.0.0 || ^17.0.0
 
   '@graphql-tools/schema@11.0.8':
     resolution: {integrity: sha512-+LZYd+TpWUg/2CqvpJtSKA4O1CX5rMNv0ZUsUd4uGNPD07Q1Eq+/QDaZdXfP7vIm6K/mkiXt25mWc7zao3Mb7g==}
@@ -6805,13 +6799,6 @@ snapshots:
     dependencies:
       '@graphql-tools/merge': 9.2.8(graphql@16.14.2)
       '@graphql-tools/utils': 12.1.0(graphql@16.14.2)
-      graphql: 16.14.2
-      tslib: 2.9.1
-
-  '@graphql-tools/schema@11.0.7(graphql@16.14.2)':
-    dependencies:
-      '@graphql-tools/merge': 10.0.8(graphql@16.14.2)
-      '@graphql-tools/utils': 13.2.1(graphql@16.14.2)
       graphql: 16.14.2
       tslib: 2.9.1
 
