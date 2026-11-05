@@ -168,22 +168,22 @@ importers:
     dependencies:
       '@graphql-codegen/core':
         specifier: ^6.0.0
-        version: 6.2.2(graphql@16.14.2)
+        version: 6.2.2(graphql@17.0.2)
       '@graphql-codegen/plugin-helpers':
         specifier: ^7.0.0
-        version: 7.4.2(graphql@16.14.2)
+        version: 7.4.2(graphql@17.0.2)
       '@graphql-codegen/typescript':
         specifier: ^6.0.0
-        version: 6.1.2(graphql@16.14.2)
+        version: 6.1.2(graphql@17.0.2)
       '@graphql-codegen/typescript-resolvers':
         specifier: ^6.0.0
-        version: 6.1.1(graphql@16.14.2)
+        version: 6.1.1(graphql@17.0.2)
       '@graphql-tools/graphql-file-loader':
         specifier: ^9.0.0
-        version: 9.1.1(graphql@16.14.2)
+        version: 9.1.1(graphql@17.0.2)
       '@graphql-tools/load':
         specifier: ^9.0.0
-        version: 9.1.1(graphql@16.14.2)
+        version: 9.1.1(graphql@17.0.2)
       '@nuxt/devtools-kit':
         specifier: ^4.0.0
         version: 4.1.0(@nuxt/kit@4.6.3(@nuxt/schema@4.6.3)(confbox@0.3.2)(dotenv@17.4.2)(giget@3.3.1)(jiti@2.7.0)(magic-string@1.4.5)(mlly@1.8.2)(rolldown@1.2.16)(unplugin@3.7.0(esbuild@0.28.2)(rolldown@1.2.16)(rollup@4.67.2)(vite@8.3.5)))(nitropack@2.13.5(rolldown@1.2.16)(srvx@0.11.22)(supports-color@10.2.2)(vite@8.3.5))(vite@8.3.5)
@@ -199,10 +199,10 @@ importers:
     devDependencies:
       '@apollo/server':
         specifier: 5.5.1
-        version: 5.5.1(graphql@16.14.2)(supports-color@10.2.2)
+        version: 5.5.1(graphql@17.0.2)(supports-color@10.2.2)
       '@as-integrations/h3':
         specifier: 2.0.3
-        version: 2.0.3(@apollo/server@5.5.1(graphql@16.14.2)(supports-color@10.2.2))(crossws@0.3.5)(graphql-ws@6.4.1(crossws@0.3.5)(graphql@16.14.2)(ws@8.22.0))(graphql@16.14.2)(h3@1.15.11)
+        version: 2.0.3(@apollo/server@5.5.1(graphql@17.0.2)(supports-color@10.2.2))(crossws@0.3.5)(graphql-ws@6.4.1(crossws@0.3.5)(graphql@17.0.2)(ws@8.22.0))(graphql@17.0.2)(h3@1.15.11)
       '@nuxt/devtools':
         specifier: 4.1.0
         version: 4.1.0(@devframes/agentic@1.3.2)(@devframes/hub-ui@1.3.2(@devframes/hub@1.3.2(@devframes/agentic@1.3.2)(crossws@0.3.5)(devframe@1.3.2))(@devframes/json-render@1.3.2(@devframes/hub@1.3.2(@devframes/agentic@1.3.2)(crossws@0.3.5)(devframe@1.3.2))(devframe@1.3.2))(devframe@1.3.2))(@nuxt/kit@4.6.3(@nuxt/schema@4.6.3)(confbox@0.3.2)(dotenv@17.4.2)(giget@3.3.1)(jiti@2.7.0)(magic-string@1.4.5)(mlly@1.8.2)(rolldown@1.2.16)(unplugin@3.7.0(esbuild@0.28.2)(rolldown@1.2.16)(rollup@4.67.2)(vite@8.3.5)))(crossws@0.3.5)(esbuild@0.28.2)(nitropack@2.13.5(rolldown@1.2.16)(srvx@0.11.22)(supports-color@10.2.2)(vite@8.3.5))(rolldown@1.2.16)(rollup@4.67.2)(srvx@0.11.22)(unstorage@1.17.6(db0@0.3.4)(ioredis@5.11.1(supports-color@10.2.2)))(vite@8.3.5)(vue@3.5.44(typescript@6.0.3))
@@ -234,14 +234,14 @@ importers:
         specifier: 4.4.1
         version: 4.4.1(@typescript-eslint/eslint-plugin@8.72.1(@typescript-eslint/parser@8.72.1(eslint@10.14.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0)(supports-color@10.2.2))
       graphql:
-        specifier: 16.14.2
-        version: 16.14.2
+        specifier: 17.0.2
+        version: 17.0.2
       graphql-subscriptions:
         specifier: 3.0.0
-        version: 3.0.0(graphql@16.14.2)
+        version: 3.0.0(graphql@17.0.2)
       graphql-ws:
         specifier: 6.4.1
-        version: 6.4.1(crossws@0.3.5)(graphql@16.14.2)(ws@8.22.0)
+        version: 6.4.1(crossws@0.3.5)(graphql@17.0.2)(ws@8.22.0)
       nuxt:
         specifier: 4.6.3
         version: 4.6.3(@babel/plugin-syntax-jsx@7.29.7(@babel/core@7.29.7(supports-color@10.2.2)))(@babel/plugin-syntax-typescript@7.29.7(@babel/core@7.29.7(supports-color@10.2.2)))(@oxc-project/types@0.156.0)(@vitejs/devtools-kit@0.7.6(@devframes/agentic@1.3.2)(cac@7.1.0)(crossws@0.3.5)(srvx@0.11.22)(vite@8.3.5))(@vitejs/devtools@0.8.0)(@vue/compiler-sfc@3.5.44)(acorn@8.19.0)(confbox@0.3.2)(db0@0.3.4)(dotenv@17.4.2)(esbuild@0.28.2)(eslint@10.14.0(jiti@2.7.0)(supports-color@10.2.2))(giget@3.3.1)(ioredis@5.11.1(supports-color@10.2.2))(lightningcss@1.33.0)(mlly@1.8.2)(optionator@0.9.4)(rolldown@1.2.16)(rollup-plugin-visualizer@7.1.1(rolldown@1.2.16)(rollup@4.67.2))(rollup@4.67.2)(srvx@0.11.22)(supports-color@10.2.2)(terser@5.51.2)(typescript@6.0.3)(vite@8.3.5)(vue-tsc@3.3.14(typescript@6.0.3))(yaml@2.9.1)
@@ -265,13 +265,13 @@ importers:
     dependencies:
       '@as-integrations/h3':
         specifier: 2.0.3
-        version: 2.0.3(@apollo/server@5.5.1(graphql@16.14.2)(supports-color@10.2.2))(crossws@0.3.5)(graphql-ws@6.4.1(crossws@0.3.5)(graphql@16.14.2)(ws@8.22.0))(graphql@16.14.2)(h3@1.15.11)
+        version: 2.0.3(@apollo/server@5.5.1(graphql@17.0.2)(supports-color@10.2.2))(crossws@0.3.5)(graphql-ws@6.4.1(crossws@0.3.5)(graphql@17.0.2)(ws@8.22.0))(graphql@17.0.2)(h3@1.15.11)
       '@graphql-tools/schema':
         specifier: 11.0.8
-        version: 11.0.8(graphql@16.14.2)
+        version: 11.0.8(graphql@17.0.2)
       graphql-subscriptions:
         specifier: 3.0.0
-        version: 3.0.0(graphql@16.14.2)
+        version: 3.0.0(graphql@17.0.2)
       nuxt:
         specifier: 4.6.3
         version: 4.6.3(@babel/plugin-syntax-jsx@7.29.7(@babel/core@7.29.7(supports-color@10.2.2)))(@babel/plugin-syntax-typescript@7.29.7(@babel/core@7.29.7(supports-color@10.2.2)))(@oxc-project/types@0.156.0)(@vitejs/devtools-kit@0.7.6(@devframes/agentic@1.3.2)(cac@7.1.0)(crossws@0.3.5)(srvx@0.11.22)(vite@8.3.5))(@vitejs/devtools@0.8.0)(@vue/compiler-sfc@3.5.44)(acorn@8.19.0)(confbox@0.3.2)(db0@0.3.4)(dotenv@17.4.2)(esbuild@0.28.2)(eslint@10.14.0(jiti@2.7.0)(supports-color@10.2.2))(giget@3.3.1)(ioredis@5.11.1(supports-color@10.2.2))(lightningcss@1.33.0)(mlly@1.8.2)(optionator@0.9.4)(rolldown@1.2.16)(rollup-plugin-visualizer@7.1.1(rolldown@1.2.16)(rollup@4.67.2))(rollup@4.67.2)(srvx@0.11.22)(supports-color@10.2.2)(terser@5.51.2)(typescript@6.0.3)(vite@8.3.5)(vue-tsc@3.3.14(typescript@6.0.3))(yaml@2.9.1)
@@ -3560,9 +3560,9 @@ packages:
       ws:
         optional: true
 
-  graphql@16.14.2:
-    resolution: {integrity: sha512-Chq1s4CY7jmh8gO2qvLIJyfCDIN+EHLFW/9iShnp1z8FjBQMoodWP1kDC36VAMXXIvAjj4ARa7ntfAV2BrjsbA==}
-    engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
+  graphql@17.0.2:
+    resolution: {integrity: sha512-FRWbddMxfkjiB7z+aQDWIR+E34xo9I8c9mtK2RPv8PmMzKRvrdsreHL/Ui/TmwHJfhHChEtsFPyMHKI+xuarQQ==}
+    engines: {node: ^22.0.0 || ^24.0.0 || ^25.0.0 || >=26.0.0}
 
   gzip-size@7.0.0:
     resolution: {integrity: sha512-O1Ld7Dr+nqPnmGpdhzLmMTQ4vAsD+rHwMm1NLUmoUFFymBOMKxCCrtDxqdBRYXdeEPEi3SyoR4TizJLQrnKBNA==}
@@ -5968,9 +5968,9 @@ packages:
 
 snapshots:
 
-  '@apollo/cache-control-types@1.0.3(graphql@16.14.2)':
+  '@apollo/cache-control-types@1.0.3(graphql@17.0.2)':
     dependencies:
-      graphql: 16.14.2
+      graphql: 17.0.2
 
   '@apollo/protobufjs@1.2.8':
     dependencies:
@@ -5987,33 +5987,33 @@ snapshots:
       '@types/long': 4.0.2
       long: 4.0.0
 
-  '@apollo/server-gateway-interface@2.0.0(graphql@16.14.2)':
+  '@apollo/server-gateway-interface@2.0.0(graphql@17.0.2)':
     dependencies:
       '@apollo/usage-reporting-protobuf': 4.1.2
       '@apollo/utils.fetcher': 3.1.0
       '@apollo/utils.keyvaluecache': 4.0.0
       '@apollo/utils.logger': 3.0.0
-      graphql: 16.14.2
+      graphql: 17.0.2
 
-  '@apollo/server@5.5.1(graphql@16.14.2)(supports-color@10.2.2)':
+  '@apollo/server@5.5.1(graphql@17.0.2)(supports-color@10.2.2)':
     dependencies:
-      '@apollo/cache-control-types': 1.0.3(graphql@16.14.2)
-      '@apollo/server-gateway-interface': 2.0.0(graphql@16.14.2)
+      '@apollo/cache-control-types': 1.0.3(graphql@17.0.2)
+      '@apollo/server-gateway-interface': 2.0.0(graphql@17.0.2)
       '@apollo/usage-reporting-protobuf': 4.1.2
       '@apollo/utils.createhash': 3.0.1
       '@apollo/utils.fetcher': 3.1.0
       '@apollo/utils.isnodelike': 3.0.0
       '@apollo/utils.keyvaluecache': 4.0.0
       '@apollo/utils.logger': 3.0.0
-      '@apollo/utils.usagereporting': 2.1.0(graphql@16.14.2)
+      '@apollo/utils.usagereporting': 2.1.0(graphql@17.0.2)
       '@apollo/utils.withrequired': 3.0.0
-      '@graphql-tools/schema': 10.1.3(graphql@16.14.2)
+      '@graphql-tools/schema': 10.1.3(graphql@17.0.2)
       async-retry: 1.3.3
       body-parser: 2.4.0(supports-color@10.2.2)
       content-type: 1.0.5
       cors: 2.8.6
       finalhandler: 2.1.1(supports-color@10.2.2)
-      graphql: 16.14.2
+      graphql: 17.0.2
       loglevel: 1.9.2
       lru-cache: 11.5.3
       negotiator: 1.1.0
@@ -6030,9 +6030,9 @@ snapshots:
       '@apollo/utils.isnodelike': 3.0.0
       sha.js: 2.4.12
 
-  '@apollo/utils.dropunuseddefinitions@2.0.1(graphql@16.14.2)':
+  '@apollo/utils.dropunuseddefinitions@2.0.1(graphql@17.0.2)':
     dependencies:
-      graphql: 16.14.2
+      graphql: 17.0.2
 
   '@apollo/utils.fetcher@3.1.0': {}
 
@@ -6045,51 +6045,51 @@ snapshots:
 
   '@apollo/utils.logger@3.0.0': {}
 
-  '@apollo/utils.printwithreducedwhitespace@2.0.1(graphql@16.14.2)':
+  '@apollo/utils.printwithreducedwhitespace@2.0.1(graphql@17.0.2)':
     dependencies:
-      graphql: 16.14.2
+      graphql: 17.0.2
 
-  '@apollo/utils.removealiases@2.0.1(graphql@16.14.2)':
+  '@apollo/utils.removealiases@2.0.1(graphql@17.0.2)':
     dependencies:
-      graphql: 16.14.2
+      graphql: 17.0.2
 
-  '@apollo/utils.sortast@2.0.1(graphql@16.14.2)':
+  '@apollo/utils.sortast@2.0.1(graphql@17.0.2)':
     dependencies:
-      graphql: 16.14.2
+      graphql: 17.0.2
       lodash.sortby: 4.7.0
 
-  '@apollo/utils.stripsensitiveliterals@2.0.1(graphql@16.14.2)':
+  '@apollo/utils.stripsensitiveliterals@2.0.1(graphql@17.0.2)':
     dependencies:
-      graphql: 16.14.2
+      graphql: 17.0.2
 
-  '@apollo/utils.usagereporting@2.1.0(graphql@16.14.2)':
+  '@apollo/utils.usagereporting@2.1.0(graphql@17.0.2)':
     dependencies:
       '@apollo/usage-reporting-protobuf': 4.1.2
-      '@apollo/utils.dropunuseddefinitions': 2.0.1(graphql@16.14.2)
-      '@apollo/utils.printwithreducedwhitespace': 2.0.1(graphql@16.14.2)
-      '@apollo/utils.removealiases': 2.0.1(graphql@16.14.2)
-      '@apollo/utils.sortast': 2.0.1(graphql@16.14.2)
-      '@apollo/utils.stripsensitiveliterals': 2.0.1(graphql@16.14.2)
-      graphql: 16.14.2
+      '@apollo/utils.dropunuseddefinitions': 2.0.1(graphql@17.0.2)
+      '@apollo/utils.printwithreducedwhitespace': 2.0.1(graphql@17.0.2)
+      '@apollo/utils.removealiases': 2.0.1(graphql@17.0.2)
+      '@apollo/utils.sortast': 2.0.1(graphql@17.0.2)
+      '@apollo/utils.stripsensitiveliterals': 2.0.1(graphql@17.0.2)
+      graphql: 17.0.2
 
   '@apollo/utils.withrequired@3.0.0': {}
 
-  '@ardatan/relay-compiler@13.0.2(graphql@16.14.2)':
+  '@ardatan/relay-compiler@13.0.2(graphql@17.0.2)':
     dependencies:
       '@babel/runtime': 8.0.10
-      graphql: 16.14.2
+      graphql: 17.0.2
       immutable: 5.1.9
       invariant: 2.2.4
 
-  '@as-integrations/h3@2.0.3(@apollo/server@5.5.1(graphql@16.14.2)(supports-color@10.2.2))(crossws@0.3.5)(graphql-ws@6.4.1(crossws@0.3.5)(graphql@16.14.2)(ws@8.22.0))(graphql@16.14.2)(h3@1.15.11)':
+  '@as-integrations/h3@2.0.3(@apollo/server@5.5.1(graphql@17.0.2)(supports-color@10.2.2))(crossws@0.3.5)(graphql-ws@6.4.1(crossws@0.3.5)(graphql@17.0.2)(ws@8.22.0))(graphql@17.0.2)(h3@1.15.11)':
     dependencies:
-      '@apollo/server': 5.5.1(graphql@16.14.2)(supports-color@10.2.2)
+      '@apollo/server': 5.5.1(graphql@17.0.2)(supports-color@10.2.2)
       '@apollo/utils.withrequired': 3.0.0
       crossws: 0.3.5
-      graphql: 16.14.2
+      graphql: 17.0.2
       h3: 1.15.11
     optionalDependencies:
-      graphql-ws: 6.4.1(crossws@0.3.5)(graphql@16.14.2)(ws@8.22.0)
+      graphql-ws: 6.4.1(crossws@0.3.5)(graphql@17.0.2)(ws@8.22.0)
 
   '@babel/code-frame@7.29.7':
     dependencies:
@@ -6696,150 +6696,150 @@ snapshots:
       '@eslint/core': 1.2.1
       levn: 0.4.1
 
-  '@graphql-codegen/core@6.2.2(graphql@16.14.2)':
+  '@graphql-codegen/core@6.2.2(graphql@17.0.2)':
     dependencies:
-      '@graphql-codegen/plugin-helpers': 7.4.2(graphql@16.14.2)
-      '@graphql-tools/schema': 10.1.3(graphql@16.14.2)
-      '@graphql-tools/utils': 12.1.0(graphql@16.14.2)
-      graphql: 16.14.2
+      '@graphql-codegen/plugin-helpers': 7.4.2(graphql@17.0.2)
+      '@graphql-tools/schema': 10.1.3(graphql@17.0.2)
+      '@graphql-tools/utils': 12.1.0(graphql@17.0.2)
+      graphql: 17.0.2
       tslib: 2.9.1
 
-  '@graphql-codegen/plugin-helpers@7.4.2(graphql@16.14.2)':
+  '@graphql-codegen/plugin-helpers@7.4.2(graphql@17.0.2)':
     dependencies:
-      '@graphql-tools/utils': 12.1.0(graphql@16.14.2)
+      '@graphql-tools/utils': 12.1.0(graphql@17.0.2)
       change-case-all: 2.1.0
       common-tags: 1.8.2
-      graphql: 16.14.2
+      graphql: 17.0.2
       import-from: 4.0.0
       tslib: 2.9.1
 
-  '@graphql-codegen/schema-ast@6.1.1(graphql@16.14.2)':
+  '@graphql-codegen/schema-ast@6.1.1(graphql@17.0.2)':
     dependencies:
-      '@graphql-codegen/plugin-helpers': 7.4.2(graphql@16.14.2)
-      '@graphql-tools/utils': 12.1.0(graphql@16.14.2)
-      graphql: 16.14.2
+      '@graphql-codegen/plugin-helpers': 7.4.2(graphql@17.0.2)
+      '@graphql-tools/utils': 12.1.0(graphql@17.0.2)
+      graphql: 17.0.2
       tslib: 2.8.1
 
-  '@graphql-codegen/typescript-resolvers@6.1.1(graphql@16.14.2)':
+  '@graphql-codegen/typescript-resolvers@6.1.1(graphql@17.0.2)':
     dependencies:
-      '@graphql-codegen/plugin-helpers': 7.4.2(graphql@16.14.2)
-      '@graphql-codegen/typescript': 6.1.2(graphql@16.14.2)
-      '@graphql-codegen/visitor-plugin-common': 7.5.0(graphql@16.14.2)
-      '@graphql-tools/utils': 12.1.0(graphql@16.14.2)
+      '@graphql-codegen/plugin-helpers': 7.4.2(graphql@17.0.2)
+      '@graphql-codegen/typescript': 6.1.2(graphql@17.0.2)
+      '@graphql-codegen/visitor-plugin-common': 7.5.0(graphql@17.0.2)
+      '@graphql-tools/utils': 12.1.0(graphql@17.0.2)
       auto-bind: 5.0.1
-      graphql: 16.14.2
+      graphql: 17.0.2
       tslib: 2.9.1
 
-  '@graphql-codegen/typescript@6.1.2(graphql@16.14.2)':
+  '@graphql-codegen/typescript@6.1.2(graphql@17.0.2)':
     dependencies:
-      '@graphql-codegen/plugin-helpers': 7.4.2(graphql@16.14.2)
-      '@graphql-codegen/schema-ast': 6.1.1(graphql@16.14.2)
-      '@graphql-codegen/visitor-plugin-common': 7.5.0(graphql@16.14.2)
+      '@graphql-codegen/plugin-helpers': 7.4.2(graphql@17.0.2)
+      '@graphql-codegen/schema-ast': 6.1.1(graphql@17.0.2)
+      '@graphql-codegen/visitor-plugin-common': 7.5.0(graphql@17.0.2)
       auto-bind: 5.0.1
-      graphql: 16.14.2
+      graphql: 17.0.2
       tslib: 2.8.1
 
-  '@graphql-codegen/visitor-plugin-common@7.5.0(graphql@16.14.2)':
+  '@graphql-codegen/visitor-plugin-common@7.5.0(graphql@17.0.2)':
     dependencies:
-      '@graphql-codegen/plugin-helpers': 7.4.2(graphql@16.14.2)
-      '@graphql-tools/optimize': 2.0.1(graphql@16.14.2)
-      '@graphql-tools/relay-operation-optimizer': 7.1.14(graphql@16.14.2)
-      '@graphql-tools/utils': 12.1.0(graphql@16.14.2)
+      '@graphql-codegen/plugin-helpers': 7.4.2(graphql@17.0.2)
+      '@graphql-tools/optimize': 2.0.1(graphql@17.0.2)
+      '@graphql-tools/relay-operation-optimizer': 7.1.14(graphql@17.0.2)
+      '@graphql-tools/utils': 12.1.0(graphql@17.0.2)
       auto-bind: 5.0.1
       change-case-all: 2.1.0
       dependency-graph: 1.0.0
-      graphql: 16.14.2
-      graphql-tag: 2.12.7(graphql@16.14.2)
+      graphql: 17.0.2
+      graphql-tag: 2.12.7(graphql@17.0.2)
       parse-filepath: 1.0.2
       tslib: 2.9.1
 
-  '@graphql-tools/graphql-file-loader@9.1.1(graphql@16.14.2)':
+  '@graphql-tools/graphql-file-loader@9.1.1(graphql@17.0.2)':
     dependencies:
-      '@graphql-tools/import': 8.0.8(graphql@16.14.2)
-      '@graphql-tools/load-files': 8.0.8(graphql@16.14.2)
-      '@graphql-tools/utils': 13.2.1(graphql@16.14.2)
-      graphql: 16.14.2
+      '@graphql-tools/import': 8.0.8(graphql@17.0.2)
+      '@graphql-tools/load-files': 8.0.8(graphql@17.0.2)
+      '@graphql-tools/utils': 13.2.1(graphql@17.0.2)
+      graphql: 17.0.2
       tslib: 2.9.1
       unixify: 1.0.0
 
-  '@graphql-tools/import@8.0.8(graphql@16.14.2)':
+  '@graphql-tools/import@8.0.8(graphql@17.0.2)':
     dependencies:
-      '@graphql-tools/utils': 13.2.1(graphql@16.14.2)
-      graphql: 16.14.2
+      '@graphql-tools/utils': 13.2.1(graphql@17.0.2)
+      graphql: 17.0.2
       resolve-from: 5.0.0
       tslib: 2.9.1
 
-  '@graphql-tools/load-files@8.0.8(graphql@16.14.2)':
+  '@graphql-tools/load-files@8.0.8(graphql@17.0.2)':
     dependencies:
-      '@graphql-tools/utils': 13.2.1(graphql@16.14.2)
-      graphql: 16.14.2
+      '@graphql-tools/utils': 13.2.1(graphql@17.0.2)
+      graphql: 17.0.2
       tslib: 2.9.1
       unixify: 1.0.0
 
-  '@graphql-tools/load@9.1.1(graphql@16.14.2)':
+  '@graphql-tools/load@9.1.1(graphql@17.0.2)':
     dependencies:
-      '@graphql-tools/schema': 11.0.8(graphql@16.14.2)
-      '@graphql-tools/utils': 13.2.1(graphql@16.14.2)
-      graphql: 16.14.2
+      '@graphql-tools/schema': 11.0.8(graphql@17.0.2)
+      '@graphql-tools/utils': 13.2.1(graphql@17.0.2)
+      graphql: 17.0.2
       p-limit: 3.1.0
       tslib: 2.9.1
 
-  '@graphql-tools/merge@10.0.8(graphql@16.14.2)':
+  '@graphql-tools/merge@10.0.8(graphql@17.0.2)':
     dependencies:
-      '@graphql-tools/utils': 13.2.1(graphql@16.14.2)
-      graphql: 16.14.2
+      '@graphql-tools/utils': 13.2.1(graphql@17.0.2)
+      graphql: 17.0.2
       tslib: 2.9.1
 
-  '@graphql-tools/merge@9.2.8(graphql@16.14.2)':
+  '@graphql-tools/merge@9.2.8(graphql@17.0.2)':
     dependencies:
-      '@graphql-tools/utils': 12.1.0(graphql@16.14.2)
-      graphql: 16.14.2
+      '@graphql-tools/utils': 12.1.0(graphql@17.0.2)
+      graphql: 17.0.2
       tslib: 2.9.1
 
-  '@graphql-tools/optimize@2.0.1(graphql@16.14.2)':
+  '@graphql-tools/optimize@2.0.1(graphql@17.0.2)':
     dependencies:
-      graphql: 16.14.2
+      graphql: 17.0.2
       tslib: 2.9.1
 
-  '@graphql-tools/relay-operation-optimizer@7.1.14(graphql@16.14.2)':
+  '@graphql-tools/relay-operation-optimizer@7.1.14(graphql@17.0.2)':
     dependencies:
-      '@ardatan/relay-compiler': 13.0.2(graphql@16.14.2)
-      '@graphql-tools/utils': 12.1.0(graphql@16.14.2)
-      graphql: 16.14.2
+      '@ardatan/relay-compiler': 13.0.2(graphql@17.0.2)
+      '@graphql-tools/utils': 12.1.0(graphql@17.0.2)
+      graphql: 17.0.2
       tslib: 2.9.1
 
-  '@graphql-tools/schema@10.1.3(graphql@16.14.2)':
+  '@graphql-tools/schema@10.1.3(graphql@17.0.2)':
     dependencies:
-      '@graphql-tools/merge': 9.2.8(graphql@16.14.2)
-      '@graphql-tools/utils': 12.1.0(graphql@16.14.2)
-      graphql: 16.14.2
+      '@graphql-tools/merge': 9.2.8(graphql@17.0.2)
+      '@graphql-tools/utils': 12.1.0(graphql@17.0.2)
+      graphql: 17.0.2
       tslib: 2.9.1
 
-  '@graphql-tools/schema@11.0.8(graphql@16.14.2)':
+  '@graphql-tools/schema@11.0.8(graphql@17.0.2)':
     dependencies:
-      '@graphql-tools/merge': 10.0.8(graphql@16.14.2)
-      '@graphql-tools/utils': 13.2.1(graphql@16.14.2)
-      graphql: 16.14.2
+      '@graphql-tools/merge': 10.0.8(graphql@17.0.2)
+      '@graphql-tools/utils': 13.2.1(graphql@17.0.2)
+      graphql: 17.0.2
       tslib: 2.9.1
 
-  '@graphql-tools/utils@12.1.0(graphql@16.14.2)':
+  '@graphql-tools/utils@12.1.0(graphql@17.0.2)':
     dependencies:
-      '@graphql-typed-document-node/core': 3.2.0(graphql@16.14.2)
+      '@graphql-typed-document-node/core': 3.2.0(graphql@17.0.2)
       '@whatwg-node/promise-helpers': 2.0.1
       cross-inspect: 1.0.1
-      graphql: 16.14.2
+      graphql: 17.0.2
       tslib: 2.9.1
 
-  '@graphql-tools/utils@13.2.1(graphql@16.14.2)':
+  '@graphql-tools/utils@13.2.1(graphql@17.0.2)':
     dependencies:
-      '@graphql-typed-document-node/core': 3.2.0(graphql@16.14.2)
+      '@graphql-typed-document-node/core': 3.2.0(graphql@17.0.2)
       '@whatwg-node/promise-helpers': 2.0.1
-      graphql: 16.14.2
+      graphql: 17.0.2
       tslib: 2.9.1
 
-  '@graphql-typed-document-node/core@3.2.0(graphql@16.14.2)':
+  '@graphql-typed-document-node/core@3.2.0(graphql@17.0.2)':
     dependencies:
-      graphql: 16.14.2
+      graphql: 17.0.2
 
   '@humanfs/core@0.19.2':
     dependencies:
@@ -9503,23 +9503,23 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
-  graphql-subscriptions@3.0.0(graphql@16.14.2):
+  graphql-subscriptions@3.0.0(graphql@17.0.2):
     dependencies:
-      graphql: 16.14.2
+      graphql: 17.0.2
 
-  graphql-tag@2.12.7(graphql@16.14.2):
+  graphql-tag@2.12.7(graphql@17.0.2):
     dependencies:
-      graphql: 16.14.2
+      graphql: 17.0.2
       tslib: 2.9.1
 
-  graphql-ws@6.4.1(crossws@0.3.5)(graphql@16.14.2)(ws@8.22.0):
+  graphql-ws@6.4.1(crossws@0.3.5)(graphql@17.0.2)(ws@8.22.0):
     dependencies:
-      graphql: 16.14.2
+      graphql: 17.0.2
     optionalDependencies:
       crossws: 0.3.5
       ws: 8.22.0
 
-  graphql@16.14.2: {}
+  graphql@17.0.2: {}
 
   gzip-size@7.0.0:
     dependencies:
